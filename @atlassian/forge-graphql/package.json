@@ -1,0 +1,52 @@
+{
+  "name": "@atlassian/forge-graphql",
+  "version": "3.0.4",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@bitbucket.org:atlassian/compass-forge-graphq-sdk.git",
+  "author": "Atlassian",
+  "license": "Apache 2.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "yarn run clean && yarn run compile",
+    "clean": "rm -rf ./dist && rm -f tsconfig.tsbuildinfo",
+    "compile": "graphql-toolkit generate -d src && tsc -b -v"
+  },
+  "dependencies": {
+    "@atlassian/graphql-toolkit": "1.1.2",
+    "@forge/api": "^2.2.1",
+    "@graphql-codegen/cli": "^2.1.1",
+    "@graphql-codegen/near-operation-file-preset": "^2.1.2",
+    "@graphql-codegen/typescript": "^2.1.2",
+    "@graphql-codegen/typescript-document-nodes": "^2.1.2",
+    "@graphql-codegen/typescript-operations": "^2.1.2",
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@types/jest": "^27.0.1",
+    "axios": "^0.21.1",
+    "enquirer": "^2.3.6",
+    "fast-glob": "^3.2.7",
+    "fs": "^0.0.1-security",
+    "graphql": "^15.5.1",
+    "jest": "^26.6.2",
+    "listr2": "^3.11.0",
+    "path": "^0.12.7",
+    "ts-jest": "^26.4.2",
+    "url-parse": "^1.5.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@oclif/plugin-help": "^3.2.3",
+    "@oclif/test": "^1.2.8",
+    "@types/node": "^16.7.1",
+    "shx": "~0.3.3",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "dist/"
+  ]
+}
