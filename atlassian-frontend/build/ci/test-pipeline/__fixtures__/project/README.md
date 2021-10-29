@@ -1,3 +1,0 @@
-# Project
-
-Standard project fixture

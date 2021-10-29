@@ -1,1 +1,0 @@
-export { HelpFooter } from './main';

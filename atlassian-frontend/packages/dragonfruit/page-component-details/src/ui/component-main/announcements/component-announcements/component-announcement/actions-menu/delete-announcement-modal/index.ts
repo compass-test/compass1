@@ -1,1 +1,0 @@
-export { DeleteAnnouncementModal } from './main';

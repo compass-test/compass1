@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Hasher should successfully hash a package 1`] = `"6ad32b29ca30765a52282e342aeef3ee7e868464"`;

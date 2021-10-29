@@ -1,1 +1,0 @@
-export { TeamDashboard } from './main';

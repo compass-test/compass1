@@ -1,7 +1,0 @@
-{
-  "$schema": "https://unpkg.com/@changesets/config@0.3.0/schema.json",
-  "commit": true,
-  "access": "public",
-  "baseBranch": "origin/master",
-  "updateInternalDependencies": "minor"
-}

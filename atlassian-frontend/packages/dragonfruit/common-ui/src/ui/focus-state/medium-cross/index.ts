@@ -1,1 +1,0 @@
-export { MediumCross } from './main';

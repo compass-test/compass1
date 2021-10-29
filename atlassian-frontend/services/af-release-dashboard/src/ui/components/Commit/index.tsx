@@ -1,1 +1,0 @@
-export { Commit } from './Commit';

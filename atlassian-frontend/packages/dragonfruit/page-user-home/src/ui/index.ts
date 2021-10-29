@@ -1,1 +1,0 @@
-export { PageUserHome } from './main';

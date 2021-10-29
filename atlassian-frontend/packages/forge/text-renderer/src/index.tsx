@@ -1,1 +1,0 @@
-export { ReactRenderer } from './renderer';

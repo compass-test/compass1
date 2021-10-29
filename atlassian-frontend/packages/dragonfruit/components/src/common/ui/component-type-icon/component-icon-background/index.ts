@@ -1,1 +1,0 @@
-export { ComponentIconBackground } from './main';

@@ -1,1 +1,0 @@
-export { TeamBreadcrumbs } from './main';

@@ -1,1 +1,0 @@
-export { HomeOptions } from './main';

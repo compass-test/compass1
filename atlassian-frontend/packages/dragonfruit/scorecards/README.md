@@ -1,3 +1,0 @@
-# Scorecards
-
-undefined

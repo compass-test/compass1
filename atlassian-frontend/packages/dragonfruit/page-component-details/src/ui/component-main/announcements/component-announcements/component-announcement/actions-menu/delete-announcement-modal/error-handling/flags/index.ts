@@ -1,1 +1,0 @@
-export { useAnnouncementDeleteMutationFlags } from './main';

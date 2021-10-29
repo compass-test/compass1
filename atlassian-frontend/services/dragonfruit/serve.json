@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    { "source": "/", "destination": "/compass" }
-  ],
-  "rewrites": [
-    { "source": "/compass", "destination": "/dist/index.html" },
-    { "source": "/compass/:rest+", "destination": "/dist/:rest" }
-  ]
-}

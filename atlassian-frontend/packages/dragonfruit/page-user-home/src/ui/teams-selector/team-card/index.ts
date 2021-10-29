@@ -1,1 +1,0 @@
-export { TeamsCard } from './main';

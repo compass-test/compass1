@@ -1,1 +1,0 @@
-export { ApplicationLinks } from './main';

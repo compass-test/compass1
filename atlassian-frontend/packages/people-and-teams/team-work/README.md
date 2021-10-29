@@ -1,3 +1,0 @@
-# TeamWork
-
-undefined

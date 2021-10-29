@@ -1,6 +1,0 @@
-fragment CompassScorecardCore on CompassScorecard {
-  id
-
-  _isOptimistic @client
-  _isDeleted @client
-}

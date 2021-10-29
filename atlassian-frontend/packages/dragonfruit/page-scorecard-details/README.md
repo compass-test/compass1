@@ -1,3 +1,0 @@
-# PageScorecardDetails
-
-Scorecard Details Page

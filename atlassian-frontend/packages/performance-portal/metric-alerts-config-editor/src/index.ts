@@ -1,1 +1,0 @@
-export { EditAlertConfigModal } from './ui';

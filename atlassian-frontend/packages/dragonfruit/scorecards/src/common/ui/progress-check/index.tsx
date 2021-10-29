@@ -1,1 +1,0 @@
-export { ProgressCheck } from './main';

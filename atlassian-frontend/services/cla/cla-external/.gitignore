@@ -1,7 +1,0 @@
-node_modules
-**/bundle.js
-.env
-*.env.*
-.next
-*.pem
-.asap-config

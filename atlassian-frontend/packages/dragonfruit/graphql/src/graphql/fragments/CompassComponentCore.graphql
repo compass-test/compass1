@@ -1,7 +1,0 @@
-
-fragment CompassComponentCore on CompassComponent {
-  id
-
-  _isOptimistic @client
-  _isDeleted @client
-}

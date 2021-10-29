@@ -1,1 +1,0 @@
-export { InlineWrapper } from './styled';

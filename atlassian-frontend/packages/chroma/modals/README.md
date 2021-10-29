@@ -1,3 +1,0 @@
-# Modals
-
-Chroma components

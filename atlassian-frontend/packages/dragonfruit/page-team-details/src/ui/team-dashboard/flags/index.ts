@@ -1,1 +1,0 @@
-export { useTeamDashboardFlags } from './main';

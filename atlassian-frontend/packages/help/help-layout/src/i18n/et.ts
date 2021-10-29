@@ -1,2 +1,0 @@
-// Estonian
-export default {};

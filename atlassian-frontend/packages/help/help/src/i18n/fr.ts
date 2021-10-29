@@ -1,2 +1,0 @@
-// French
-export default {};

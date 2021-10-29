@@ -1,8 +1,0 @@
-{
-  "name": "@af/pkg-with-postbuild",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "ak-postbuild": "touch dist/some_file.png"
-  }
-}

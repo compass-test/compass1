@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<ChoiceButton /> renders button 1`] = `"<button class=\\"css-1ygcfaf-ButtonBase\\" data-testid=\\"choose-cloud-button\\" type=\\"button\\" tabindex=\\"0\\"><span class=\\"css-1aqf1z6-ButtonBase\\"><span>Choose projects</span></span></button>"`;
-
-exports[`<ChoiceButton /> renders button with custom text 1`] = `"<button class=\\"css-1ygcfaf-ButtonBase\\" data-testid=\\"choose-cloud-button\\" type=\\"button\\" tabindex=\\"0\\"><span class=\\"css-1aqf1z6-ButtonBase\\">Hello World</span></button>"`;

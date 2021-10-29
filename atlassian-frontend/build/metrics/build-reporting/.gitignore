@@ -1,4 +1,0 @@
-# Ignore generated json files created by add-attribute.js as this makes the cache hash nondeterministic
-/*.json
-!package.json
-!tsconfig.json

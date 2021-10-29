@@ -1,1 +1,0 @@
-export { TomeModal } from './ui';

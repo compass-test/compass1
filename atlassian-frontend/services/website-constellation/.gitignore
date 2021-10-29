@@ -1,8 +1,0 @@
-public
-.cache
-.env
-# Local Netlify folder
-.netlify
-functions
-
-.lighthouseci

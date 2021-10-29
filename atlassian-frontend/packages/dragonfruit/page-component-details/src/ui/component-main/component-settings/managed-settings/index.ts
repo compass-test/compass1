@@ -1,1 +1,0 @@
-export { ManagedSettings } from './main';

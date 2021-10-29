@@ -1,1 +1,0 @@
-export { ProductFabricStatus } from './ProductFabricStatus';

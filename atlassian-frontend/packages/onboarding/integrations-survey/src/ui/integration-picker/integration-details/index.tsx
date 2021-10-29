@@ -1,1 +1,0 @@
-export { IntegrationDetails } from './main';

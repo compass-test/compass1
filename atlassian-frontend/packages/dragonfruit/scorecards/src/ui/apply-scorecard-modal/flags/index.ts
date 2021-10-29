@@ -1,1 +1,0 @@
-export { useApplyScorecardFlags } from './main';

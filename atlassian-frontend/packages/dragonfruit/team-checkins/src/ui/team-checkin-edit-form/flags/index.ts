@@ -1,1 +1,0 @@
-export { useFlags } from './main';

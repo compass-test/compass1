@@ -1,1 +1,0 @@
-export { useGetComponentApplicableScorecards } from './main';

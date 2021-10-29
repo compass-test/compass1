@@ -1,2 +1,0 @@
-// Italian
-export default {};

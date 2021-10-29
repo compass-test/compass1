@@ -1,1 +1,0 @@
-export { NotificationsPopup } from './main';

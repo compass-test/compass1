@@ -1,1 +1,0 @@
-export { getPublicPath } from './main';

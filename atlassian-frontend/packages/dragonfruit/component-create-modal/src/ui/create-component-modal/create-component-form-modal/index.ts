@@ -1,1 +1,0 @@
-export { CreateComponentFormModal } from './main';

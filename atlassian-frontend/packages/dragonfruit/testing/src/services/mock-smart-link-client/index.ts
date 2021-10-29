@@ -1,1 +1,0 @@
-export { MockSmartLinkClient } from './main';

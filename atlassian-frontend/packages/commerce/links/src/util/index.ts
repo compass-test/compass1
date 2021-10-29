@@ -1,1 +1,0 @@
-export { getLinkTo } from './links';

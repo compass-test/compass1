@@ -1,1 +1,0 @@
-export { SplitTeamsButton } from './main';

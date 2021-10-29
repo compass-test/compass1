@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<SearchDialog /> snapshot 1`] = `
-<Styled(div)
-  data-test-id="search-dialog-dialog-wrapper"
-  tabIndex={-1}
-/>
-`;

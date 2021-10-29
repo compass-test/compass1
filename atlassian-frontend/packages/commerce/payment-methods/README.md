@@ -1,1 +1,0 @@
-# 💸 Commerce Payment Methods

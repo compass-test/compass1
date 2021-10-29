@@ -1,6 +1,0 @@
-fragment CompassTeamCheckinCore on CompassTeamCheckin {
-  id
-
-  _isOptimistic @client
-  _isDeleted @client
-}

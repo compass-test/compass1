@@ -1,1 +1,0 @@
-export { RelationshipList } from './main';

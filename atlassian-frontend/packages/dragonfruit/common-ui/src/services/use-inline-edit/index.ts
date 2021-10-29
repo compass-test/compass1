@@ -1,1 +1,0 @@
-export { useInlineEdit } from './main';

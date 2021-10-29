@@ -1,1 +1,0 @@
-export { ComponentStatistic } from './main';

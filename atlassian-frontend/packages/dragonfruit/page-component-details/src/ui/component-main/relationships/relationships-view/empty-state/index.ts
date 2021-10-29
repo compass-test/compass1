@@ -1,1 +1,0 @@
-export { RelationshipsEmptyState } from './main';

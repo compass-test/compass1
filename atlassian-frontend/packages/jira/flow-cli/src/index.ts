@@ -1,1 +1,0 @@
-export { generateDeclarations } from './main';

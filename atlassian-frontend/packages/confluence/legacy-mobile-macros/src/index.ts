@@ -1,1 +1,0 @@
-export { withLegacyMobileMacros } from './ui';

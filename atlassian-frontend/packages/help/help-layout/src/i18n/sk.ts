@@ -1,2 +1,0 @@
-// Slovak
-export default {};

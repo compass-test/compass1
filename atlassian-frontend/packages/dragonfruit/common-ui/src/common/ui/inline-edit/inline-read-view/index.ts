@@ -1,1 +1,0 @@
-export { InlineReadView } from './styled';

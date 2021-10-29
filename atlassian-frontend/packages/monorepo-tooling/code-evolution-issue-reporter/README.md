@@ -1,1 +1,0 @@
-# Code evolution issue reporter

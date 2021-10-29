@@ -1,1 +1,0 @@
-export { useExperiment } from './useExperiment';

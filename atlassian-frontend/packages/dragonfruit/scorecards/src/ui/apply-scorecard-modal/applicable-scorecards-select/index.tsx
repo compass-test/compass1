@@ -1,1 +1,0 @@
-export { ApplicableScorecardsSelect } from './main';

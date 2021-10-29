@@ -1,1 +1,0 @@
-export { SearchFiltering } from './main';

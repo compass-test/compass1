@@ -1,1 +1,0 @@
-export { TechstackVisualisation } from './ui';

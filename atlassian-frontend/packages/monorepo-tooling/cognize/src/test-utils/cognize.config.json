@@ -1,7 +1,0 @@
-{
-  "targetImports": "^@atlaskit/(button|flag)$",
-  "filesDirectory": "./my-project/src",
-  "customLogger": "./my-logger.js",
-  "customVisitors": "./my-visitors.js",
-  "ignoreDirs": "(__fixtures__|__tests__)"
-}

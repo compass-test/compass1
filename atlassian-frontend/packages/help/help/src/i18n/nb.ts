@@ -1,2 +1,0 @@
-// Norwegian Bokmål
-export default {};

@@ -1,7 +1,0 @@
-fragment CompassComponentAnnouncements on CompassComponent {
-  ...CompassComponentCore
-
-  announcements {
-    ...CompassComponentAnnouncement
-  }
-}

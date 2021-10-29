@@ -1,1 +1,0 @@
-export { ComponentMain } from './main';

@@ -1,1 +1,0 @@
-export { JiraIssueCard } from './main';

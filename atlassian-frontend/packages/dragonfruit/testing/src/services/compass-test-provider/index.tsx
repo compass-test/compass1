@@ -1,1 +1,0 @@
-export { CompassTestProvider } from './main';

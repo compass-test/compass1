@@ -1,6 +1,0 @@
-fragment CompassComponentLabels on CompassComponent {
-  ...CompassComponentCore
-  labels {
-    name
-  }
-}

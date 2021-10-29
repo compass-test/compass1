@@ -1,1 +1,0 @@
-export { ComponentDetails } from './main';

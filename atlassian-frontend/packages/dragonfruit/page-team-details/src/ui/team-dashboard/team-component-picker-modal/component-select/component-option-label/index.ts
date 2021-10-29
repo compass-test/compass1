@@ -1,1 +1,0 @@
-export { ComponentOptionLabel } from './main';

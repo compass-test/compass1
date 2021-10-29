@@ -1,1 +1,0 @@
-export { ToplineLegend } from './main';

@@ -1,9 +1,0 @@
-{
-  "name": "@af/implicit",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@af/implicit-utils": "^1.0.0",
-    "node-fetch": "^1.0.0"
-  }
-}

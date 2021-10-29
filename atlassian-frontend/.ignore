@@ -1,6 +1,0 @@
-# Beyond .gitignore, files matching these patterns should beyond
-# ignored by text search programs like rg and ag, but should still
-# be checked into git.
-
-# Checked-in yarn
-.yarn

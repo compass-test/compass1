@@ -1,7 +1,0 @@
-fragment CommonQueryError on QueryError {
-  message
-  extensions {
-    statusCode
-    errorType
-  }
-}

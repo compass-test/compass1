@@ -1,1 +1,0 @@
-export { OwnerOverrideConfirmationModal } from './main';

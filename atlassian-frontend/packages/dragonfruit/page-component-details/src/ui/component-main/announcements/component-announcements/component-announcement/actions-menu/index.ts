@@ -1,1 +1,0 @@
-export { AnnouncementActionsMenu } from './main';

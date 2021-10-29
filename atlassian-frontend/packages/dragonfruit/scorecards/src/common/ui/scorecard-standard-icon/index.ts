@@ -1,1 +1,0 @@
-export { ScorecardStandardIcon } from './main';

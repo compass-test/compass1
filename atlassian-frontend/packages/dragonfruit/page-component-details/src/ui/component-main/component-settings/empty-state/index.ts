@@ -1,1 +1,0 @@
-export { ComponentSettingsEmptyState } from './main';

@@ -1,2 +1,0 @@
-// Portuguese (Brazil)
-export default {};
