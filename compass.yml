@@ -1,11 +1,4 @@
-name: henaaa
-id: 'ari:cloud:compass:7b279044-212b-4f5f-928a-9267af878b95:component/f03c5fed-292b-4236-80ca-138ed9a4ffce/7388606a-d807-49c2-bae6-9e11702fbfb8'
-description: null
-ownerId: null
-fields:
-  tier: 4
-links: []
-relationships: {}
-
-# Learn more about formatting compass.yml:
-# https://go.atlassian.com/compass-config-as-code
+name: Henry's Jalapeno Sauceee
+type: service
+id: ari:cloud:compass:4958bb5d-3970-4a13-bebc-62bbca57f370:component/5ce8c075-7b72-4455-9be9-7f0a1c6e6db4/c96f6453-b8cc-44b7-b356-cd7d266a228b
+description: New desc
