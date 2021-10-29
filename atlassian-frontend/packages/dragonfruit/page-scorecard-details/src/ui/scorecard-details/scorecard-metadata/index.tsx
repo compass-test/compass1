@@ -1,0 +1,1 @@
+export { ScorecardMetadata } from './main';

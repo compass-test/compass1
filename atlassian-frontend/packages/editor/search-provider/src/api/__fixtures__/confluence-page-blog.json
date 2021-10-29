@@ -1,0 +1,117 @@
+{
+  "scopes": [
+    {
+      "id": "confluence.page,blogpost",
+      "results": [
+        {
+          "content": {
+            "id": "1538426521",
+            "type": "page"
+          },
+          "container": {
+            "title": "Editor Media",
+            "displayUrl": "/spaces/EM"
+          },
+          "title": "Editor Media Planning - 2020-07-07",
+          "url": "/spaces/EM/pages/1538426521/Editor+Media+Planning+-+2020-07-07",
+          "baseUrl": "https://product-fabric.atlassian.net/wiki",
+          "iconCssClass": "aui-icon aui-icon-small aui-iconfont-page-default",
+          "entityType": "content",
+          "lastModified": "2020-07-07T03:24:39+00:00",
+          "excerpt": ""
+        },
+        {
+          "content": {
+            "id": "873989347",
+            "type": "page"
+          },
+          "container": {
+            "title": "Media Platform Team",
+            "displayUrl": "/spaces/FIL"
+          },
+          "title": "Weekly Media Triad Meeting",
+          "url": "/spaces/FIL/pages/873989347/Weekly+Media+Triad+Meeting",
+          "baseUrl": "https://product-fabric.atlassian.net/wiki",
+          "iconCssClass": "aui-icon aui-icon-small aui-iconfont-page-default",
+          "entityType": "content",
+          "lastModified": "2020-07-05T23:30:42+00:00",
+          "excerpt": ""
+        },
+        {
+          "content": {
+            "id": "1356074858",
+            "type": "page"
+          },
+          "container": {
+            "title": "Editor Media",
+            "displayUrl": "/spaces/EM"
+          },
+          "title": "Media test Media single",
+          "url": "/spaces/EM/pages/1356074858/Media+test+Media+single",
+          "baseUrl": "https://product-fabric.atlassian.net/wiki",
+          "iconCssClass": "aui-icon aui-icon-small aui-iconfont-page-default",
+          "entityType": "content",
+          "lastModified": "2020-05-05T06:06:28+00:00",
+          "excerpt": ""
+        },
+        {
+          "content": {
+            "id": "1385631549",
+            "type": "page"
+          },
+          "container": {
+            "title": "Editor Media",
+            "displayUrl": "/spaces/EM"
+          },
+          "title": "Editor Media OKRs",
+          "url": "/spaces/EM/pages/1385631549/Editor+Media+OKRs",
+          "baseUrl": "https://product-fabric.atlassian.net/wiki",
+          "iconCssClass": "aui-icon aui-icon-small aui-iconfont-page-default",
+          "entityType": "content",
+          "lastModified": "2020-06-09T02:21:27+00:00",
+          "excerpt": ""
+        },
+        {
+          "content": {
+            "id": "998082697",
+            "type": "superpage"
+          },
+          "container": {
+            "title": "Editor",
+            "displayUrl": "/spaces/E"
+          },
+          "title": "Media linking",
+          "url": "/spaces/E/pages/998082697/Media+linking",
+          "baseUrl": "https://product-fabric.atlassian.net/wiki",
+          "iconCssClass": "aui-icon aui-icon-small aui-iconfont-page-default",
+          "entityType": "content",
+          "lastModified": "2020-04-15T03:00:05+00:00",
+          "excerpt": ""
+        },
+        {
+          "content": {
+            "id": "998082697",
+            "type": "blogpost"
+          },
+          "container": {
+            "title": "Editor",
+            "displayUrl": "/spaces/E"
+          },
+          "title": "Media linking",
+          "url": "/spaces/E/pages/998082697/Media+linking",
+          "baseUrl": "https://product-fabric.atlassian.net/wiki",
+          "iconCssClass": "aui-icon aui-icon-small aui-iconfont-page-default",
+          "entityType": "content",
+          "lastModified": "2020-04-15T03:00:05+00:00",
+          "excerpt": ""
+        }
+      ],
+      "size": 4871,
+      "abTest": {
+        "abTestId": "default",
+        "controlId": "default",
+        "experimentId": "content-searcher"
+      }
+    }
+  ]
+}

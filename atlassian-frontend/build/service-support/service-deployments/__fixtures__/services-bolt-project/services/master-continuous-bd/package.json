@@ -1,0 +1,15 @@
+{
+  "name": "@af/master-continuous-bd",
+  "version": "0.0.1",
+  "af:services": {
+    "serviceName": "master-continuous-bd-service",
+    "master": {
+      "continuous": {
+        "env": "prod-east"
+      }
+    },
+    "branch": {
+      "env": "ddev"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { useAnnouncementUpdateErrorHandler } from './main';

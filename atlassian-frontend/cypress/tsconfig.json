@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "es5",
+    "lib": ["es2015"],
+    "types": ["cypress", "cypress-file-upload"],
+    "typeRoots": ["node_modules/@types", "typings"],
+    "baseUrl": "../"
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}

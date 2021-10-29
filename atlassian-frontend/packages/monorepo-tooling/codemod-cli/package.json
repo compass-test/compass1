@@ -1,0 +1,46 @@
+{
+  "name": "@atlaskit/codemod-cli",
+  "version": "0.8.0",
+  "description": "A cli for distributing codemods for atlassian-frontend components and services",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Design System Team",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "scripts": {
+    "prestart": "cd ../../ && bolt build @atlaskit/codemod-utils",
+    "start": "./bin/codemod-cli.js"
+  },
+  "bin": {
+    "codemod-cli": "./bin/codemod-cli.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@types/chalk": "^2.2.0",
+    "@types/jscodeshift": "^0.11.0",
+    "chalk": "^2.1.0",
+    "enquirer": "^2.3.4",
+    "glob": "^7.1.2",
+    "jscodeshift": "^0.13.0",
+    "meow": "^6.0.0",
+    "projector-spawn": "^1.0.1",
+    "semver": "^7.3.0",
+    "simple-git": "^1.130.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "3.9.6"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

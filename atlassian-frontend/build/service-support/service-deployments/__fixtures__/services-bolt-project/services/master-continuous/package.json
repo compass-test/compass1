@@ -1,0 +1,12 @@
+{
+  "name": "@af/master-continuous",
+  "version": "0.0.1",
+  "af:services": {
+    "serviceName": "master-continuous-service",
+    "master": {
+      "continuous": {
+        "env": "prod-west"
+      }
+    }
+  }
+}

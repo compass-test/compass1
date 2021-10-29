@@ -1,0 +1,7 @@
+fragment AppListView on App {
+  id
+  name
+  avatarFileId
+  vendorName
+  description
+}

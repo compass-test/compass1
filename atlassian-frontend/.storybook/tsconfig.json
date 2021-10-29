@@ -1,0 +1,25 @@
+{
+  "extends": "../tsconfig.node.json",
+  "include": [
+    "**/*.ts",
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": ["es2019"],
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "../typings",
+      "../node_modules/@types"
+    ]
+  },
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // "transpileOnly": true,
+    // We must load files for third party defs - https://typestrong.org/ts-node/docs/types
+    "files": true,
+  }
+}

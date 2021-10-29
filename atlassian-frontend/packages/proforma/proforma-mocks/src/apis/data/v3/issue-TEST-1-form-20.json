@@ -1,0 +1,521 @@
+{
+  "id": 20,
+  "updated": "2019-11-07T01:23:45Z",
+  "design": {
+    "settings": {
+      "name": "Read Only",
+      "submit": {
+        "lock": false,
+        "pdf": false
+      },
+      "templateId": 20,
+      "html": false
+    },
+    "questions": {
+      "32": {
+        "type": "ts",
+        "label": "Read only short text",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "readOnly": true,
+        "jiraField": "issuekey"
+      },
+      "33": {
+        "type": "tl",
+        "label": "Read only long text",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "text": "Read only"
+        },
+        "readOnly": true,
+        "jiraField": "summary"
+      },
+      "34": {
+        "type": "pg",
+        "label": "Read only paragraph",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "text": "Read only"
+        },
+        "readOnly": true
+      },
+      "35": {
+        "type": "te",
+        "label": "Read only email",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "text": "read only"
+        },
+        "readOnly": true
+      },
+      "36": {
+        "type": "tu",
+        "label": "Read only email",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "text": "email"
+        },
+        "readOnly": true
+      },
+      "37": {
+        "type": "cs",
+        "label": "Read only radio",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [
+          {
+            "id": "1",
+            "label": "A",
+            "other": false
+          },
+          {
+            "id": "2",
+            "label": "b",
+            "other": false
+          },
+          {
+            "id": "3",
+            "label": "c",
+            "other": false
+          }
+        ],
+        "questionKey": "",
+        "defaultAnswer": {
+          "choices": [
+            "1"
+          ]
+        },
+        "readOnly": true
+      },
+      "38": {
+        "type": "cm",
+        "label": "Read only checkbox",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [
+          {
+            "id": "1",
+            "label": "A",
+            "other": false
+          },
+          {
+            "id": "2",
+            "label": "b",
+            "other": false
+          },
+          {
+            "id": "3",
+            "label": "c",
+            "other": false
+          }
+        ],
+        "questionKey": "",
+        "defaultAnswer": {
+          "choices": [
+            "1",
+            "2"
+          ]
+        },
+        "readOnly": true
+      },
+      "39": {
+        "type": "cd",
+        "label": "Read only dropdown",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [
+          {
+            "id": "1",
+            "label": "A",
+            "other": false
+          },
+          {
+            "id": "2",
+            "label": "b",
+            "other": false
+          },
+          {
+            "id": "3",
+            "label": "c",
+            "other": false
+          }
+        ],
+        "questionKey": "",
+        "defaultAnswer": {
+          "choices": [
+            "1"
+          ]
+        },
+        "readOnly": true
+      },
+      "40": {
+        "type": "cl",
+        "label": "Read only dropdown multi",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [
+          {
+            "id": "1",
+            "label": "A",
+            "other": false
+          },
+          {
+            "id": "2",
+            "label": "b",
+            "other": false
+          },
+          {
+            "id": "3",
+            "label": "c",
+            "other": false
+          }
+        ],
+        "questionKey": "",
+        "defaultAnswer": {
+          "choices": [
+            "1",
+            "2"
+          ]
+        },
+        "readOnly": true
+      },
+      "41": {
+        "type": "da",
+        "label": "Read only Date",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "date": "2021-03-01"
+        },
+        "readOnly": true
+      },
+      "42": {
+        "type": "dt",
+        "label": "Read only DateTime",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "date": "2021-03-01",
+          "time": "01:00"
+        },
+        "readOnly": true
+      },
+      "43": {
+        "type": "ti",
+        "label": "Read Only time",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "time": "09:30"
+        },
+        "readOnly": true
+      },
+      "44": {
+        "type": "no",
+        "label": "Read only number",
+        "validation": {
+          "rq": false,
+          "wh": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {
+          "text": "123"
+        },
+        "readOnly": true
+      },
+      "45": {
+        "type": "us",
+        "label": "Read only user",
+        "validation": {
+          "rq": false
+        },
+        "description": "",
+        "choices": [],
+        "questionKey": "",
+        "defaultAnswer": {},
+        "readOnly": true
+      }
+    },
+    "layout": [
+      {
+        "version": 1,
+        "type": "doc",
+        "content": [
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 32
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 33
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 34
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 35
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 36
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 37
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 38
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 39
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 40
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 41
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 42
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 43
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 44
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 45
+              },
+              "layout": "default"
+            }
+          }
+        ]
+      }
+    ],
+    "conditions": {},
+    "sections": {}
+  },
+  "publish": {
+    "portal": {
+      "portalRequestTypeIds": [
+        876
+      ],
+      "submitOnCreate": true
+    }
+  },
+  "state": {
+    "visibility": "i",
+    "status": "o",
+    "answers": {
+      "32": {
+        "text": "Read only"
+      },
+      "33": {
+        "text": "Read only"
+      },
+      "34": {
+        "text": "Read only"
+      },
+      "35": {
+        "text": "read only"
+      },
+      "36": {
+        "text": "email"
+      },
+      "37": {
+        "text": "",
+        "choices": [
+          "1"
+        ]
+      },
+      "38": {
+        "text": "",
+        "choices": [
+          "1",
+          "2"
+        ]
+      },
+      "39": {
+        "text": "",
+        "choices": [
+          "1"
+        ]
+      },
+      "40": {
+        "text": "",
+        "choices": [
+          "1",
+          "2"
+        ]
+      },
+      "41": {
+        "date": "2021-03-01"
+      },
+      "42": {
+        "date": "2021-03-01",
+        "time": "01:00"
+      },
+      "43": {
+        "time": "09:30"
+      },
+      "44": {
+        "text": "123"
+      },
+      "45": {
+        "users": []
+      }
+    }
+  }
+}

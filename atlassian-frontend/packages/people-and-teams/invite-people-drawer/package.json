@@ -1,0 +1,63 @@
+{
+  "name": "@atlassian/invite-people-drawer",
+  "version": "2.4.1",
+  "description": "The invite people drawer component wraps the invite component in a drawer component.",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "af:exports": {
+    "./types": "./src/types.ts",
+    ".": "./src/index.ts"
+  },
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Growth: Groot",
+    "releaseModel": "continuous"
+  },
+  "scripts": {
+    "lint": "(cd ../../.. && yarn eslint 'packages/people-and-teams/invite-people-drawer/**/*.{ts,tsx,ts}')",
+    "lint:fix": "(cd ../../.. && yarn eslint --fix 'packages/people-and-teams/invite-people-drawer/**/*.{ts,tsx,ts}')",
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit --project ./tsconfig.json",
+    "test": "(cd ../../.. && yarn test 'packages/people-and-teams/invite-people-drawer')",
+    "test:watch": "(cd ../../.. && yarn test --watch packages/people-and-teams/invite-people-drawer)"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-gas-types": "^5.0.0",
+    "@atlaskit/analytics-next": "^8.2.0",
+    "@atlaskit/drawer": "^7.0.0",
+    "@atlaskit/icon": "^21.9.0",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlassian/invite-people": "^7.5.0",
+    "@babel/runtime": "^7.0.0",
+    "@emotion/core": "^10.0.9"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-intl": "^2.6.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/button": "^16.0.0",
+    "@atlaskit/checkbox": "^12.2.0",
+    "@atlaskit/docs": "^9.0.0",
+    "@atlaskit/flag": "^14.4.0",
+    "@atlaskit/lozenge": "^11.0.0",
+    "@atlaskit/modal-dialog": "^12.0.0",
+    "@atlaskit/radio": "^5.1.0",
+    "@atlaskit/select": "^15.2.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^8.0.1",
+    "@testing-library/react-hooks": "^1.0.4",
+    "enzyme": "^3.10.0",
+    "fetch-mock": "^8.0.0",
+    "typescript": "3.9.6"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

@@ -1,0 +1,14 @@
+/**
+ * This file is used by the test scaling project to optimise test result caching
+ * Examples that are used by tests affect the outcome of tests so must be included when hashing
+ * They are defined here so the hashing algorithm doesn't need to search test files for example usage each time
+ */
+{
+  "testExamples": [
+    "10-add-staging-unregistered-runner.tsx",
+    "20-add-runner-error.tsx",
+    "30-edit-runner.tsx",
+    "40-edit-runner-error.tsx",
+    "50-add-production-registered-runner.tsx"
+  ]
+}

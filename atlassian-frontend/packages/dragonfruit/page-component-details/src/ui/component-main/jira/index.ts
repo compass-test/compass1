@@ -1,0 +1,1 @@
+export { JiraComponentPage } from './main';

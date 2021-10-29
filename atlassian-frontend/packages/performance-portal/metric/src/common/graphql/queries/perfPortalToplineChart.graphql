@@ -1,0 +1,69 @@
+query perfPortalToplineChart(
+    $id: ID!
+    $env: Environment!
+    $dateTimeRange: DateTimeRange!
+    $dateFrom: DateTime!
+    $dateTo: DateTime!
+    $aggregations: [ToplineAggregation!]!
+    $toplineTypes: [PageLoadToplineType!]!
+    $pageLoadTypes: [PageLoadType!]!
+    $cohortTypes: [CohortType!]!
+  ) {
+    metric(id: $id) {
+      id
+      ... on PageLoadMetric {
+        hotEvents(from: $dateFrom, to: $dateTo) {
+          ...hotEvent
+        }
+        toplineTrend(
+          env: $env
+          dateTimeRange: $dateTimeRange
+          aggregations: $aggregations
+          toplineTypes: $toplineTypes
+          pageLoadTypes: $pageLoadTypes
+          cohortTypes: $cohortTypes
+        ) {
+          series {
+            ...toplineSeries
+          }
+        }
+      }
+    }
+  }
+
+  fragment hotEvent on HotEvent {
+    issueId
+    name
+    startAt
+    endAt
+  }
+
+  fragment toplineSeries on PageLoadToplineTrendSeries {
+    toplineType
+    aggregation
+    pageLoadType
+    cohortType
+    cohortValue
+    version
+    goal {
+      ...toplineGoal
+    }
+    data {
+      ...toplineTrendData
+    }
+  }
+
+  fragment toplineGoal on PageLoadToplineGoal {
+    id
+    name
+    value
+  }
+
+  fragment toplineTrendData on TrendData {
+    dateTime
+    value
+    count
+    aggregatedAt
+    overrideAt
+    overrideSourceName
+  }

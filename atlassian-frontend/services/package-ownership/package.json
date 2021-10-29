@@ -1,0 +1,49 @@
+{
+  "name": "@af/package-ownership",
+  "version": "1.2.3",
+  "description": "Checks if the list of approvers on an atlassian-frontend pull request contain contributors to the changed packages",
+  "private": true,
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "UNLICENSED",
+  "main": "dist/bundle.js",
+  "source": "src/handler.js",
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "scripts": {
+    "deploy:dev": "npx @atlassian/micros-support deploy-lambda --env ddev --useResourceSet",
+    "fulldeploy:dev": "npx @atlassian/micros-support deploy-lambda --env ddev",
+    "deploy": "./scripts/deploy.sh",
+    "start": "npx @atlassian/micros-support start-nanos -s package-ownership",
+    "bundle": "rollup -c ../../build/service-support/micros-support/config/rollup.config.js",
+    "dev": "nodemon --ext ts,js --watch src --watch run.js --exec ts-node ./run.js"
+  },
+  "dependencies": {
+    "@atlassian/micros-serverless-platform": "^0.0.9",
+    "@atlassian/micros-support": "^0.3.0",
+    "axios": "^0.21.1",
+    "query-string": "^5.1.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@atlassian/nanos": "^3.7.6",
+    "@types/node": "~12.0.12",
+    "dynamodb-local": "^0.0.31",
+    "lambda-local": "^1.6.3",
+    "nodemon": "^2.0.2",
+    "rollup": "^1.29.0",
+    "ts-node": "^10.0.0",
+    "typescript": "3.9.6"
+  },
+  "af:services": {
+    "serviceName": "package-ownership",
+    "master": {
+      "continuous": {
+        "env": "prod-west"
+      }
+    },
+    "slackChannelId": "C01GWT84NH5"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

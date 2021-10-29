@@ -1,0 +1,7 @@
+overwrite: true
+schema:
+  - https://perf-portal-gql.us-east-1.prod.atl-paas.net/graphql
+generates:
+  ../../packages/performance-portal/schema.graphql:
+    plugins:
+      - schema-ast

@@ -1,0 +1,12 @@
+dev:
+  default:
+    - type: Simple
+      env: ddev
+staging:
+  default:
+    - type: Simple
+      env: stg-east
+prod:
+  default:
+    - type: Simple
+      env: prod-east

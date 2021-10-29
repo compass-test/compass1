@@ -1,0 +1,24 @@
+query getComponentLinks($id: ID!) {
+  compass {
+    component(id: $id) {
+      __typename
+      ... on CompassComponent {
+        id
+        links {
+          id
+          name
+          url
+          type
+        }
+      }
+
+      ... on QueryError {
+        message
+        extensions {
+          statusCode
+          errorType
+        }
+      }
+    }
+  }
+}

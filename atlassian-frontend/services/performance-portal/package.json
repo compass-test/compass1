@@ -1,0 +1,107 @@
+{
+  "name": "@atlassian/performance-portal",
+  "version": "3.0.3",
+  "private": true,
+  "description": "PerformancePortal",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "author": "Atlassian Pty Ltd",
+  "atlassian": {
+    "team": "UIP Frontend Observability",
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.1.3",
+    "@atlaskit/multi-entry-tools": "^0.0.5",
+    "@atlassian/performance-portal-site": "^1.0.0",
+    "bunyan": "^2.0.4",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^3.2.0",
+    "http-proxy-middleware": "^1.0.3",
+    "node-cache": "^5.0.1",
+    "node-fetch": "^2.6.1",
+    "react-dom": "^16.8.0",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "workbox-webpack-plugin": "^6.1.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "webpack-dev-server": "webpack-dev-server --config=build-config/webpack.ui.config.js",
+    "gqlSchema:update": "graphql-codegen --config ${GQL_CODGEN_CONFIG:-codegen.yml}",
+    "gqlSchema:update:local": "GQL_CODGEN_CONFIG='codegen.local-gql.yml' yarn gqlSchema:update",
+    "codegen": "bolt ws run codegen --parallel --only-fs \"packages/performance-portal/**\"",
+    "codegen:watch": "bolt ws run codegen:watch --parallel --only-fs \"packages/performance-portal/**\"",
+    "dev": "concurrently \"yarn codegen:watch\" \"webpack-dev-server --mode=development --config=build-config/webpack.ui.config.js\" \"webpack --mode=development --watch --config=build-config/webpack.server.config.js\" \"docker-compose up --build dev\"",
+    "dev:localGql": "GQL_SERVER_URL=http://dockerhost:8080 yarn dev",
+    "build:ui": "webpack --mode=production --config=build-config/webpack.ui.config.js",
+    "build:server": "webpack --mode=production --config=build-config/webpack.server.config.js",
+    "build:js": "concurrently \"yarn build:ui\" \"yarn build:server\"",
+    "build:docker": "docker build --target prod --tag $IMAGE_TAG .",
+    "build": "ci-scripts/build.sh",
+    "bundle-analyze": "yarn build:ui --analyze=true",
+    "pre-deploy": "ci-scripts/pre-deploy.sh",
+    "deploy": "ci-scripts/deploy.sh",
+    "deploy:ddev": "ci-scripts/deploy-ddev.sh"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@graphql-codegen/cli": "^1.20.1",
+    "@graphql-codegen/typescript": "^1.21.0",
+    "@types/compression": "^1.7.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-relay": "^11.0.2",
+    "concurrently": "^6.0.0",
+    "css-loader": "^0.28.0",
+    "file-loader": "^1.1.11",
+    "style-loader": "^0.16.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "af:services": {
+    "serviceName": "performance-portal",
+    "master": {
+      "continuous": {
+        "env": [
+          "stg-east",
+          "prod-east"
+        ],
+        "deployOnDependencies": {
+          "type": "explicit",
+          "dependencies": [
+            "@atlassian/performance-portal-analytics",
+            "@atlassian/performance-portal-catalog",
+            "@atlassian/performance-portal-common",
+            "@atlassian/performance-portal-feature-flags",
+            "@atlassian/performance-portal-home",
+            "@atlassian/performance-portal-metric",
+            "@atlassian/performance-portal-metric-editor",
+            "@atlassian/performance-portal-metric-alerts-config-editor",
+            "@atlassian/performance-portal-metric-tome",
+            "@atlassian/performance-portal-query-param",
+            "@atlassian/performance-portal-reports",
+            "@atlassian/performance-portal-site",
+            "@atlassian/performance-portal-team-editor"
+          ]
+        }
+      }
+    },
+    "slackChannelId": "C0192TJ9N80"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

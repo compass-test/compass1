@@ -1,0 +1,1 @@
+export { TeamStatistic } from './main';

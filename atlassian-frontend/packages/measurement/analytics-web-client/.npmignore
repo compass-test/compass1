@@ -1,0 +1,10 @@
+build/
+config/
+coverage/
+example/
+src/
+test/
+babel.config.js
+junit.xml
+tsconfig.json
+stats.json

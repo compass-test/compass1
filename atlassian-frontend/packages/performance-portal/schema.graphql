@@ -1,0 +1,922 @@
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type Alert implements Node {
+  id: ID!
+  date: Date
+  sentAt: DateTime
+  opsgenieAlertId: String
+  title: String
+  description: String
+  priority: AlertPriority
+  status: String
+  acknowledged: Boolean
+  snoozed: Boolean
+  isSeen: Boolean
+}
+
+type AlertConfig implements Node {
+  id: ID!
+  metricId: String
+  env: String
+  pageLoadType: String
+  metricType: String
+  cohortType: String
+  cohortValue: String
+  percentile: Int
+  thresholdValue: Float
+  thresholdType: AlertConfigThresholdType
+  comparisonType: ComparisonType
+  priority: AlertConfigPriority
+  ignoreWeekend: Boolean
+}
+
+enum AlertConfigPriority {
+  P1
+  P2
+  P3
+  P4
+  P5
+}
+
+enum AlertConfigThresholdType {
+  PERCENT_DIFF
+  ABSOLUTE_DIFF
+}
+
+enum AlertPriority {
+  P1
+  P2
+  P3
+  P4
+  P5
+}
+
+input BatchSaveAlertConfigs {
+  alertConfigsToCreate: [CreateAlertConfigInput!]
+  alertConfigsToUpdate: [UpdateAlertConfigInput!]
+  alertConfigsToDelete: [ID!]
+}
+
+type BatchSaveAlertConfigsPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  alertConfigsCreated: [AlertConfig!]
+  alertConfigsUpdated: [AlertConfig!]
+  alertConfigsDeleted: [ID!]
+}
+
+enum BreakdownAggregation {
+  p50
+  p75
+  p90
+}
+
+type BreakdownTimingDetail {
+  name: String!
+  startTime: Float!
+  duration: Float!
+  count: Int
+  aggregatedAt: DateTime
+}
+
+type BreakdownTimings {
+  app: [BreakdownTimingDetail!]
+  metric: [BreakdownTimingDetail!]
+}
+
+interface BrowserMetric {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  eventType: BrowserMetricEventType
+  eventKey: String
+  availableCohortTypes: [CohortType!]
+  knownCohortValues: [KnownCohortValues!]
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+  hotEvents(from: DateTime!, to: DateTime!): [HotEvent!]
+}
+
+type BrowserMetricBreakdownTimingDetail {
+  name: String!
+  startTime: Float!
+  duration: Float!
+  count: Int
+  aggregatedAt: DateTime
+}
+
+input BrowserMetricCapabilitiesInput {
+  availableCohortTypes: [CohortType!]
+}
+
+input BrowserMetricCapabilitiesPatchInput {
+  availableCohortTypes: [CohortType!]
+}
+
+enum BrowserMetricEventType {
+  PAGE_LOAD
+  INLINE_RESULT
+  CUSTOM
+  PAGE_SEGMENT_LOAD
+  WEB_VITALS
+}
+
+input BrowserMetricInput {
+  name: String!
+  key: String!
+  eventType: BrowserMetricEventType!
+  product: Product!
+  owner: MetricOwnerInput
+  slackChannel: String
+  opsgenieTeamId: String
+  toplineGoals: [BrowserMetricToplineGoalInput!]
+  capabilities: BrowserMetricCapabilitiesInput
+}
+
+input BrowserMetricPatchInput {
+  name: String
+  key: String
+  eventType: BrowserMetricEventType
+  product: Product
+  owner: MetricOwnerInput
+  slackChannel: String
+  opsgenieTeamId: String
+  toplineGoals: [BrowserMetricToplineGoalPatchInput]
+  capabilities: BrowserMetricCapabilitiesPatchInput
+}
+
+input BrowserMetricToplineGoalInput {
+  name: String!
+  toplineType: PageLoadToplineType!
+  percentile: BrowserMetricToplineGoalPercentile!
+  value: Float!
+}
+
+input BrowserMetricToplineGoalPatchInput {
+  id: ID
+  name: String
+  toplineType: PageLoadToplineType
+  percentile: BrowserMetricToplineGoalPercentile
+  value: Float
+}
+
+enum BrowserMetricToplineGoalPercentile {
+  p50
+  p75
+  p90
+}
+
+enum CohortType {
+  """All traffic"""
+  ALL
+  REGION
+  ENTERPRISE
+  INSTANCE_SIZE
+  BROWSER
+  JSM_ENTERPRISE
+  ENABLED_USERS
+  OS
+  CPU
+  MIGRATION_READINESS
+}
+
+enum ComparisonType {
+  DoD
+  WoW
+}
+
+input CreateAlertConfigInput {
+  metricId: String!
+  env: String!
+  pageLoadType: String
+  metricType: String!
+  cohortType: String!
+  cohortValue: String!
+  percentile: Int!
+  thresholdValue: Float!
+  thresholdType: AlertConfigThresholdType!
+  comparisonType: ComparisonType!
+  priority: AlertConfigPriority!
+  ignoreWeekend: Boolean
+}
+
+type CreateAlertConfigPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  alertConfig: AlertConfig
+}
+
+type CreateBrowserMetricPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  browserMetric: BrowserMetric
+}
+
+input CreateExperienceInput {
+  name: String!
+  key: String!
+  experienceType: ExperienceEventType!
+  product: Product!
+  teamId: String
+  slackChannel: String
+  opsgenieTeamId: String
+}
+
+type CreateExperiencePayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  experience: Experience
+}
+
+input CreateHotEventInput {
+  issueId: String!
+  name: String!
+  description: String
+  affectedProducts: [Product!]!
+  affectedMetricEventKey: [String!]
+  startAt: DateTime!
+  endAt: DateTime
+}
+
+type CreateHotEventPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  hotEvent: HotEvent
+}
+
+input CreateTempHardcodedTeamInfoInput {
+  id: ID!
+  displayName: String!
+}
+
+type CreateTempHardcodedTeamInfoPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  team: Team
+}
+
+type CustomMetric implements BrowserMetric & Metric & Node {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  eventType: BrowserMetricEventType
+  eventKey: String
+  availableCohortTypes: [CohortType!]
+  knownCohortValues: [KnownCohortValues!]
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+  hotEvents(from: DateTime!, to: DateTime!): [HotEvent!]
+}
+
+type DailyToplineTrendSeries {
+  env: Environment!
+  percentile: Int!
+  pageLoadType: PageLoadType
+  metric: String!
+  cohortType: String!
+  cohortValue: String!
+  data: [DailyToplineTrendSeriesData!]!
+  goals: [ExperienceToplineGoal!]!
+}
+
+type DailyToplineTrendSeriesData {
+  day: Date!
+  value: Float!
+  count: Int!
+  aggregatedAt: DateTime
+  overrideUserId: String
+  overrideAt: DateTime
+  overrideSourceName: String
+}
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format
+outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for
+representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the
+`date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO
+8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+input DateTimeRange {
+  from: DateTime
+  to: DateTime
+}
+
+input DeleteNodeInput {
+  id: ID!
+}
+
+type DeleteNodePayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+}
+
+enum Environment {
+  STAGING
+  PROD
+  DEV
+}
+
+type Experience {
+  id: ID!
+  name: String!
+  key: String!
+  product: Product!
+  owner: Team
+  slackChannel: String
+  opsgenieTeamId: String
+  experienceKey: String!
+  experienceType: ExperienceEventType!
+  populations(
+    """
+    sloEnabled: true, return the populations that are slo configurable
+    
+    sloEnabled: false/null, return all the available populations
+    """
+    sloEnabled: Boolean
+    env: Environment = PROD
+
+    """
+    onlySLOConfigured: true, return the populations that have SLO configured
+    
+    onlySLOConfigured: false/null, return the populations regardless of slo configuration
+    """
+    onlySLOConfigured: Boolean
+  ): [ExperiencePopulation!]!
+  dailyToplineTrend(
+    env: Environment!
+    dateFrom: Date!
+    dateTo: Date!
+
+    """e.g 50, 75, 90"""
+    percentile: Int!
+    pageLoadType: PageLoadType
+
+    """e.g. tti, fmp"""
+    metric: String!
+    cohortType: String!
+  ): [DailyToplineTrendSeries!]!
+  dailyBreakdown(
+    env: Environment!
+    date: Date!
+
+    """e.g 50, 75, 90"""
+    percentile: Int!
+    pageLoadType: PageLoadType
+    cohortType: String!
+    cohortValue: String!
+  ): BreakdownTimings!
+  toplineGoals: [ExperienceToplineGoal!]
+  pageLoadTransitionRatio(env: Environment!, date: Date!, cohort: String!): Float
+  hotEvents(from: Date!, to: Date!): [HotEvent!]
+}
+
+enum ExperienceEventType {
+  PAGE_LOAD
+  INLINE_RESULT
+  CUSTOM
+  PAGE_SEGMENT_LOAD
+  WEB_VITALS
+}
+
+type ExperiencePopulation {
+  """e.g. tti, fmp"""
+  metric: String
+  env: Environment!
+  pageLoadType: PageLoadType
+
+  """
+  e.g. 'all::all', 'enabled_users::>5k', 'enabled_users::Other', 'enterprise::Enterprise'
+  """
+  cohort: String!
+  perfPortalUrl: String
+  sloConfiguration: SLOConfiguration
+}
+
+input ExperiencePopulationToplineGoalInput {
+  """
+  If id is set, the goal will be updated or deleted, otherwise, the goal will be created
+  """
+  id: ID
+
+  """If delete is truthy, the goal will be deleted"""
+  delete: Boolean
+  name: String!
+  env: Environment!
+  pageLoadType: PageLoadType
+
+  """e.g. 'All::all' 'ENTERPRISE::enterprise"""
+  cohort: String!
+
+  """e.g. tti, fmp"""
+  metric: String!
+
+  """e.g. 50, 75, 90"""
+  percentile: Int!
+  value: Float!
+}
+
+type ExperienceToplineGoal {
+  id: ID!
+  name: String!
+  env: Environment!
+  pageLoadType: PageLoadType
+  cohort: String!
+  metric: String!
+
+  """e.g. 50, 75, 90"""
+  percentile: Int!
+  value: Float!
+}
+
+type FeatureFlag {
+  name: String
+  value: Boolean
+}
+
+type HotEvent implements Node {
+  id: ID!
+  issueId: String
+  name: String
+  description: String
+  affectedProducts: [Product]
+  affectedMetricEventKey: [String]
+  startAt: DateTime
+  endAt: DateTime
+}
+
+type InlineResultMetric implements BrowserMetric & Metric & Node {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  eventType: BrowserMetricEventType
+  eventKey: String
+  availableCohortTypes: [CohortType!]
+  knownCohortValues: [KnownCohortValues!]
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+  hotEvents(from: DateTime!, to: DateTime!): [HotEvent!]
+}
+
+type KnownCohortValues {
+  cohortType: CohortType!
+  cohortValues: [String!]
+}
+
+interface Metric {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+}
+
+type MetricConnection {
+  edges: [MetricEdge!]
+  nodes: [Metric!]
+  pageInfo: PageInfo!
+}
+
+type MetricEdge {
+  cursor: String!
+  node: Metric!
+}
+
+interface MetricOwner {
+  id: ID!
+}
+
+input MetricOwnerInput {
+  staffId: String
+  teamId: String
+}
+
+type MetricPaginatedResults {
+  metrics: [Metric!]
+  totalCount: Int!
+}
+
+enum MetricType {
+  BROWSER_METRIC
+}
+
+type Mutation {
+  _void_: String
+  saveExperienceSLOTarget(experienceKey: String!, sloTargets: [PopulationSLOTargetInput!]!): SaveExperienceSLOTargetPayload
+  createExperience(input: CreateExperienceInput!): CreateExperiencePayload
+  saveExperiencePopulationToplineGoals(experienceId: ID!, toplineGoals: [ExperiencePopulationToplineGoalInput!]!): SaveExperiencePopulationToplineGoalsPayload
+  deleteNode(input: DeleteNodeInput!): DeleteNodePayload
+  overridePageLoadToplineTrend(input: OverridePageLoadToplineTrendInput!): OverrideToplineTrendPayload
+  removePageLoadToplineTrendOverride(input: RemovePageLoadToplineTrendOverrideInput!): OverrideToplineTrendPayload
+  createBrowserMetric(input: BrowserMetricInput!): CreateBrowserMetricPayload
+  updateBrowserMetric(input: UpdateBrowserMetricInput!): UpdateBrowserMetricPayload
+  createAlertConfig(input: CreateAlertConfigInput!): CreateAlertConfigPayload
+  updateAlertConfig(input: UpdateAlertConfigInput!): UpdateAlertConfigPayload
+  batchSaveAlertConfigs(input: BatchSaveAlertConfigs!): BatchSaveAlertConfigsPayload
+  muteAlerts(date: Date!, userId: String!): MuteAlertsPayload
+  unmuteAlerts(date: Date!): UnmuteAlertsPayload
+  createHotEvent(input: CreateHotEventInput!): CreateHotEventPayload
+  updateHotEvent(input: UpdateHotEventInput!): UpdateHotEventPayload
+  createTempHardcodedTeamInfo(input: CreateTempHardcodedTeamInfoInput!): CreateTempHardcodedTeamInfoPayload
+  updateTempHardcodedTeamInfo(input: UpdateTempHardcodedTeamInfoInput!): UpdateTempHardcodedTeamInfoPayload
+}
+
+type MutationError {
+  message: String
+  extensions: MutationErrorExtension
+}
+
+type MutationErrorExtension {
+  """
+  A numerical code (as a HTTP status code) representing the error category
+  """
+  statusCode: Int
+
+  """Application specific error trace"""
+  errorType: String
+}
+
+type MuteAlertsPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  alertConfig: AlertConfig
+}
+
+interface Node {
+  id: ID!
+}
+
+input OverridePageLoadToplineTrendInput {
+  overrideUserId: String!
+  series: [PageLoadToplineTrendSeriesOverrideInput!]!
+}
+
+type OverrideToplineTrendPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+}
+
+type PageLoadBreakdownResult {
+  timings: PageLoadBreakdownTimings
+}
+
+type PageLoadBreakdownTimings {
+  app: [BrowserMetricBreakdownTimingDetail!]
+  metric: [BrowserMetricBreakdownTimingDetail!]
+}
+
+type PageLoadMetric implements BrowserMetric & Metric & Node {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  eventType: BrowserMetricEventType
+  eventKey: String
+  pageLoadTransitionRatio(env: Environment!, date: Date!, cohort: String!): Float
+  availableCohortTypes: [CohortType!]
+  knownCohortValues: [KnownCohortValues!]
+  toplineTrend(env: Environment!, dateTimeRange: DateTimeRange!, aggregations: [ToplineAggregation!]!, toplineTypes: [PageLoadToplineType!], pageLoadTypes: [PageLoadType!]!, cohortTypes: [CohortType!] = [ALL]): PageLoadToplineTrendResult
+  breakdown(env: Environment!, date: Date!, aggregation: BreakdownAggregation!, pageLoadType: PageLoadType!, cohortType: CohortType = ALL, cohortValue: String = "all"): PageLoadBreakdownResult
+  toplineGoals: [PageLoadToplineGoal!]
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+  hotEvents(from: DateTime!, to: DateTime!): [HotEvent!]
+}
+
+type PageLoadToplineGoal implements Node {
+  id: ID!
+  name: String
+  toplineType: PageLoadToplineType
+  percentile: ToplineAggregation
+  value: Float!
+}
+
+type PageLoadToplineTrendResult {
+  series: [PageLoadToplineTrendSeries!]
+}
+
+type PageLoadToplineTrendSeries {
+  toplineType: PageLoadToplineType!
+  aggregation: ToplineAggregation!
+  pageLoadType: PageLoadType!
+  cohortType: CohortType!
+  cohortValue: String!
+  version: String
+  goal: [PageLoadToplineGoal!]
+  data: [TrendData!]
+}
+
+input PageLoadToplineTrendSeriesOverrideInput {
+  env: Environment!
+  eventKey: String!
+  toplineType: PageLoadToplineType!
+  pageLoadType: PageLoadType!
+  cohortType: CohortType!
+  cohortValue: String!
+  percentile: Int!
+  overrideSourceName: String!
+  data: [TrendDataOverrideInput!]!
+}
+
+enum PageLoadToplineType {
+  TTI
+  FMP
+}
+
+enum PageLoadType {
+  INITIAL
+  TRANSITION
+  COMBINED
+}
+
+type PageSegmentLoadMetric implements BrowserMetric & Metric & Node {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  eventType: BrowserMetricEventType
+  eventKey: String
+  availableCohortTypes: [CohortType!]
+  knownCohortValues: [KnownCohortValues!]
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+  hotEvents(from: DateTime!, to: DateTime!): [HotEvent!]
+}
+
+interface Payload {
+  success: Boolean!
+  errors: [MutationError!]
+}
+
+input PopulationSLOTargetInput {
+  metric: String
+  pageLoadType: PageLoadType
+  cohort: String!
+  sloConfiguration: SLOConfigurationInput
+}
+
+enum Product {
+  JIRA
+  CONFLUENCE
+  OPSGENIE
+  PERFORMANCE_PORTAL
+  WATERMELON
+  COMPASS
+  ADMIN
+  DAC
+}
+
+type Query {
+  _void_: String
+  experience(experienceId: ID!): Experience
+  searchExperiences(
+    limit: Int
+    offset: Int
+
+    """
+    onlySLOConfigured: true, return the experiences that have SLO configured
+    
+    onlySLOConfigured: false/null, return the experiences regardless of slo configuration
+    """
+    onlySLOConfigured: Boolean
+  ): SearchExperiencesResults!
+  node(id: ID!): Node
+  metric(id: ID!): Metric
+  metrics(first: Int, after: String, last: Int, before: String, product: String): MetricConnection
+  searchMetrics(limit: Int, offset: Int, products: [Product!], searchString: String, sortBy: SearchMetricsSortBy, sortOrder: SearchMetricsSortOrder): MetricPaginatedResults
+  metricByEventKey(eventKey: String!): Metric
+  metricsByIds(ids: [ID]!): [Metric!]
+  staff(id: ID): Staff
+  team(id: String!): Team
+  me: Staff
+  featureFlags: [FeatureFlag]
+}
+
+input RemovePageLoadToplineTrendOverrideInput {
+  series: [RemovePageLoadToplineTrendSeriesOverrideInput!]!
+}
+
+input RemovePageLoadToplineTrendSeriesOverrideInput {
+  env: Environment!
+  eventKey: String!
+  toplineType: PageLoadToplineType!
+  pageLoadType: PageLoadType!
+  cohortType: CohortType!
+  cohortValue: String!
+  percentile: Int!
+  dates: [Date!]!
+}
+
+type SaveExperiencePopulationToplineGoalsPayload {
+  success: Boolean!
+  errors: [MutationError!]
+  toplineGoals: [ExperienceToplineGoal!]
+}
+
+type SaveExperienceSLOTargetPayload {
+  success: Boolean!
+  errors: [MutationError!]
+  populationSLOTargets: [ExperiencePopulation!]
+}
+
+type SearchExperiencesResults {
+  experiences: [Experience!]!
+}
+
+enum SearchMetricsSortBy {
+  EVENT_KEY
+  NAME
+  OWNER
+  PRODUCT
+}
+
+enum SearchMetricsSortOrder {
+  ASC
+  DESC
+}
+
+type SLOConfiguration {
+  target: Float!
+  tomeUrl: String!
+}
+
+input SLOConfigurationInput {
+  target: Float!
+  tomeUrl: String!
+}
+
+type Staff implements MetricOwner {
+  id: ID!
+  atlassianId: String
+  fullName: String
+  email: String
+  avatarUrl: String
+}
+
+type Team implements MetricOwner {
+  id: ID!
+  teamName: String
+}
+
+enum ToplineAggregation {
+  p50
+  p75
+  p90
+}
+
+type TrendData {
+  dateTime: DateTime!
+  value: Float!
+  count: Int!
+  aggregatedAt: DateTime
+  overrideUserId: String
+  overrideAt: DateTime
+  overrideSourceName: String
+}
+
+input TrendDataOverrideInput {
+  day: Date!
+  value: Float!
+  count: Int!
+  aggregatedAt: DateTime!
+}
+
+type UnmuteAlertsPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  alertConfig: AlertConfig
+}
+
+input UpdateAlertConfigInput {
+  id: ID!
+  patch: UpdateAlertConfigPatchInput!
+}
+
+input UpdateAlertConfigPatchInput {
+  metricId: String
+  env: String
+  pageLoadType: String
+  metricType: String
+  cohortType: String
+  cohortValue: String
+  percentile: Int
+  thresholdValue: Float
+  thresholdType: AlertConfigThresholdType
+  comparisonType: ComparisonType
+  priority: AlertConfigPriority
+  ignoreWeekend: Boolean
+}
+
+type UpdateAlertConfigPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  alertConfig: AlertConfig
+}
+
+input UpdateBrowserMetricInput {
+  id: ID!
+  patch: BrowserMetricPatchInput!
+}
+
+type UpdateBrowserMetricPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  browserMetric: BrowserMetric
+}
+
+input UpdateHotEventInput {
+  id: ID!
+  patch: UpdateHotEventPatchInput!
+}
+
+input UpdateHotEventPatchInput {
+  issueId: String
+  name: String
+  description: String
+  affectedProducts: [Product!]
+  affectedMetricEventKey: [String!]
+  startAt: DateTime
+  endAt: DateTime
+}
+
+type UpdateHotEventPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  hotEvent: HotEvent
+}
+
+input UpdateTempHardcodedTeamInfoInput {
+  id: ID!
+  patch: UpdateTempHardcodedTeamInfoPatchInput!
+}
+
+input UpdateTempHardcodedTeamInfoPatchInput {
+  displayName: String
+}
+
+type UpdateTempHardcodedTeamInfoPayload implements Payload {
+  success: Boolean!
+  errors: [MutationError!]
+  team: Team
+}
+
+type WebVitalsMetric implements BrowserMetric & Metric & Node {
+  id: ID!
+  name: String
+  key: String
+  product: Product
+  owner: MetricOwner
+  slackChannel: String
+  opsgenieTeamId: String
+  metricType: MetricType
+  eventType: BrowserMetricEventType
+  eventKey: String
+  availableCohortTypes: [CohortType!]
+  knownCohortValues: [KnownCohortValues!]
+  alertConfigs: [AlertConfig!]
+  alerts(dateFrom: Date!, dateTo: Date!, env: Environment!, aggregation: ToplineAggregation!, toplineType: PageLoadToplineType!, pageLoadType: PageLoadType!, cohortType: CohortType!, cohortValue: String!): [Alert!]
+  hotEvents(from: DateTime!, to: DateTime!): [HotEvent!]
+}

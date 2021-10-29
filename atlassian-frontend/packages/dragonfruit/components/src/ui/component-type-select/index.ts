@@ -1,0 +1,1 @@
+export { ComponentTypeSelect } from './main';

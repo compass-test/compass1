@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CrossProductSearchInput /> matches snapshot with as primary product 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "activeIndex": 0,
+      "primaryProduct": "",
+      "products": Array [
+        "COMPASS",
+      ],
+    }
+  }
+>
+  <CrossProductSearchInput
+    debounceTime={0}
+    forwardRef={null}
+    isExpanded={true}
+    isLoading={true}
+    onBack={[MockFunction]}
+    onInput={[MockFunction]}
+    onNavigate={[MockFunction]}
+    onOpen={[MockFunction]}
+    value=""
+  />
+</ContextProvider>
+`;
+
+exports[`<CrossProductSearchInput /> matches snapshot with secondary products 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "activeIndex": 0,
+      "primaryProduct": "",
+      "products": Array [
+        "COMPASS",
+      ],
+    }
+  }
+>
+  <CrossProductSearchInput
+    debounceTime={0}
+    forwardRef={null}
+    isExpanded={true}
+    isLoading={true}
+    onBack={[MockFunction]}
+    onInput={[MockFunction]}
+    onNavigate={[MockFunction]}
+    onOpen={[MockFunction]}
+    value=""
+  />
+</ContextProvider>
+`;

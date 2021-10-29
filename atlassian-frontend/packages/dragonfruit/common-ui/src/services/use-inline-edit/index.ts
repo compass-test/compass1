@@ -1,0 +1,1 @@
+export { useInlineEdit } from './main';

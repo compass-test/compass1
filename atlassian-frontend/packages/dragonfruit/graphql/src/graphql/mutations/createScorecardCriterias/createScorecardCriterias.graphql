@@ -1,0 +1,15 @@
+mutation createScorecardCriterias($scorecardId: ID!, $input: CreateCompassScorecardCriteriasInput!) {
+  compass {
+    createScorecardCriterias(scorecardId: $scorecardId, input: $input) {
+      success
+
+      scorecard {
+        ...CompassScorecardCore
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

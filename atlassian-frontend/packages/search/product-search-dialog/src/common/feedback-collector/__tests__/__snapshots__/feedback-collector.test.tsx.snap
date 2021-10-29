@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedbackCollector /> renders the feedback button by default 1`] = `
+<FeedbackCollector>
+  <FeedbackButton
+    onClick={[Function]}
+  >
+    <div
+      data-test-id="FeedbackButton"
+    />
+  </FeedbackButton>
+</FeedbackCollector>
+`;
+
+exports[`<FeedbackCollector /> renders the feedback collector dialog if button is clicked 1`] = `
+<FeedbackCollector>
+  <FeedbackButton
+    onClick={[Function]}
+  >
+    <div
+      data-test-id="FeedbackButton"
+    />
+  </FeedbackButton>
+  <_default
+    additionalFields={
+      Array [
+        Object {
+          "id": "customfield_10047",
+          "value": "experimentId: some_experiment, abTestId: some_ab_test, frontendVersion: @atlassian/product-search-dialog@__BUILD_VERSION__, product: jira, primaryProduct: confluence",
+        },
+      ]
+    }
+    email="some_email"
+    embeddableKey="85dc6027-c074-4800-ba54-4ecb844b29f8"
+    name="some_name"
+    onClose={[Function]}
+    onSubmit={[Function]}
+    requestTypeId="182"
+  >
+    <div
+      data-test-id="AkFeedbackCollector"
+    />
+  </_default>
+</FeedbackCollector>
+`;
+
+exports[`<FeedbackCollector /> renders the feedback flag and closes dialog if form is submitted 1`] = `
+.emotion-2 {
+  bottom: 48px;
+  left: 80px;
+  position: fixed;
+  z-index: 600;
+}
+
+@media (max-width:560px) {
+  .emotion-2 {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.emotion-1 {
+  bottom: 0;
+  position: absolute;
+  width: 400px;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  -webkit-transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+}
+
+@media (max-width:560px) {
+  .emotion-1 {
+    width: 100vw;
+  }
+}
+
+.emotion-1:first-of-type {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+.emotion-1:nth-of-type(n + 2) {
+  -webkit-animation-duration: 0ms;
+  animation-duration: 0ms;
+  -webkit-transform: translateX(0) translateY(100%) translateY(16px);
+  -ms-transform: translateX(0) translateY(100%) translateY(16px);
+  transform: translateX(0) translateY(100%) translateY(16px);
+}
+
+.emotion-1:nth-of-type(1) {
+  z-index: 5;
+}
+
+.emotion-1:nth-of-type(2) {
+  z-index: 4;
+}
+
+.emotion-1:nth-of-type(n + 4) {
+  visibility: hidden;
+}
+
+.emotion-1.emotion-1 + * {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+<FeedbackCollector>
+  <FeedbackButton
+    onClick={[Function]}
+  >
+    <div
+      data-test-id="FeedbackButton"
+    />
+  </FeedbackButton>
+  <FlagGroup
+    onDismissed={[Function]}
+  >
+    <Portal
+      zIndex={600}
+    >
+      <InternalPortal
+        zIndex={600}
+      >
+        <Portal
+          containerInfo={
+            .emotion-2 {
+  bottom: 48px;
+  left: 80px;
+  position: fixed;
+  z-index: 600;
+}
+
+@media (max-width:560px) {
+  .emotion-2 {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.emotion-0 {
+  border: 0;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.emotion-1 {
+  bottom: 0;
+  position: absolute;
+  width: 400px;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  -webkit-transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+}
+
+@media (max-width:560px) {
+  .emotion-1 {
+    width: 100vw;
+  }
+}
+
+.emotion-1:first-of-type {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+.emotion-1:nth-of-type(n + 2) {
+  -webkit-animation-duration: 0ms;
+  animation-duration: 0ms;
+  -webkit-transform: translateX(0) translateY(100%) translateY(16px);
+  -ms-transform: translateX(0) translateY(100%) translateY(16px);
+  transform: translateX(0) translateY(100%) translateY(16px);
+}
+
+.emotion-1:nth-of-type(1) {
+  z-index: 5;
+}
+
+.emotion-1:nth-of-type(2) {
+  z-index: 4;
+}
+
+.emotion-1:nth-of-type(n + 4) {
+  visibility: hidden;
+}
+
+.emotion-1.emotion-1 + * {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+<div
+              class="atlaskit-portal"
+              style="z-index: 600;"
+            >
+              <div
+                class="emotion-2"
+              >
+                <h2
+                  class="emotion-0"
+                >
+                  Flag notifications
+                </h2>
+                <div
+                  class=" emotion-1"
+                >
+                  <div
+                    data-test-id="FeedbackFlag"
+                  />
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <div
+            className="emotion-2"
+          >
+            <h2
+              className="emotion-0"
+            >
+              Flag notifications
+            </h2>
+            <ExitingPersistence
+              appear={false}
+            >
+              <SlideIn
+                animationTimingFunction={[Function]}
+                duration={400}
+                enterFrom="left"
+                fade="inout"
+                key=".$.0"
+              >
+                <EnteringMotion
+                  animationTimingFunction={[Function]}
+                  duration={400}
+                  enteringAnimation={
+                    Object {
+                      "0%": Object {
+                        "opacity": 0,
+                        "transform": "translate3d(-100%, 0, 0)",
+                      },
+                      "100%": Object {
+                        "opacity": 1,
+                        "transform": "none",
+                      },
+                    }
+                  }
+                  exitingAnimation={
+                    Object {
+                      "0%": Object {
+                        "opacity": 1,
+                        "transform": "none",
+                      },
+                      "100%": Object {
+                        "opacity": 0,
+                        "transform": "translate3d(-100%, 0, 0)",
+                      },
+                    }
+                  }
+                >
+                  <ForwardRef(render)>
+                    <div
+                      className=" emotion-1"
+                    >
+                      <FeedbackFlag>
+                        <div
+                          data-test-id="FeedbackFlag"
+                        />
+                      </FeedbackFlag>
+                    </div>
+                  </ForwardRef(render)>
+                </EnteringMotion>
+              </SlideIn>
+            </ExitingPersistence>
+          </div>
+        </Portal>
+      </InternalPortal>
+    </Portal>
+  </FlagGroup>
+</FeedbackCollector>
+`;

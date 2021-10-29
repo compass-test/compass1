@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchAnchor /> matches snapshot when expanded 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    test
+  </Styled(div)>
+</Styled(div)>
+`;

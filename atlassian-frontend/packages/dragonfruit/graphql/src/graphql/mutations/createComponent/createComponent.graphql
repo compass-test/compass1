@@ -1,0 +1,15 @@
+mutation createComponent($cloudId: ID!, $input: CreateCompassComponentInput!) {
+  compass {
+    createComponent(cloudId: $cloudId, input: $input) {
+      success
+
+      componentDetails {
+        ...CompassComponentCore
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "customfield_10033": {},
+  "customfield_10015": {
+    "date": "2020-10-01"
+  },
+  "customfield_10035": {
+    "choices": [
+      {
+        "id": "10022",
+        "label": "Medium"
+      }
+    ]
+  },
+  "customfield_10039": {
+    "choices": []
+  },
+  "customfield_10100": {
+    "choices": [],
+    "choiceApi": {
+      "api": "InsightDefault",
+      "fieldConfigId": 10600
+    }
+  },
+  "summary": {
+    "text": "Sample data TEST-1"
+  },
+  "issuekey": {
+    "text": "TEST-1"
+  }
+}

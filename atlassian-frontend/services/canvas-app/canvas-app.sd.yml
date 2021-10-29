@@ -1,0 +1,11 @@
+version: 2
+cleanup: false
+name: CanvasApp
+
+organization: 'Team Work Platform'
+
+notifications:
+  email: mnebl@atlassian.com
+
+static:
+  content: ./dist

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UseStep /> should render component 1`] = `
+<Styled(div)>
+  <p>
+    Copy the labels and add them to
+     
+    <span
+      className="fileName"
+    >
+      bitbucket.pipelines.yml
+    </span>
+     in the following format:
+  </p>
+  <Styled(div)>
+    <CodeBlock
+      highlight="5"
+      language="yaml"
+      showLineNumbers={true}
+      text="# Example
+pipelines:
+  default:
+      - step:
+          runs-on: self.hosted
+          script:"
+    />
+  </Styled(div)>
+  <Styled(div)>
+    <p>
+      Your labels
+    </p>
+    <Styled(div)>
+      <Styled(div)>
+        <Memo(CopyButton)
+          analyticEventId="runnerWizardCopyLabels"
+          content="- self.hosted
+- label.1
+- label.2"
+          name="labels"
+        />
+      </Styled(div)>
+      <p
+        key="runner-label-0"
+      >
+        - self.hosted
+      </p>
+      <p
+        key="runner-label-1"
+      >
+        - label.1
+      </p>
+      <p
+        key="runner-label-2"
+      >
+        - label.2
+      </p>
+    </Styled(div)>
+  </Styled(div)>
+  <Styled(div)>
+    <Button
+      appearance="subtle"
+      className="backButton"
+    >
+      Back
+    </Button>
+    <Button
+      appearance="primary"
+      className="forwardButton"
+      name="finishUse"
+    >
+      Finish
+    </Button>
+  </Styled(div)>
+</Styled(div)>
+`;

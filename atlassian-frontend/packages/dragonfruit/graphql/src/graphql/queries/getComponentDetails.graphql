@@ -1,0 +1,15 @@
+query getComponentDetails($id: ID!) {
+  compass {
+    component(id: $id) {
+      __typename
+
+      ... on CompassComponent {
+        ...CompassComponentDetailView
+      }
+
+      ... on QueryError {
+        ...CommonQueryError
+      }
+    }
+  }
+}

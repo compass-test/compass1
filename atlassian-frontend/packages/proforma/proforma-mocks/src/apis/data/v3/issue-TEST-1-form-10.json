@@ -1,0 +1,213 @@
+{
+  "id": 10,
+  "updated": "2020-06-16T23:18:35.280Z",
+  "design": {
+    "settings": {
+      "templateId": 4,
+      "name": "Conditional form",
+      "submit": {
+        "lock": false,
+        "pdf": false
+      }
+    },
+    "layout": [
+      {
+        "version": 1,
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 1
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Building access request"
+              }
+            ]
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 1
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 2
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Request type"
+              }
+            ]
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 4
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 3
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "extension",
+            "attrs": {
+              "extensionType": "com.thinktilt.proforma",
+              "extensionKey": "question",
+              "parameters": {
+                "id": 5
+              },
+              "layout": "default"
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": []
+          }
+        ]
+      }
+    ],
+    "conditions": {},
+    "sections": {},
+    "questions": {
+      "4": {
+        "type": "cs",
+        "label": "Request type",
+        "description": "",
+        "validation": {
+          "rq": false
+        },
+        "choices": [
+          {
+            "id": "1",
+            "label": "New",
+            "other": false
+          },
+          {
+            "id": "2",
+            "label": "Amendment to previous request",
+            "other": false
+          }
+        ],
+        "questionKey": ""
+      },
+      "5": {
+        "type": "pg",
+        "label": "Special conditions",
+        "description": "Leave blank for standard access to the nominated buildings",
+        "validation": {
+          "rq": false
+        },
+        "choices": [],
+        "questionKey": ""
+      },
+      "1": {
+        "type": "tl",
+        "label": "Employee name",
+        "description": "",
+        "validation": {
+          "rq": false
+        },
+        "choices": [],
+        "questionKey": ""
+      },
+      "2": {
+        "type": "te",
+        "label": "Email address",
+        "description": "",
+        "validation": {
+          "rq": false
+        },
+        "choices": [],
+        "questionKey": ""
+      },
+      "3": {
+        "type": "cl",
+        "label": "Access required to these buildings",
+        "description": "",
+        "jiraField": "customfield_10100",
+        "validation": {
+          "rq": false
+        },
+        "choices": [
+          {
+            "id": "1",
+            "label": "Melbourne",
+            "other": false
+          },
+          {
+            "id": "2",
+            "label": "Sydney",
+            "other": false
+          },
+          {
+            "id": "3",
+            "label": "Brisbane",
+            "other": false
+          }
+        ],
+        "questionKey": ""
+      }
+    }
+  },
+  "hash": "21ea62260564ba5f6eaa159855d67c2b981084bc509f49e24cba00383017cfbc",
+  "state": {
+    "visibility": "i",
+    "status": "o",
+    "answers": {
+      "4": {
+        "text": "",
+        "choices": [
+          "2"
+        ]
+      },
+      "1": {
+        "text": "Charlie"
+      },
+      "2": {
+        "text": "charlesg@thinktilt.com"
+      },
+      "3": {
+        "text": "",
+        "choices": [
+          "1",
+          "3"
+        ]
+      }
+    }
+  }
+}

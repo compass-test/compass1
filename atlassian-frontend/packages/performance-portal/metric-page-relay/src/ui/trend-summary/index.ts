@@ -1,0 +1,1 @@
+export { TrendSummary } from './main';

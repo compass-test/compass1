@@ -1,0 +1,86 @@
+{
+  "name": "@atlassian/text-avatar-editor",
+  "version": "1.1.0",
+  "author": "Atlassian Pty Ltd",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "atlassian": {
+    "team": "Identity: Kirby",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "yarn lint:eslint && yarn format:prettier",
+    "lint:eslint": "(cd ../../.. && bolt eslint 'packages/identity/text-avatar-editor/**/*.{ts,tsx,ts}')",
+    "format:prettier": "(cd ../../.. && bolt run lint:prettier --write 'packages/identity/text-avatar-editor')",
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit --project ./tsconfig.json",
+    "start": "(cd ../../.. && bolt start text-avatar-editor)",
+    "test": "(cd ../../.. && bolt test packages/identity/text-avatar-editor)",
+    "test:watch": "(cd ../../.. && bolt run test --watch packages/identity/text-avatar-editor)"
+  },
+  "dependencies": {
+    "@atlaskit/button": "^16.1.0",
+    "@atlaskit/form": "^8.4.0",
+    "@atlaskit/icon": "^21.9.0",
+    "@atlaskit/modal-dialog": "^12.0.0",
+    "@atlaskit/textfield": "^5.0.1",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlaskit/tooltip": "^17.5.0",
+    "@babel/runtime": "^7.0.0",
+    "react-intl": "^2.6.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/build-utils": "*",
+    "@atlaskit/button": "^16.1.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/visual-regression": "*",
+    "@atlaskit/webdriver-runner": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^8.0.1",
+    "@testing-library/user-event": "10.4.0",
+    "react-dom": "^16.8.0",
+    "typescript": "3.9.6",
+    "wait-for-expect": "^1.2.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": [
+        "atlassian-conventions"
+      ],
+      "circular-dependencies": [
+        "file-and-folder-level"
+      ]
+    },
+    "@repo/internal": {
+      "analytics": [
+        "analytics-next"
+      ],
+      "theming": [
+        "new-theming-api"
+      ],
+      "ui-components": [
+        "lite-mode"
+      ],
+      "deprecation": [
+        "no-deprecated-imports"
+      ]
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transform() Getters 1`] = `
+"export default class TestGetters {
+  constructor();
+  readonly dom: HTMLElement | undefined
+  readonly performanceOptions: {
+        enabled: boolean;
+        samplingRate: number;
+        slowThreshold: number;
+      }
+}
+"
+`;
+
+exports[`transform() Omit 1`] = `
+"interface GENERATED$Omit$5 {
+    foo: string;
+    bar: number;
+    baz: string;
+    bfoo: string;
+    bbar: number;
+    bbaz: number;
+}
+
+interface GENERATED$Omit$4 {
+    status: CardStatus;
+    previewOrientation: number;
+    isPlayingFile: boolean;
+    mediaViewerSelectedItem?: Identifier;
+    metadata?: FileDetails;
+    dataURI?: string;
+    progress?: number;
+}
+
+interface GENERATED$Omit$1 {
+    status: CardStatus;
+    isCardVisible: boolean;
+    previewOrientation: number;
+    isPlayingFile: boolean;
+    mediaViewerSelectedItem?: Identifier;
+    metadata?: FileDetails;
+    dataURI?: string;
+    progress?: number;
+}
+
+interface GENERATED$Pick$1 {
+    bar: number;
+    bfoo: string;
+}
+
+export interface A {
+  foo: string;
+  bar: number;
+  baz: string;
+}
+
+export interface B {
+  bfoo: string;
+  bbar: number;
+  bbaz: number;
+}
+
+export interface C extends A, B {
+  cfoo: string;
+}
+
+export interface D extends Array<A>, B {
+  cfoo: string;
+}
+
+export interface OptionalAndComplexSignatures {
+  status: CardStatus;
+  isCardVisible: boolean;
+  previewOrientation: number;
+  isPlayingFile: boolean;
+  mediaViewerSelectedItem?: Identifier;
+  metadata?: FileDetails;
+  dataURI?: string;
+  progress?: number;
+  error?: Error;
+}
+
+export type OneKeyOmit = GENERATED$Omit$1;
+export type OmitWithKeyOfOperator = any;
+export type OmitWithTypeReference = any;
+export type MultipleKeyOmit = GENERATED$Omit$4;
+
+export type OmitWithInheritInterface = GENERATED$Omit$5;
+export type OmitWithInheritInterfaceAndComplexTypeInHeritage = any;
+"
+`;
+
+exports[`transform() Pick 1`] = `
+"interface GENERATED$Pick$10 {
+    dfoo: string;
+    bfoo: string;
+    foo: string;
+}
+
+interface GENERATED$Pick$8 {
+    status: CardStatus;
+    metadata?: FileDetails;
+}
+
+interface GENERATED$Pick$7 {
+    bar: number;
+    bfoo: string;
+}
+
+interface GENERATED$Pick$6 {
+    bfoo: string;
+    bbar: number;
+}
+
+interface GENERATED$Pick$5 {
+    cfoo: Pick<B, 'bfoo' | 'bbar'>;
+}
+
+interface GENERATED$Pick$3 {
+    bbar: number;
+}
+
+interface GENERATED$Pick$2 {
+    Blub: any;
+}
+
+interface GENERATED$Pick$1 {
+    foo: string;
+}
+
+export interface A {
+  foo: string;
+  bar: number;
+  baz: string;
+}
+
+export interface B {
+  bfoo: string;
+  bbar: number;
+  bbaz: number;
+}
+
+export interface D extends A, B {
+  dfoo: string;
+}
+
+export interface OptionalAndComplexSignatures {
+  status: CardStatus;
+  isCardVisible: boolean;
+  previewOrientation: number;
+  isPlayingFile: boolean;
+  mediaViewerSelectedItem?: Identifier;
+  metadata?: FileDetails;
+  dataURI?: string;
+  progress?: number;
+  error?: Error;
+}
+
+export type SimplePick = GENERATED$Pick$1;
+export type NotFoundPick = GENERATED$Pick$2;
+export type NestedPick = GENERATED$Pick$3;
+export type PickInDefinition = GENERATED$Pick$5;
+
+export interface C {
+  cfoo: GENERATED$Pick$6;
+  cbar: number;
+  cbaz: number;
+}
+
+export type IntersectionPick = GENERATED$Pick$7;
+export type OptionalAndComplexPropertyPick = GENERATED$Pick$8;
+
+export type PickIncludedOtherUtilities = any;
+
+export type PickWithDefinitionsInHeritageClaue = GENERATED$Pick$10;
+
+export interface RadioProps extends WithAnalyticsEventsProps {
+  /** the aria-label attribute associated with the radio element */
+  ariaLabel?: string;
+  /** Field disabled */
+  isDisabled?: boolean;
+  /** Marks this as a required field */
+  isRequired?: boolean;
+  /** Field is invalid */
+  isInvalid?: boolean;
+  /** Set the field as checked */
+  isChecked?: boolean;
+  /** The label value for the input rendered to the dom */
+  label?: React$Node;
+  /** Field name */
+  name?: string;
+  /** onChange event handler, passed into the props of each Radio Component instantiated within RadioGroup */
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onBlur?: (event: SyntheticFocusEvent<HTMLInputElement>) => void;
+  onFocus?: (event: SyntheticFocusEvent<HTMLInputElement>) => void;
+  onMouseDown?: (event: SyntheticFocusEvent<any>) => void;
+  onMouseUp?: (event: SyntheticFocusEvent<any>) => void;
+  onMouseEnter?: (event: SyntheticFocusEvent<any>) => void;
+  onMouseLeave?: (event: SyntheticFocusEvent<any>) => void;
+  /** onInvalid event handler, passed into the props of each Radio Component instantiated within RadioGroup */
+  onInvalid?: (e: SyntheticEvent<any>) => void;
+  /** Field value */
+  value?: RadioValue;
+  /**
+      A \`testId\` prop is provided for specified elements, which is a unique string that appears as a data attribute \`data-testid\` in the rendered code, serving as a hook for automated tests
+      we have 2 different testid generated based on the one you pass to the Radio component:
+      - \`{testId}--hidden-radio\` to check if it got changed to checked/unchecked.
+      - \`{testId}--radio-label\` to click the input, because in IE11 the input has opacity: 0 and can't be interacted.
+    */
+  testId?: string;
+}
+"
+`;
+
+exports[`transform() React types 1`] = `
+"interface TestReactInterace {
+  React$Ref: React$Ref;
+  React$Node: React$Node;
+  React$ElementType: React$ElementType;
+  React$Element: React$Element;
+  React$Element: React.Element;
+  React$StatelessFunctionalComponent: React$ComponentType;
+  React$StatelessFunctionalComponent: React$ComponentType;
+  React$StatelessFunctionalComponent: React$ComponentType;
+  React$Component: React$Component;
+  React$ComponentType: React$ComponentType;
+  React$ComponentType: React$ComponentType;
+  SyntheticMouseEvent: SyntheticMouseEvent;
+  SyntheticFocusEvent: SyntheticFocusEvent;
+  SyntheticKeyboardEvent: SyntheticKeyboardEvent;
+  React$Portal: React$Portal;
+  React$Node: React$Node;
+  React$Ref: React$Ref;
+  React$Node: React$Node;
+  React$ElementType: React$ElementType;
+  React$Element: React$Element;
+  React$StatelessFunctionalComponent: React$AbstractComponent<any, any>;
+  React$Component: React$Component;
+  React$ComponentType: React$ComponentType;
+  React$ComponentType: React$ComponentType;
+  React$StatelessFunctionalComponent: React$ComponentType;
+  SyntheticMouseEvent: SyntheticMouseEvent;
+  SyntheticFocusEvent: SyntheticFocusEvent;
+  SyntheticKeyboardEvent: SyntheticKeyboardEvent;
+  React$Portal: React$Portal;
+  React$Node: React$Node;
+  React$StatelessFunctionalComponent: React$ComponentType;
+  React$Context: React$Context;
+}
+
+interface TestInterfaceReactHandler {
+  mouseEventHandler: (event: SyntheticFocusEvent<any>) => void;
+  mouseEventHandlerHTML: (event: SyntheticMouseEvent<HTMLElement>) => void;
+  mouseEventHandlerHTMLDiv: (event: SyntheticMouseEvent<HTMLDivElement>) => void;
+  mouseEventHandlerHTMLButton: (event: SyntheticMouseEvent<HTMLButtonElement>) => void;
+  focusEventHandler: (event: SyntheticFocusEvent<any>) => void;
+  mouseEventHandlerHTML: (event: SyntheticFocusEvent<HTMLElement>) => void;
+  mouseEventHandlerInput: (event: SyntheticFocusEvent<HTMLInputElement>) => void;
+  mouseEventHandlerHTMLTextarea: (event: SyntheticFocusEvent<HTMLTextAreaElement>) => void;
+  mouseEventHandlerHTMLDiv: (event: SyntheticFocusEvent<HTMLDivElement>) => void;
+  mouseEventHandlerHTMLButton: (event: SyntheticFocusEvent<HTMLButtonElement>) => void;
+}
+
+declare var reactHoc: () => (
+  prop: () => React$Element<any>,
+) => React$Element<any>;
+"
+`;
+
+exports[`transform() Setters 1`] = `
+"export default class ErrorReporter {
+  private handlerStorage;
+  captureMessage(msg: string, tags?: ErrorReporterTags): void;
+  captureException(err: Error, tags?: ErrorReporterTags): void;
+  handler: ErrorReportingHandler | null
+}
+"
+`;
+
+exports[`transform() interface extends array with numerical literal 1`] = `
+"export interface ListItemArray
+  extends Array<
+    Paragraph | OrderedList | BulletList | MediaSingle | CodeBlock
+  > {
+  0: Paragraph | MediaSingle | CodeBlock;
+}
+"
+`;

@@ -1,0 +1,16 @@
+{
+  "name": "@atlassian/atlassian-frontend-prettier-config",
+  "version": "1.0.1",
+  "main": "./index.js",
+  "atlassian": {
+    "team": "AFP: Monorepo",
+    "releaseModel": "continuous"
+  },
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "af:exports": { "index": "./index" },
+  "description": "atlassian-frontend prettier config",
+  "dependencies": {},
+  "devDependencies": {}
+}

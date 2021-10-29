@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfluenceSearchClient collaborationGraph should get spaces from collaboration graph if enabled 1`] = `
+Object {
+  "analyticsType": "recent-person",
+  "avatarUrl": "http://marguerite.biz",
+  "contentType": "person",
+  "href": "/people/3b35d9af-29b6-4c09-a604-ebcc0da91d3f",
+  "mentionName": "Personal Loan Account",
+  "name": "Personal Loan Account",
+  "presenceMessage": "Personal Loan Account",
+  "resultId": "3b35d9af-29b6-4c09-a604-ebcc0da91d3f",
+  "resultType": "person-result",
+  "userId": "3b35d9af-29b6-4c09-a604-ebcc0da91d3f",
+}
+`;
+
+exports[`ConfluenceSearchClient search people single user response is mapped correctly 1`] = `
+Object {
+  "analyticsType": "result-person",
+  "avatarUrl": "http://lorempixel.com/640/480/people",
+  "contentType": "person",
+  "href": "/people/2a430a73-d9e9-4bcc-a46a-51618965ffea",
+  "mentionName": "nickname-t94ds",
+  "name": "Toby Lubowitz",
+  "presenceMessage": "",
+  "resultId": "people-2a430a73-d9e9-4bcc-a46a-51618965ffea",
+  "resultType": "person-result",
+  "userId": "2a430a73-d9e9-4bcc-a46a-51618965ffea",
+}
+`;
+
+exports[`ConfluenceSearchClient search transforms page blog response correctly 1`] = `
+Object {
+  "analyticsType": "result-confluence",
+  "containerId": "UNAVAILABLE",
+  "containerName": "Lang LLC",
+  "contentType": "confluence-page",
+  "href": "http://localhost/qzk/r6u",
+  "iconClass": "aui-iconfont-page-default",
+  "isRecentResult": false,
+  "lastModified": "2019-07-08T02:54:38.822Z",
+  "name": "in blanditiis sed aliquam eum",
+  "resultId": "018dfea7-3f5f-4feb-91d7-0645f58a657a",
+  "resultType": "confluence-object-result",
+}
+`;
+
+exports[`ConfluenceSearchClient search transforms people response correctly 1`] = `
+Object {
+  "analyticsType": "result-person",
+  "avatarUrl": "http://lorempixel.com/640/480/people",
+  "contentType": "person",
+  "href": "/people/2f6d4a36-8987-49cc-9b80-20eebd8c3310",
+  "mentionName": "nickname-qmtr2",
+  "name": "Maybelle Leffler",
+  "presenceMessage": "Lead Functionality Engineer",
+  "resultId": "people-2f6d4a36-8987-49cc-9b80-20eebd8c3310",
+  "resultType": "person-result",
+  "userId": "2f6d4a36-8987-49cc-9b80-20eebd8c3310",
+}
+`;
+
+exports[`ConfluenceSearchClient search transforms space response correctly 1`] = `
+Object {
+  "analyticsType": "result-confluence",
+  "avatarUrl": "http://localhosthttp://lorempixel.com/640/480/cats",
+  "contentType": "confluence-space",
+  "href": "http://localhost/spaces/KEY-BORDERS",
+  "key": "KEY-BORDERS",
+  "name": "Harvey - Rath",
+  "resultId": "space-KEY-BORDERS",
+  "resultType": "generic-container-result",
+}
+`;

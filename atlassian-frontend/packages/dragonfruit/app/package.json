@@ -1,0 +1,97 @@
+{
+  "name": "@atlassian/dragonfruit-app",
+  "version": "1.16.37",
+  "private": true,
+  "atlassian": {
+    "team": "Compass Frontend",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.1.3",
+    "@atlaskit/button": "^16.1.0",
+    "@atlaskit/empty-state": "^7.1.5",
+    "@atlaskit/flag": "^14.4.0",
+    "@atlaskit/page-layout": "^1.0.3",
+    "@atlaskit/smart-card": "^16.0.0",
+    "@atlassian/analytics-bridge": "^0.4.4",
+    "@atlassian/compass-search-cache": "^0.6.0",
+    "@atlassian/dragonfruit-analytics": "^2.2.0",
+    "@atlassian/dragonfruit-common-messages": "^1.1.2",
+    "@atlassian/dragonfruit-common-ui": "^1.19.0",
+    "@atlassian/dragonfruit-csv-import": "^0.10.0",
+    "@atlassian/dragonfruit-feature-flags": "^1.25.0",
+    "@atlassian/dragonfruit-field-definitions-context": "^1.0.0",
+    "@atlassian/dragonfruit-graphql": "^3.21.0",
+    "@atlassian/dragonfruit-in-product-help": "^0.0.1",
+    "@atlassian/dragonfruit-intercom": "^0.4.0",
+    "@atlassian/dragonfruit-navigation": "^3.17.0",
+    "@atlassian/dragonfruit-onboarding": "^0.8.0",
+    "@atlassian/dragonfruit-page-apps": "^3.20.0",
+    "@atlassian/dragonfruit-page-component-details": "^7.36.0",
+    "@atlassian/dragonfruit-page-component-list": "^4.2.0",
+    "@atlassian/dragonfruit-page-scorecard-details": "^0.1.0",
+    "@atlassian/dragonfruit-page-scorecard-list": "^0.14.0",
+    "@atlassian/dragonfruit-page-team-details": "^2.14.0",
+    "@atlassian/dragonfruit-page-team-list": "^0.0.3",
+    "@atlassian/dragonfruit-page-teams-list": "^0.5.0",
+    "@atlassian/dragonfruit-page-user-home": "^0.0.1",
+    "@atlassian/dragonfruit-performance": "^1.0.0",
+    "@atlassian/dragonfruit-routes": "^1.5.0",
+    "@atlassian/dragonfruit-tenant-context": "^2.4.0",
+    "@atlassian/dragonfruit-utils": "^1.3.0",
+    "@babel/runtime": "^7.0.0",
+    "@sentry/react": "5.16.1",
+    "react-helmet": "^6.1.0",
+    "react-loosely-lazy": "^0.5.0",
+    "react-resource-router": "^0.14.2",
+    "react-use-intercom": "^1.4.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@atlassian/dragonfruit-testing": "^1.2.0",
+    "@testing-library/react": "^8.0.1",
+    "typescript": "3.9.6"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "code-structure": [
+        "tangerine-next"
+      ],
+      "import-structure": [
+        "atlassian-conventions"
+      ],
+      "circular-dependencies": [
+        "file-and-folder-level"
+      ]
+    },
+    "@repo/internal": {
+      "analytics": [
+        "analytics-next"
+      ],
+      "theming": [
+        "new-theming-api"
+      ],
+      "ui-components": [
+        "lite-mode"
+      ],
+      "deprecation": [
+        "no-deprecated-imports"
+      ]
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

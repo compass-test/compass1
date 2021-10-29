@@ -1,0 +1,66 @@
+version: 2
+name: design system docs
+organization: UI Platform
+
+notifications:
+  email: eng-design-system@atlassian.com
+static:
+  content: public/
+  cache:
+    compress: true
+    maxTTL: 10800 # 3 hours
+  errors:
+    - errorCode: 404
+      responseCode: 404
+      responsePagePath: /404/index.html
+  files:
+    - match: 'static/*' # https://www.gatsbyjs.com/docs/caching/#static-files
+      params:
+        CacheControl: public, max-age=31536000, immutable
+    - match: '.*\.js' # https://www.gatsbyjs.com/docs/caching/#javascript-and-css
+      params:
+        CacheControl: public, max-age=31536000, immutable
+    - match: '.*\.css' # https://www.gatsbyjs.com/docs/caching/#javascript-and-css
+      params:
+        CacheControl: public, max-age=31536000, immutable
+    - match: '.*\.(eot|svg|woff|woff2)' # cache font files
+      params:
+        CacheControl: max-age=31536000, immutable
+    - match: '.*\.html' # https://www.gatsbyjs.com/docs/caching/#html
+      params:
+        CacheControl: public, max-age=0, must-revalidate
+    - match: 'page-data/*' # https://www.gatsbyjs.com/docs/caching/#page-data
+      params:
+        CacheControl: public, max-age=0, must-revalidate
+    - match: 'app-data.json' # https://www.gatsbyjs.com/docs/caching/#app-data
+      params:
+        CacheControl: public, max-age=0, must-revalidate
+
+environmentOverrides:
+  stg-east:
+    static:
+      lambdas:
+        - eventType: origin-request
+          name: lambda
+          attributes:
+            healthcheck: true
+            runtime: nodejs10.x
+            artefact: ${PROXY_NAME}
+            handler: functions/redirect.handler
+            memory: 128
+            timeout: 5
+            concurrentExecution: 2
+
+  prod-east:
+    static:
+      lambdas:
+        - eventType: origin-request
+          name: lambda
+          attributes:
+            healthcheck: true
+            runtime: nodejs10.x
+            artefact: ${PROXY_NAME}
+            handler: functions/redirect.handler
+            memory: 128
+            timeout: 5
+            concurrentExecution: 2

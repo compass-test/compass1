@@ -1,0 +1,35 @@
+{
+  "name": "@atlaskit/elements-test-helpers",
+  "version": "0.7.6",
+  "description": "common test helpers",
+  "private": true,
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "atlassian": {
+    "team": "People and Teams Collective",
+    "releaseModel": "scheduled"
+  },
+  "dependencies": {
+    "@atlaskit/ssr": "*",
+    "@babel/runtime": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-intl": "^2.6.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "typescript": "3.9.6"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

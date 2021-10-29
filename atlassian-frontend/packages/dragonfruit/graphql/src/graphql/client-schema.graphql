@@ -1,0 +1,51 @@
+##
+# ==============================================================
+#      This is where you can define your client side schema
+# ==============================================================
+#
+# By including it here it will be compiled down and merged with
+# the remote definition as part of the codegen process, so
+# that it can be and safely typechecked in your queries.
+##
+
+# Define @client as a usable directive on our fields
+directive @client on FIELD
+
+type CompassComponent {
+  # Indicates that the Component only exists optimistically
+  _isOptimistic: Boolean
+
+  # Indicates that the Component has been deleted
+  _isDeleted: Boolean
+}
+
+type CompassScorecard {
+  # Indicates that the Scorecard only exists optimistically
+  _isOptimistic: Boolean
+
+  # Indicates that the Scorecard has been deleted
+  _isDeleted: Boolean
+}
+
+type DeleteCompassComponentPayload {
+  # Indicates that the Delete Component response is optimistic
+  _isOptimistic: Boolean
+}
+
+type CompassLink {
+  # Indicates that the links has been deleted
+  _isDeleted: Boolean
+}
+
+type CompassRelationship {
+  # Indicates that the relationship has been deleted
+  _isDeleted: Boolean
+}
+
+type CompassTeamCheckin {
+  # Indicates that the Team Checkin only exists optimistically
+  _isOptimistic: Boolean
+
+  # Indicates thats the Team Checkin has been deleted
+  _isDeleted: Boolean
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@af/master-continuous-statlas-bd",
+  "version": "0.0.1",
+  "af:services": {
+    "serviceName": "master-continuous-statlas-bd-service",
+    "master": {
+      "continuous": {
+        "env": "ddev"
+      }
+    },
+    "branch": {
+      "env": "statlas"
+    }
+  }
+}

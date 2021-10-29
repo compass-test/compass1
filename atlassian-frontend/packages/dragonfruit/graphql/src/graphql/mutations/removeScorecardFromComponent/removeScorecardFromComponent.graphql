@@ -1,0 +1,15 @@
+mutation removeScorecardFromComponent($scorecardId: ID!, $componentId: ID!) {
+  compass {
+    removeScorecardFromComponent(scorecardId: $scorecardId, componentId: $componentId) {
+      success
+
+      componentDetails {
+        ...CompassComponentCore
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

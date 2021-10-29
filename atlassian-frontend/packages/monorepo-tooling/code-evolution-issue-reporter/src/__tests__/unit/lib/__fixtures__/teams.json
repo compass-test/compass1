@@ -1,0 +1,9 @@
+{
+  "Test Team": {
+    "contributors": ["foo", "bar"],
+    "directly-responsible-individual": "foo",
+    "slack": "foo-bar",
+    "project": "http://example.com",
+    "primaryReleaseModel": "continuous"
+  }
+}

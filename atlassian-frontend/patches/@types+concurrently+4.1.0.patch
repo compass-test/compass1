@@ -1,0 +1,12 @@
+diff --git a/node_modules/@types/concurrently/index.d.ts b/node_modules/@types/concurrently/index.d.ts
+index a608bc0..d010983 100644
+--- a/node_modules/@types/concurrently/index.d.ts
++++ b/node_modules/@types/concurrently/index.d.ts
+@@ -21,6 +21,7 @@ declare namespace concurrently {
+     interface Options {
+         defaultInputTarget?: number;
+         inputStream?: NodeJS.ReadableStream;
++        kill?: (pid: number, code?: string) => void;
+         killOthers?: Array<'success' | 'failure'>;
+         outputStream?: NodeJS.WritableStream;
+         prefix?: 'index' | 'pid' | 'time' | 'command' | 'name' | 'none' | string;

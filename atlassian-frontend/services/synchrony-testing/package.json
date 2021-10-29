@@ -1,0 +1,16 @@
+{
+  "name": "@atlassian/synchrony-testing",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Testing deployment of Synchrony for atlassian-frontend",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "author": "Atlassian Pty Ltd",
+  "atlassian": {
+    "team": "Editor"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1"
+  }
+}

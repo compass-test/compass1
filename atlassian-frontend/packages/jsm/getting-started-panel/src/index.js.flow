@@ -1,0 +1,285 @@
+// @flow strict
+import type { ComponentType } from 'react';
+
+declare export var ActiveState: {|
+  +On: 'on',
+  +Off: 'off',
+|};
+
+type ActiveStateType = typeof ActiveState.On | typeof ActiveState.Off;
+
+declare export var VisualState: {|
+  +Lozenge: 'lozenge',
+  +FullPanel: 'full-panel',
+|};
+
+type VisualStateType =
+  | typeof VisualState.Lozenge
+  | typeof VisualState.FullPanel;
+
+declare export var Product: {|
+  +ServiceDesk: 'serviceDesk',
+  +Opsgenie: 'opsgenie',
+|};
+
+type ProductType = typeof Product.ServiceDesk | typeof Product.Opsgenie;
+
+declare export var Environment: {|
+  +Local: 'local',
+  +Dev: 'dev',
+  +Staging: 'staging',
+  +Prod: 'prod',
+|};
+
+type EnvironmentType =
+  | typeof Environment.Local
+  | typeof Environment.Dev
+  | typeof Environment.Staging
+  | typeof Environment.Prod;
+
+declare export var GspSectionKey: {|
+  +Checklist: 'checklist',
+  +ProductTours: 'productTours',
+  +Home: 'home',
+|};
+
+type GspSectionKeyType =
+  | typeof GspSectionKey.Checklist
+  | typeof GspSectionKey.ProductTours
+  | typeof GspSectionKey.Home;
+
+declare export var ChecklistTabKey: {|
+  +Basics: 'basics',
+  +Incidents: 'incidents',
+  +Changes: 'changes',
+|};
+
+declare export var ProductTourKey: {|
+  +Welcome: 'welcome',
+  +IncidentManagement: 'incident-management',
+  +ChangeManagement: 'change-management',
+|};
+
+type ChecklistTabKeyType =
+  | typeof ChecklistTabKey.Basics
+  | typeof ChecklistTabKey.Incidents
+  | typeof ChecklistTabKey.Changes;
+
+type ProductTourKeyType =
+  | typeof ProductTourKey.Welcome
+  | typeof ProductTourKey.IncidentManagement
+  | typeof ProductTourKey.ChangeManagement;
+
+declare export var HeaderState: {|
+  +Minimized: 'minimized',
+  +Expanded: 'expanded',
+|};
+
+type HeaderStateType =
+  | typeof HeaderState.Minimized
+  | typeof HeaderState.Expanded;
+
+declare export var TaskId: {|
+  +CreateItsmProject: 'servicedesk-itsm-project-created',
+  +CustomizePortal: 'servicedesk-portal-name-customized',
+  +AddPortalLogo: 'servicedesk-logo-added-to-portal',
+  +SetupEmailRequests: 'servicedesk-email-requests-setup',
+  +SetupServices: 'servicedesk-services-setup',
+  +AddTeamMember: 'servicedesk-team-member-added',
+  +GoBeyondBasics: 'servicedesk-basics-documentation-accessed',
+  +ConnectCiCdPipeline: 'servicedesk-change-management-pipeline-connected',
+  +AddChangeApprovers: 'servicedesk-change-management-change-approvers-added',
+  +TurnOnAutomationRules: 'servicedesk-change-management-automation-rules-on',
+  +MakeTheMostOfChangeManagement: 'servicedesk-change-management-documentation-accessed',
+  +SetupProfileForNotifications: 'opsgenie-user-profile-notifications-setup',
+  +SetupTeam: 'opsgenie-response-team-setup',
+  +AssignOwnerTeamToServices: 'opsgenie-owner-team-assigned-to-service',
+  +LevelUpIncidentManagement: 'opsgenie-incident-management-documentation-accessed',
+|};
+
+export type TaskIdType =
+  | typeof TaskId.CreateItsmProject
+  | typeof TaskId.CustomizePortal
+  | typeof TaskId.AddPortalLogo
+  | typeof TaskId.SetupEmailRequests
+  | typeof TaskId.SetupServices
+  | typeof TaskId.AddTeamMember
+  | typeof TaskId.GoBeyondBasics
+  | typeof TaskId.ConnectCiCdPipeline
+  | typeof TaskId.AddChangeApprovers
+  | typeof TaskId.TurnOnAutomationRules
+  | typeof TaskId.MakeTheMostOfChangeManagement
+  | typeof TaskId.SetupProfileForNotifications
+  | typeof TaskId.SetupTeam
+  | typeof TaskId.AssignOwnerTeamToServices
+  | typeof TaskId.LevelUpIncidentManagement;
+
+export const BasicsTaskIds: TaskIdType[] = [
+  TaskId.CreateItsmProject,
+  TaskId.CustomizePortal,
+  TaskId.AddPortalLogo,
+  TaskId.SetupEmailRequests,
+  TaskId.SetupServices,
+  TaskId.AddTeamMember,
+  TaskId.GoBeyondBasics,
+];
+export const ChangesTaskIds: TaskIdType[] = [
+  TaskId.ConnectCiCdPipeline,
+  TaskId.AddChangeApprovers,
+  TaskId.MakeTheMostOfChangeManagement,
+];
+export const IncidentsTaskIds: TaskIdType[] = [
+  TaskId.SetupProfileForNotifications,
+  TaskId.SetupTeam,
+  TaskId.AssignOwnerTeamToServices,
+  TaskId.LevelUpIncidentManagement,
+];
+
+type ChecklistTab = {|
+  activeTask: TaskIdType | void,
+|};
+
+type Checklist = {|
+  headerState: HeaderStateType,
+  activeTab: ChecklistTabKeyType,
+  tabs: {|
+    basics: ChecklistTab,
+    incidents: ChecklistTab,
+    changes: ChecklistTab,
+  |},
+|};
+
+type ProductTours = {|
+  headerState?: HeaderStateType,
+  activeTour: ProductTourKey | string,
+|};
+
+export type SectionState = {|
+  version: number,
+  activeSection: GspSectionKeyType | void,
+  sections: {|
+    checklist: Checklist,
+    documentation?: { activeItem: string },
+    productTours: ProductTours,
+  |},
+|};
+
+declare export var TaskVisibility: {|
+  +Hidden: 'hidden',
+  +Unset: 'unset',
+  +Visible: 'visible',
+|};
+
+type TaskVisibilityType =
+  | typeof TaskVisibility.Hidden
+  | typeof TaskVisibility.Unset
+  | typeof TaskVisibility.Visible;
+
+declare export var HasSeenReopenSpotlight: {|
+  +Yes: 'yes',
+  +No: 'no',
+|};
+
+declare export var ContainerType: {|
+  +Project: 'project',
+|};
+
+declare export var ExplicitStringBoolean: {|
+  +Yes: 'yes',
+  +No: 'no',
+|};
+
+export type ContainerPropertiesType = {|
+  containerType: $Values<typeof ContainerType>,
+  containerId: string,
+  properties: {|
+    projectDeleted?: $Values<typeof ExplicitStringBoolean>,
+  |},
+|};
+
+export type GspState = {|
+  completedItems: string[],
+  properties: {|
+    containers: ContainerPropertiesType[],
+    user: {|
+      sectionState: string,
+      activeState: ActiveStateType,
+      visualState: VisualStateType,
+      projectId?: string,
+      hasSeenReopenSpotlight: $Values<typeof HasSeenReopenSpotlight>,
+      // TODO: don't hard code these/fix flow types in general https://jdog.jira-dev.com/browse/JIG-386
+      'servicedesk-standard-tasks-visibility'?: TaskVisibilityType | void,
+      'servicedesk-advanced-tasks-visibility'?: TaskVisibilityType | void,
+      'opsgenie-user-profile-notifications-setup-task-visibility'?: TaskVisibilityType | void,
+      'opsgenie-response-team-setup-task-visibility'?: TaskVisibilityType | void,
+      'opsgenie-owner-team-assigned-to-service-task-visibility'?: TaskVisibilityType | void,
+      'opsgenie-incident-management-documentation-accessed-task-visibility'?: TaskVisibilityType | void,
+    |},
+  |},
+|};
+
+declare export var PropertyKey: {|
+  +VisualState: 'visualState',
+  +ActiveState: 'activeState',
+  +SectionState: 'sectionState',
+  +HasSeenReopenSpotlight: 'hasSeenReopenSpotlight',
+|};
+
+type PropertyKeyType =
+  | typeof PropertyKey.VisualState
+  | typeof PropertyKey.ActiveState
+  | typeof PropertyKey.SectionState;
+
+export type Property = {|
+  key: PropertyKeyType,
+  value: string,
+|};
+
+export type Tenant = {|
+  type: string,
+  id: string,
+|};
+
+export type User = {|
+  type: string,
+  id: string,
+|};
+
+type GettingStartedPanelType = ComponentType<{|
+  state: GspState,
+  serviceDeskBaseUrl: string | void,
+  opsgenieBaseUrl: string | void,
+  product: ProductType,
+  environment: EnvironmentType,
+  cloudId: string,
+  projectKey?: string,
+  onTaskComplete: (id: TaskIdType) => void,
+  onUserActivity: (property: Property) => void,
+  onSpaRedirect?: (url: string) => void,
+  onOpenInProductHelpArticle?: (articleId: string) => void,
+  tenant?: Tenant,
+  user?: User,
+|}>;
+
+declare export var GettingStartedPanel: GettingStartedPanelType;
+
+type LozengeType = ComponentType<{|
+  state: GspState,
+  serviceDeskBaseUrl: string | void,
+  opsgenieBaseUrl: string | void,
+  onUserActivity: (state: State) => void,
+  product: ProductType,
+  environment: EnvironmentType,
+  cloudId: string,
+  tenant?: Tenant,
+  user?: User,
+|}>;
+
+declare export var Lozenge: LozengeType;
+
+declare export var defaultGspState: GspState;
+
+declare export var mockGspState: GspState;
+declare export var mockChecklist: Checklist;
+declare export var mockChecklistTab: ChecklistTab;
+declare export var mockProductTours: ProductTours;

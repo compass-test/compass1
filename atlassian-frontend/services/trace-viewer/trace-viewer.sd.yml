@@ -1,0 +1,20 @@
+name: Trace Viewer
+description: A trace viewer service powered by Perfetto UI
+buildNumber: '0.0.1'
+notifications:
+  email: wbinnssmith@atlassian.com
+organization: UI Platform
+
+links:
+  healthcheck:
+    uri: /healthcheck
+  source:
+    url: git@bitbucket.org:atlassian/atlassian-frontend.git
+  binary:
+    name: docker.atl-paas.net/micros/trace-viewer
+    tag: '0.0.1'
+    type: docker
+
+network:
+  ingress: internal
+  egress: internet-only

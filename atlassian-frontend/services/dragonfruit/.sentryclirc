@@ -1,0 +1,4 @@
+[defaults]
+url=https://sentry.prod.atl-paas.net/
+org=atlassian
+project=compass-frontend

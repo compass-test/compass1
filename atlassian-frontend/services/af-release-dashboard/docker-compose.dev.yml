@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  db:
+    ports:
+      - 5432:5432
+    image: postgres
+    environment:
+      - POSTGRES_DB=${PG_AF_RELEASE_DASHBOARD_SCHEMA}
+      - POSTGRES_USER=${PG_AF_RELEASE_DASHBOARD_ROLE}
+      - POSTGRES_PASSWORD=${PG_AF_RELEASE_DASHBOARD_PASSWORD}
+
+  server:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    restart: always
+    environment:
+      NODE_ENV: development
+      STATLAS_NAMESPACE: ${STATLAS_NAMESPACE}
+      MICROS_ENV: ${MICROS_ENV}
+      PG_AF_RELEASE_DASHBOARD_HOST: db
+      PG_AF_RELEASE_DASHBOARD_PORT: ${PG_AF_RELEASE_DASHBOARD_PORT}
+      PG_AF_RELEASE_DASHBOARD_ROLE: ${PG_AF_RELEASE_DASHBOARD_ROLE}
+      PG_AF_RELEASE_DASHBOARD_PASSWORD: ${PG_AF_RELEASE_DASHBOARD_PASSWORD}
+      PG_AF_RELEASE_DASHBOARD_SCHEMA: ${PG_AF_RELEASE_DASHBOARD_SCHEMA}
+      BITBUCKET_USER: ${BITBUCKET_USER}
+      BITBUCKET_PASSWORD: ${BITBUCKET_PASSWORD}
+    depends_on:
+      - slauth-proxy
+      - dockerhost
+      - db
+
+  slauth-proxy:
+    image: docker.atl-paas.net/micros/slauth-mock-sidecar:stable
+    ports:
+      - 8081:8081
+    environment:
+      BACKEND_HOST: dockerhost
+      BACKEND_PORT: 8080
+    depends_on:
+      - dockerhost
+
+  dockerhost:
+    image: qoomon/docker-host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    restart: on-failure
+    mem_limit: 8M
+    cpu_count: 1

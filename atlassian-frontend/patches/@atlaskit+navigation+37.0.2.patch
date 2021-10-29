@@ -1,0 +1,86 @@
+diff --git a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/.DS_Store b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/.DS_Store
+new file mode 100644
+index 0000000..e38c35e
+Binary files /dev/null and b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/.DS_Store differ
+diff --git a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerHeaderText.js b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerHeaderText.js
+index 2283fae..daf7d01 100644
+--- a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerHeaderText.js
++++ b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerHeaderText.js
+@@ -1,10 +1,9 @@
+ import styled from 'styled-components';
+ import { gridSize } from '@atlaskit/theme/constants';
+-import { multiply, divide } from '@atlaskit/theme/math';
+ var SkeletonContainerHeaderText = styled.div.withConfig({
+   displayName: "SkeletonContainerHeaderText",
+   componentId: "s5b309-0"
+-})(["\n  height: ", "px;\n  background-color: currentColor;\n  border-radius: ", "px;\n  opacity: 0.3;\n  ", ";\n  width: ", "px;\n"], multiply(gridSize, 2.5), divide(gridSize, 2), function (props) {
++})(["\n  height: ", "px;\n  background-color: currentColor;\n  border-radius: ", "px;\n  opacity: 0.3;\n  ", ";\n  width: ", "px;\n"], 2.5*gridSize(), gridSize() / 2, function (props) {
+   return !props.isAvatarHidden && "margin-left: ".concat(gridSize() * 2, "px");
+ }, gridSize() * 18);
+ SkeletonContainerHeaderText.displayName = 'SkeletonContainerHeaderText';
+diff --git a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerItemText.js b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerItemText.js
+index 85c161f..1897e70 100644
+--- a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerItemText.js
++++ b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonContainerItemText.js
+@@ -1,10 +1,9 @@
+ import styled from 'styled-components';
+ import { gridSize } from '@atlaskit/theme/constants';
+-import { multiply, divide } from '@atlaskit/theme/math';
+ var SkeletonContainerItemText = styled.div.withConfig({
+   displayName: "SkeletonContainerItemText",
+   componentId: "sc-5ck6m2-0"
+-})(["\n  height: ", "px;\n  background-color: currentColor;\n  border-radius: ", "px;\n  opacity: 0.15;\n  margin-left: ", "px;\n  width: ", ";\n"], multiply(gridSize, 2.5), divide(gridSize, 2), gridSize() * 3, function (props) {
++})(["\n  height: ", "px;\n  background-color: currentColor;\n  border-radius: ", "px;\n  opacity: 0.15;\n  margin-left: ", "px;\n  width: ", ";\n"], 20, 4, gridSize() * 3, function (props) {
+   return props.textWidth || "".concat(gridSize() * 17, "px");
+ });
+ SkeletonContainerItemText.displayName = 'SkeletonContainerItemText';
+diff --git a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonDefaultContainerHeaderInner.js b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonDefaultContainerHeaderInner.js
+index 80f49e3..ed60997 100644
+--- a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonDefaultContainerHeaderInner.js
++++ b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonDefaultContainerHeaderInner.js
+@@ -1,11 +1,10 @@
+ import styled from 'styled-components';
+ import { gridSize } from '@atlaskit/theme/constants';
+-import { divide } from '@atlaskit/theme/math';
+ var SkeletonDefaultContainerHeaderInner = styled.div.withConfig({
+   displayName: "SkeletonDefaultContainerHeaderInner",
+   componentId: "v596gu-0"
+ })(["\n  display: flex;\n  align-items: center;\n  margin: ", "px\n    ", "px 0 ", "px;\n"], function (props) {
+-  return props.isAvatarHidden ? gridSize() * 2 : divide(gridSize, 2);
++  return props.isAvatarHidden ? gridSize() * 2 : 4;
+ }, gridSize(), gridSize());
+ SkeletonDefaultContainerHeaderInner.displayName = 'SkeletonDefaultContainerHeaderInner';
+ export default SkeletonDefaultContainerHeaderInner;
+\ No newline at end of file
+diff --git a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalIconOuter.js b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalIconOuter.js
+index 5b35837..4086e47 100644
+--- a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalIconOuter.js
++++ b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalIconOuter.js
+@@ -1,9 +1,7 @@
+ import styled from 'styled-components';
+-import { gridSize } from '@atlaskit/theme/constants';
+-import { divide } from '@atlaskit/theme/math';
+ var SkeletonGlobalIconOuter = styled.div.withConfig({
+   displayName: "SkeletonGlobalIconOuter",
+   componentId: "sc-1kpch5t-0"
+-})(["\n  margin-bottom: ", "px;\n\n  &:last-child {\n    margin-bottom: 0;\n  }\n"], divide(gridSize, 2));
++})(["\n  margin-bottom: ", "px;\n\n  &:last-child {\n    margin-bottom: 0;\n  }\n"], 4);
+ SkeletonGlobalIconOuter.displayName = 'SkeletonGlobalIconOuter';
+ export default SkeletonGlobalIconOuter;
+\ No newline at end of file
+diff --git a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalPrimaryIconOuter.js b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalPrimaryIconOuter.js
+index 451ffc8..a907da4 100644
+--- a/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalPrimaryIconOuter.js
++++ b/node_modules/@atlaskit/navigation/dist/esm/components/js/skeleton/styled/SkeletonGlobalPrimaryIconOuter.js
+@@ -1,9 +1,7 @@
+ import styled from 'styled-components';
+-import { gridSize } from '@atlaskit/theme/constants';
+-import { multiply } from '@atlaskit/theme/math';
+ var SkeletonGlobalPrimaryIconOuter = styled.div.withConfig({
+   displayName: "SkeletonGlobalPrimaryIconOuter",
+   componentId: "p7w614-0"
+-})(["\n  margin-bottom: ", "px;\n"], multiply(gridSize, 1.5));
++})(["\n  margin-bottom: ", "px;\n"], 12);
+ SkeletonGlobalPrimaryIconOuter.displayName = 'SkeletonGlobalPrimaryIconOuter';
+ export default SkeletonGlobalPrimaryIconOuter;
+\ No newline at end of file

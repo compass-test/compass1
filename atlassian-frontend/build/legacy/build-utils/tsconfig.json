@@ -1,0 +1,24 @@
+{
+  "extends": "../../../tsconfig.json",
+  "include": [
+    "**/*.ts",
+    "typings/*.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "allowJs": true,
+    "target": "es2018",
+    "types": [
+      "node"
+    ],
+    "typeRoots": ["../../../typings", "./typings", "./node_modules/@types"]
+  },
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // It is faster to skip typechecking.
+    "transpileOnly": true,
+    // We must load files for third party defs - https://typestrong.org/ts-node/docs/types
+    "files": true,
+  }
+}

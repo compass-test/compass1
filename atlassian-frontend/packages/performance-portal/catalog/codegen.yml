@@ -1,0 +1,35 @@
+overwrite: true
+schema: ../schema.graphql
+documents: src/**/*.graphql
+generates:
+  src/__generated__/graphql.ts:
+    plugins:
+      - add:
+          content: |
+            //==============================================================
+            /* tslint:disable */
+            /* eslint-disable */
+            // @generated
+            // This file was automatically generated and should not be edited.
+            //==============================================================
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      preResolveTypes: true
+      # Creates a convenient function for refetching queries after a mutation
+      # https://www.apollographql.com/docs/react/caching/advanced-topics/#rerunning-queries-after-a-mutation
+      withRefetchFn: true
+      # DocumentNodes will be generated instead of gql templates, which means we don't need to ship gql to the customer
+      documentMode: documentNode
+      # Adds the __PURE__ comment, which marks variables as side-effect free and allows for easy tree-shaking
+      pureMagicComment: true
+      # Convert all of our enums to uppercase
+      namingConvention:
+        enumValues: change-case#upperCase
+      scalars:
+        Date: string
+        DateTime: string
+    hooks:
+      afterOneFileWrite:
+        - prettier --write

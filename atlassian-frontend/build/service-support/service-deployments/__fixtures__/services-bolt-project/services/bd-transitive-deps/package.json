@@ -1,0 +1,17 @@
+{
+  "name": "@af/bd-transitive-deps",
+  "version": "0.0.1",
+  "dependencies": {
+    "@atlaskit/foo": "^0.0.1"
+  },
+  "af:services": {
+    "serviceName": "bd-transitive-deps-service",
+    "branch": {
+      "env": "stg-east"
+    },
+    "deployOnDependencies": {
+      "type": "transitive",
+      "depth": 2
+    }
+  }
+}

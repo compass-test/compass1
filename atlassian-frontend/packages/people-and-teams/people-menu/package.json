@@ -1,0 +1,77 @@
+{
+  "name": "@atlassian/people-menu",
+  "version": "17.4.0",
+  "description": "People Menu for Navigation 3",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts"
+  },
+  "atlassian": {
+    "team": "People and Teams Collective",
+    "releaseModel": "continuous"
+  },
+  "scripts": {
+    "lint:fix": "(cd ../../.. && bolt w @atlaskit/codeshifts format-package-jsons && yarn eslint --fix 'packages/people-and-teams/people-menu/**/*.{ts,tsx,ts}')",
+    "lint": "(cd ../../.. && yarn eslint 'packages/people-and-teams/people-menu/**/*.{ts,tsx,ts}')",
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit --project ./tsconfig.json",
+    "test": "(cd ../../.. && yarn test 'packages/people-and-teams/people-menu')",
+    "test:vr": "(cd ../../.. && yarn test:vr -u people-menu)"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-gas-types": "^5.0.0",
+    "@atlaskit/analytics-next": "^8.0.0",
+    "@atlaskit/icon": "^21.9.0",
+    "@atlaskit/modal-dialog": "^12.0.0",
+    "@atlaskit/onboarding": "^10.1.9",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlassian/invite-people": "^7.5.0",
+    "@atlassian/invite-people-drawer": "^2.4.0",
+    "@atlassian/people-teams": "^2.6.0",
+    "@babel/runtime": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@atlaskit/atlassian-navigation": "*",
+    "@atlaskit/menu": "*",
+    "@atlaskit/popup": "*",
+    "@atlaskit/tokens": "^0.2.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-intl": "^2.6.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/button": "^16.0.0",
+    "@atlaskit/checkbox": "^12.0.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/field-text": "^11.0.0",
+    "@atlaskit/logo": "^13.0.0",
+    "@atlaskit/radio": "^5.0.0",
+    "@atlaskit/visual-regression": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@atlassian/ptc-test-utils": "^0.1.5",
+    "@testing-library/react": "^8.0.1",
+    "@testing-library/react-hooks": "^1.0.4",
+    "fetch-mock": "^8.0.0",
+    "typescript": "3.9.6"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    },
+    "@repo/internal": {
+      "theming": "tokens"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

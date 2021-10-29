@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Eslint adapter returns the correct eslint config 1`] = `
+Object {
+  "overrides": Array [
+    Object {
+      "files": Array [
+        "**/*.js",
+      ],
+      "rules": Object {
+        "rule-e": "error",
+      },
+    },
+    Object {
+      "files": Array [
+        "/Foo/project/packages/package-a/**/*.{js,jsx,ts,tsx}",
+      ],
+      "rules": Object {
+        "rule-a": Array [
+          "error",
+          Object {
+            "foo": "bar",
+          },
+        ],
+      },
+    },
+    Object {
+      "files": Array [
+        "/Foo/project/packages/package-b/**/*.{js,jsx,ts,tsx}",
+      ],
+      "rules": Object {
+        "rule-b": "error",
+      },
+    },
+    Object {
+      "files": Array [
+        "/Foo/project/packages/package-c/**/*.{js,jsx,ts,tsx}",
+      ],
+      "rules": Object {
+        "rule-c": "error",
+      },
+    },
+    Object {
+      "files": Array [
+        "/Foo/project/packages/package-d/**/*.{js,jsx,ts,tsx}",
+      ],
+      "rules": Object {
+        "rule-d": "error",
+      },
+    },
+  ],
+  "plugins": Array [
+    "plugin-e",
+    "plugin-a",
+    "plugin-b",
+    "plugin-c",
+  ],
+}
+`;

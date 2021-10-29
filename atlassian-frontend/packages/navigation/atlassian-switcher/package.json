@@ -1,0 +1,78 @@
+{
+  "name": "@atlassian/switcher",
+  "version": "19.0.7",
+  "description": "App switcher component for Atlassian products.",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Activity Platform",
+    "releaseModel": "continuous"
+  },
+  "scripts": {
+    "lint": "(cd ../../.. && yarn eslint 'packages/navigation/atlassian-switcher/**/*.{ts,tsx,ts}')",
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-gas-types": "^5.0.0",
+    "@atlaskit/analytics-namespaced-context": "^6.3.0",
+    "@atlaskit/analytics-next": "^8.0.0",
+    "@atlaskit/avatar-group": "^8.5.0",
+    "@atlaskit/button": "^16.0.0",
+    "@atlaskit/icon": "^21.9.0",
+    "@atlaskit/item": "^12.0.0",
+    "@atlaskit/logo": "^13.4.2",
+    "@atlaskit/lozenge": "^11.0.0",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlaskit/tooltip": "^17.5.0",
+    "@babel/runtime": "^7.0.0",
+    "lodash": "^4.17.15",
+    "memoize-one": "^6.0.0",
+    "react-loadable": "^5.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-intl": "^2.6.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/atlassian-navigation": "^1.1.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/drawer": "^7.0.0",
+    "@atlaskit/form": "^8.4.0",
+    "@atlaskit/inline-dialog": "^13.0.0",
+    "@atlaskit/modal-dialog": "^12.0.0",
+    "@atlaskit/navigation": "^37.0.0",
+    "@atlaskit/navigation-next": "^9.0.0",
+    "@atlaskit/page": "^12.0.0",
+    "@atlaskit/popup": "^1.1.0",
+    "@atlaskit/textfield": "^5.0.0",
+    "@atlaskit/visual-regression": "^0.7.5",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@atlassian/switcher-test-utils": "^2.0.0",
+    "@testing-library/dom": "^7.7.3",
+    "@testing-library/react": "^8.0.1",
+    "enzyme": "^3.10.0",
+    "fetch-mock": "^8.0.0",
+    "react": "^16.8.0",
+    "react-intl": "^2.6.0",
+    "typescript": "3.9.6",
+    "wait-for-expect": "^1.2.0"
+  },
+  "af:exports": {
+    ".": "./src/index.ts",
+    "./create-custom-provider": "./src/create-custom-provider.ts",
+    "./prefetch": "./src/prefetch.ts",
+    "./types": "./src/types.ts"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

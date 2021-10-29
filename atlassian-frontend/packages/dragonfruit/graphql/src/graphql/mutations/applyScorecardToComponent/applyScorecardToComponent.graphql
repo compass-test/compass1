@@ -1,0 +1,15 @@
+mutation applyScorecardToComponent($scorecardId: ID!, $componentId: ID!) {
+  compass {
+    applyScorecardToComponent(scorecardId: $scorecardId, componentId: $componentId) {
+      success
+
+      componentDetails {
+        ...CompassComponentCore
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

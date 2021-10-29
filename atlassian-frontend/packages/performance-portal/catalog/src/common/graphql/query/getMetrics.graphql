@@ -1,0 +1,41 @@
+query getMetrics($first: Int! = 200) {
+  metrics(first: $first) {
+    edges {
+      cursor
+      node {
+        ...metric
+      }
+    }
+    nodes {
+      ...metric
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}
+
+fragment metric on Metric {
+  __typename
+  id
+  name
+  product
+  key
+  slackChannel
+  owner {
+    __typename
+    ... on Staff {
+      id
+      fullName
+    }
+    ... on Team {
+      id
+      teamName
+    }
+  }
+  ... on PageLoadMetric {
+    eventType
+    eventKey
+  }
+}

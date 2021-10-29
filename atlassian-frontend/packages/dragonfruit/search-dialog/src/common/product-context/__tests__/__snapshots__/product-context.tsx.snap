@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductProvider /> render matches snapshot with multiple products 1`] = `
+<ProductProvider
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <ProductContextDummy>
+    <div>
+      <span>
+        Products: 
+        CONFLUENCE
+      </span>
+      <span>
+        Primary Product: 
+        CONFLUENCE
+      </span>
+      <span>
+        Active Product: 
+        CONFLUENCE
+      </span>
+    </div>
+  </ProductContextDummy>
+</ProductProvider>
+`;
+
+exports[`<ProductProvider /> render matches snapshot with multiple products and an activeIndex 1`] = `
+<ProductProvider
+  activeIndex={1}
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <ProductContextDummy>
+    <div>
+      <span>
+        Products: 
+        CONFLUENCE
+      </span>
+      <span>
+        Primary Product: 
+        CONFLUENCE
+      </span>
+      <span>
+        Active Product: 
+        CONFLUENCE
+      </span>
+    </div>
+  </ProductContextDummy>
+</ProductProvider>
+`;
+
+exports[`<ProductProvider /> render matches snapshot with multiple products and primary product 1`] = `
+<ProductProvider
+  primaryProduct="uchi"
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <ProductContextDummy>
+    <div>
+      <span>
+        Products: 
+        CONFLUENCE
+      </span>
+      <span>
+        Primary Product: 
+        uchi
+      </span>
+      <span>
+        Active Product: 
+        CONFLUENCE
+      </span>
+    </div>
+  </ProductContextDummy>
+</ProductProvider>
+`;
+
+exports[`<ProductProvider /> render matches snapshot with negative index 1`] = `
+<ProductProvider
+  activeIndex={-1}
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <ProductContextDummy>
+    <div>
+      <span>
+        Products: 
+        CONFLUENCE
+      </span>
+      <span>
+        Primary Product: 
+        CONFLUENCE
+      </span>
+      <span>
+        Active Product: 
+        CONFLUENCE
+      </span>
+    </div>
+  </ProductContextDummy>
+</ProductProvider>
+`;
+
+exports[`<ProductProvider /> render matches snapshot with out of bounds index 1`] = `
+<ProductProvider
+  activeIndex={2}
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <ProductContextDummy>
+    <div>
+      <span>
+        Products: 
+        CONFLUENCE
+      </span>
+      <span>
+        Primary Product: 
+        CONFLUENCE
+      </span>
+      <span>
+        Active Product: 
+        CONFLUENCE
+      </span>
+    </div>
+  </ProductContextDummy>
+</ProductProvider>
+`;
+
+exports[`<ProductProvider /> render matches snapshot with single product 1`] = `
+<ProductProvider
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <ProductContextDummy>
+    <div>
+      <span>
+        Products: 
+        CONFLUENCE
+      </span>
+      <span>
+        Primary Product: 
+        CONFLUENCE
+      </span>
+      <span>
+        Active Product: 
+        CONFLUENCE
+      </span>
+    </div>
+  </ProductContextDummy>
+</ProductProvider>
+`;

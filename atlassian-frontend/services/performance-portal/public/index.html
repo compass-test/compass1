@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PerformancePortal</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://npmcdn.com/@atlaskit/css-reset/dist/bundle.css"
+    />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+      </script>
+  </body>
+</html>

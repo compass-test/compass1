@@ -1,0 +1,24 @@
+{
+  "name": "@af/bundle-size-pipeline",
+  "version": "0.0.1",
+  "private": true,
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "scripts": {
+    "merge:json": "cd ../../.. && ts-node build/ci/bundle-size-pipeline/scripts/merge.json.in.folder.ts .currentBundleSize",
+    "send:bundleSize": "cd ../../.. && ts-node build/ci/bundle-size-pipeline/scripts/sending.bundle.size.analytics.ts",
+    "split-pkgs-for-bundle-size": "cd ../../.. && ts-node build/ci/bundle-size-pipeline/scripts/split-pkgs-for-bundle-size-step",
+    "trigger-bundle-size-if-changed": "cd ../../.. && node build/legacy/ci-scripts/run.tool.if.changed.js bundlesize --dependents='direct' -- ts-node build/ci/bundle-size-pipeline/scripts/trigger-bundle-size.ts"
+  },
+  "dependencies": {
+    "@af/cache": "^1.0.0",
+    "@af/s3-remote-store": "^1.0.0",
+    "@atlaskit/build-utils": "*",
+    "@atlassiansox/analytics-node-client": "^1.1.4"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "ts-node": "^10.0.0"
+  }
+}

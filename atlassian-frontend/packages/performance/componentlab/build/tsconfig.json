@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "paths": {},
+    "allowJs": true,
+    "sourceMap": false
+  },
+  "extends": "../tsconfig.json",
+  "include": [
+    "../src/create-test-harness/multi-entry-tools/*.js",
+    "../src/worker-entry.js",
+    "../src/**/*.ts",
+    "../src/**/*.tsx",
+    "../plugins/**/*.ts",
+    "../plugins/**/*.tsx"
+  ],
+  "exclude": [
+    "../src/**/__tests__/*",
+    "../src/**/*.test.*",
+    "../src/**/test.*"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "tests": [{
+    "name": "Allow ASAP for other CLA services",
+    "path": "/api/pull-requests/pending-signees",
+    "method": "POST",
+    "mechanism": "asap",
+    "principals": ["micros/cla-bot"],
+    "allowed": true
+  },
+  {
+    "name": "Deny ASAP requests for any other service",
+    "path": "/api/pull-requests/pending-signees",
+    "method": "POST",
+    "mechanism": "asap",
+    "principals": ["micros/oss"],
+    "allowed": false
+  },
+  {
+    "name": "Allow any service team access to api webpages",
+    "path": "/api/corporate",
+    "method": "GET",
+    "mechanism": "group",
+    "principals": ["micros-sv--my-cool-service-dl-admins"],
+    "allowed": true
+  }]
+}

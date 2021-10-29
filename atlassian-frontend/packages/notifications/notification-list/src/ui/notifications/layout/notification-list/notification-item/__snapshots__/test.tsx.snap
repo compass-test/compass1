@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) NotificationItem Adf Expand should expand notification adf on click 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  min-height: 38px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  color: #172B4D;
+  margin: 4px 0 4px 52px;
+  border: 1px solid rgba(9,30,66,0.08);
+  border-radius: 3px;
+  padding: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #4C9AFF;
+}
+
+.emotion-0:hover {
+  background-color: #F4F5F7;
+}
+
+<div
+  class="emotion-0"
+  data-testid="document-wrapper"
+  tabindex="0"
+>
+  <p>
+    Matthew Low hello!
+  </p>
+</div>
+`;
+
+exports[`(Component) NotificationItem Adf Expand should expand notification adf on click 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  min-height: 38px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  color: #172B4D;
+  margin: 4px 0 4px 52px;
+  border: 1px solid rgba(9,30,66,0.08);
+  border-radius: 3px;
+  padding: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #4C9AFF;
+}
+
+.emotion-0:hover {
+  background-color: #F4F5F7;
+}
+
+<div
+  class="emotion-0"
+  data-testid="document-wrapper"
+  tabindex="0"
+>
+  <div
+    style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"
+  />
+  <div
+    style="position: absolute; height: 0px; width: 100%;"
+  >
+    <object
+      aria-hidden="true"
+      data="about:blank"
+      style="position: absolute; height: 0px; width: 100%;"
+      tabindex="-1"
+      type="text/html"
+    />
+  </div>
+  <div
+    class="ak-renderer-wrapper sc-jDwBTQ iokgpV"
+  >
+    <div />
+    <div
+      class="sc-kTUwUJ fzwjBi"
+    >
+      <div
+        class="ak-renderer-document"
+      >
+        <p
+          data-renderer-start-pos="1"
+        >
+          <span
+            data-access-level=""
+            data-mention-id="5fb4f7aff8b01200695710f6"
+            spellcheck="false"
+          >
+            <span
+              class="sc-Rmtcm hbsRbF"
+            >
+              Matthew Low
+            </span>
+          </span>
+           hello!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`(Component) NotificationItem Adf Expand should expand notification adf using enter keypress 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  min-height: 38px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  color: #172B4D;
+  margin: 4px 0 4px 52px;
+  border: 1px solid rgba(9,30,66,0.08);
+  border-radius: 3px;
+  padding: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #4C9AFF;
+}
+
+.emotion-0:hover {
+  background-color: #F4F5F7;
+}
+
+<div
+  class="emotion-0"
+  data-testid="document-wrapper"
+  tabindex="0"
+>
+  <p>
+    Matthew Low hello!
+  </p>
+</div>
+`;
+
+exports[`(Component) NotificationItem Adf Expand should expand notification adf using enter keypress 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  min-height: 38px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  color: #172B4D;
+  margin: 4px 0 4px 52px;
+  border: 1px solid rgba(9,30,66,0.08);
+  border-radius: 3px;
+  padding: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #4C9AFF;
+}
+
+.emotion-0:hover {
+  background-color: #F4F5F7;
+}
+
+<div
+  class="emotion-0"
+  data-testid="document-wrapper"
+  tabindex="0"
+>
+  <div
+    style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;"
+  />
+  <div
+    style="position: absolute; height: 0px; width: 100%;"
+  >
+    <object
+      aria-hidden="true"
+      data="about:blank"
+      style="position: absolute; height: 0px; width: 100%;"
+      tabindex="-1"
+      type="text/html"
+    />
+  </div>
+  <div
+    class="ak-renderer-wrapper sc-jDwBTQ iokgpV"
+  >
+    <div />
+    <div
+      class="sc-kTUwUJ fzwjBi"
+    >
+      <div
+        class="ak-renderer-document"
+      >
+        <p
+          data-renderer-start-pos="1"
+        >
+           hello!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

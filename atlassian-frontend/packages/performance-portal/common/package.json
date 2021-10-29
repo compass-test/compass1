@@ -1,0 +1,46 @@
+{
+  "name": "@atlassian/performance-portal-common",
+  "version": "0.0.41",
+  "description": "Shared Performance Portal UI components and utilities",
+  "private": true,
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "atlassian": {
+    "team": "UIP Frontend Observability",
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@atlaskit/icon": "^21.9.0",
+    "@atlaskit/spinner": "^15.0.6",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlaskit/tooltip": "^17.5.0",
+    "@emotion/styled": "^10.0.7",
+    "json-date-parser": "^1.0.1",
+    "lodash": "^4.17.15",
+    "react-resource-router": "^0.14.2",
+    "react-sweet-state": "^2.1.1",
+    "react-use-clipboard": "^1.0.0",
+    "url-parse": "^1.4.5",
+    "utility-types": "^3.10.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "af:exports": {
+    "./ui": "./src/ui/index.ts",
+    "./types": "./src/types.ts",
+    "./constants": "./src/constants.ts",
+    ".": "./src/index.ts"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1"
+  }
+}

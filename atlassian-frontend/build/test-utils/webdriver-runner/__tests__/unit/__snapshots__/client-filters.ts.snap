@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BrowserStack getBetaBrowserTestCaseClients should include only beta desktop browsers 1`] = `
+Array [
+  "chrome beta",
+]
+`;
+
+exports[`BrowserStack getBrowserTestCaseClients should filter out all browsers when wildcard is passed via test case options 1`] = `Array []`;
+
+exports[`BrowserStack getBrowserTestCaseClients should filter out browser(s) when skipped via test case options 1`] = `
+Array [
+  "firefox",
+  "safari",
+  "edge",
+]
+`;
+
+exports[`BrowserStack getBrowserTestCaseClients should ignore invalid skipped browsers via test case options 1`] = `
+Array [
+  "chrome",
+  "firefox",
+  "safari",
+  "edge",
+]
+`;
+
+exports[`BrowserStack getBrowserTestCaseClients should include only desktop browsers 1`] = `
+Array [
+  "chrome",
+  "firefox",
+  "safari",
+  "edge",
+]
+`;
+
+exports[`BrowserStack getMobileTestCaseClients should augment additional devices when the 'DEFAULT' value is provided in options.versions 1`] = `
+Array [
+  "iOS 14 iPhone 12",
+  "iOS 12 iPhone XS",
+  "Android 10.0 Google Pixel 4",
+]
+`;
+
+exports[`BrowserStack getMobileTestCaseClients should filter out all platforms if wildcard is provided via skip options 1`] = `Array []`;
+
+exports[`BrowserStack getMobileTestCaseClients should filter out platform and version based on skip options 1`] = `
+Array [
+  "Android 10.0 Google Pixel 4",
+]
+`;
+
+exports[`BrowserStack getMobileTestCaseClients should include a single iOS and Android device by default 1`] = `
+Array [
+  "iOS 14 iPhone 12",
+  "Android 10.0 Google Pixel 4",
+]
+`;
+
+exports[`BrowserStack getMobileTestCaseClients should only target samsung devices 1`] = `
+Array [
+  "Android 10.0 Samsung Galaxy S20",
+]
+`;
+
+exports[`BrowserStack getMobileTestCaseClients should only target tablet devices 1`] = `
+Array [
+  "iOS 14 iPad Pro 12.9 2020",
+]
+`;

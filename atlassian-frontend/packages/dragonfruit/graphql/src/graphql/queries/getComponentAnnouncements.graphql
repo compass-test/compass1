@@ -1,0 +1,11 @@
+query getComponentAnnouncements($id: ID!) {
+  compass {
+    component(id: $id) {
+      __typename
+      ...on CompassComponent {
+        id
+        ...CompassComponentAnnouncements
+      }
+    }
+  }
+}

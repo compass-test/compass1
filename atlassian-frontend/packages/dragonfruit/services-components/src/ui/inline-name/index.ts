@@ -1,0 +1,1 @@
+export { InlineName } from './main';

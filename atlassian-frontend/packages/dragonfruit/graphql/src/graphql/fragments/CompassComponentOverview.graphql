@@ -1,0 +1,5 @@
+fragment CompassComponentOverview on CompassComponent {
+  id
+  name
+  type
+}

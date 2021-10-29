@@ -1,0 +1,1 @@
+export { UpdateAnnouncementModal } from './main';

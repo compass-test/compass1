@@ -1,0 +1,44 @@
+{
+  "name": "@atlassian/canvas-app",
+  "description": "A whiteboarding webapp",
+  "version": "1.0.7",
+  "author": "Atlassian Pty Ltd",
+  "private": true,
+  "scripts": {
+    "build": "canvas-build --favicon canvas-favicon.prod.svg --main=src/canvas-app --basename=$BASENAME",
+    "deploy": "atlas micros static deploy -s canvas-app -e ${MICROS_ENV:-adev} -f canvas-app.sd.yml",
+    "start": "canvas-start --favicon canvas-favicon.prod.svg --main=src/canvas-app"
+  },
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "atlassian": {
+    "team": "Canvas",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "af:services": {
+    "serviceName": "canvas-app",
+    "slackChannelId": "C027MLUFSFN",
+    "master": {
+      "continuous": {
+        "env": "adev"
+      }
+    },
+    "branch": {
+      "env": "statlas"
+    }
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "dependencies": {
+    "@atlaskit/atlassian-navigation": "^1.0.0",
+    "@atlaskit/popup": "^1.0.6",
+    "@atlassian/canvas-renderer": "^0.0.4",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlassian/canvas-build": "^1.0.0"
+  }
+}

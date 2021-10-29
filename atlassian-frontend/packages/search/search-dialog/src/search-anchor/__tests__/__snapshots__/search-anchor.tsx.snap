@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchAnchor /> matches snapshot when contracted 1`] = `
+<Styled(div)>
+  <Styled(div)
+    isExpanded={false}
+  >
+    <Styled(div)
+      isExpanded={false}
+      onBlur={[MockFunction]}
+      onFocus={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    />
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`<SearchAnchor /> matches snapshot when expanded 1`] = `
+<Styled(div)>
+  <Styled(div)
+    isExpanded={true}
+  >
+    <Styled(div)
+      isExpanded={true}
+      onBlur={[MockFunction]}
+      onFocus={[MockFunction]}
+      onKeyDown={[MockFunction]}
+    />
+  </Styled(div)>
+</Styled(div)>
+`;

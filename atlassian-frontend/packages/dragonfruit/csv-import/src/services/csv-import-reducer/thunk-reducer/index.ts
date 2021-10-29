@@ -1,0 +1,1 @@
+export { useThunkReducer } from './main';

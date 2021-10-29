@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuildPkg should run babel and tsc to transpile a TS package 1`] = `
+Array [
+  "NODE_ENV=production BABEL_ENV=production:cjs babel src -d dist/cjs -x .ts,.tsx --root-mode upward",
+  "NODE_ENV=production BABEL_ENV=production:esm babel src -d dist/esm -x .ts,.tsx --root-mode upward",
+  "NODE_ENV=production BABEL_ENV=production:es2019 babel src -d dist/es2019 -x .ts,.tsx --root-mode upward",
+  "NODE_ENV=production tsc --project ./build/tsconfig.json --emitDeclarationOnly --outDir ./dist/types",
+]
+`;
+
+exports[`BuildPkg should run babel to transpile a JS package 1`] = `
+Array [
+  "NODE_ENV=production BABEL_ENV=production:cjs babel src -d dist/cjs --root-mode upward",
+  "NODE_ENV=production BABEL_ENV=production:esm babel src -d dist/esm --root-mode upward",
+  "echo \\"es2019 builds not supported for babel packages\\"",
+  "echo \\"No type generation for JS packages\\"",
+]
+`;

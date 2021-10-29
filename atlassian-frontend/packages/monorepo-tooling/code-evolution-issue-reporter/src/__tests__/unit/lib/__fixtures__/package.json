@@ -1,0 +1,11 @@
+{
+  "name": "mock-package",
+  "atlassian": {
+    "team": "Test Team",
+    "releaseModel": "continuous"
+  },
+  "team": "Test Team",
+  "jira": {
+    "team": "Test Team"
+  }
+}

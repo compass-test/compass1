@@ -1,0 +1,11 @@
+mutation deleteScorecardCriterias($scorecardId: ID!, $input: DeleteCompassScorecardCriteriasInput!) {
+  compass {
+    deleteScorecardCriterias(scorecardId: $scorecardId, input: $input) {
+      success
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

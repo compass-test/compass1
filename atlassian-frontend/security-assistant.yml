@@ -1,0 +1,26 @@
+# Whether to raise all SourceClear findings regardless of progressive rollout
+# file-sourceclear-tickets: true
+
+# Who to assign issues to instead of the committer
+owner: jdang2@atlassian.com
+
+# Assign an owner based on finding path
+# owners:
+#   - user: zsims@atlassian.com
+#     paths:
+#       - "pkg-a/**"
+#       - "pkg-c/**"
+#       - "something/else/package.json"
+#   - user: mhart@atlassian.com
+#     paths:
+#       - "pkg-b/**"
+#       - "**/*.json"
+
+# Security/VMP team use only
+# Ignore findings for given paths
+# ignore:
+#   # Signature for the repository + paths below
+#   # Security can generate this at https://sec-assist-tools.us-west-2.prod.atl-paas.net/repo-settings
+#   signature: "TBD"
+#   paths:
+#     - "test/**"

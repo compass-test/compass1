@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BuildVersionAnalyticContext /> render matches snapshot 1`] = `
+<SearchDialogAnalyticsContext
+  analyticContext={
+    Object {
+      "frontend": "@atlassian/product-search-dialog@__BUILD_VERSION__",
+    }
+  }
+  nonPrivacySafeAnalyticContext={Object {}}
+>
+  <div />
+</SearchDialogAnalyticsContext>
+`;

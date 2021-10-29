@@ -1,0 +1,21 @@
+query getTeamCheckins(
+  $input: CompassTeamCheckinsInput!
+) {
+  compass {
+    teamCheckins(input: $input) {
+      __typename
+      teamId
+      id
+      mood
+      response1
+      response2
+      response3
+      changeMetadata {
+        createdAt
+        lastUserModificationAt
+      }
+
+      ...CompassTeamCheckinCore
+    }
+  }
+}

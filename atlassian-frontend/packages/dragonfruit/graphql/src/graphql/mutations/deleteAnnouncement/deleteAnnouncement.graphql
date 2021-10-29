@@ -1,0 +1,11 @@
+mutation deleteAnnouncement($input: CompassDeleteAnnouncementInput!) {
+  compass {
+    deleteAnnouncement(input: $input) {
+      deletedAnnouncementId
+      success
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

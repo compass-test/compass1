@@ -1,0 +1,15 @@
+/**
+ * This file is used by the test scaling project to optimise test result caching
+ * Examples that are used by tests affect the outcome of tests so must be included when hashing
+ * They are defined here so the hashing algorithm doesn't need to search test files for example usage each time
+ */
+{
+  "testExamples": [
+    "50-slack-disabled-form--jira.tsx",
+    "51-slack-disabled-form--confluence.tsx",
+    "60-slack-consent-primer--jira.tsx",
+    "61-slack-consent-primer--confluence.tsx",
+    "70-share-to-slack-form--loading.tsx",
+    "71-share-to-slack-form--loaded.tsx"
+  ]
+}

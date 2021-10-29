@@ -1,0 +1,37 @@
+diff --git a/node_modules/request/lib/oauth.js b/node_modules/request/lib/oauth.js
+index 96de72b..a344f78 100644
+--- a/node_modules/request/lib/oauth.js
++++ b/node_modules/request/lib/oauth.js
+@@ -62,16 +62,9 @@ OAuth.prototype.buildParams = function (_oauth, uri, method, query, form, qsLib)
+ }
+ 
+ OAuth.prototype.buildBodyHash = function (_oauth, body) {
+-  if (['HMAC-SHA1', 'RSA-SHA1'].indexOf(_oauth.signature_method || 'HMAC-SHA1') < 0) {
+-    this.request.emit('error', new Error('oauth: ' + _oauth.signature_method +
+-      ' signature_method not supported with body_hash signing.'))
+-  }
+-
+-  var shasum = crypto.createHash('sha1')
+-  shasum.update(body || '')
+-  var sha1 = shasum.digest('hex')
+-
+-  return Buffer.from(sha1, 'hex').toString('base64')
++  this.request.emit('error', new Error(`SHA1 hash is not safe for use,
++    for more details see https://product-fabric.atlassian.net/wiki/spaces/AFP/pages/1799816164/DACI+How+to+solve+Vulnerability+in+request?focusedCommentId=1812168826#comment-1812168826`))
++  return ''
+ }
+ 
+ OAuth.prototype.concatParams = function (oa, sep, wrap) {
+diff --git a/node_modules/request/request.js b/node_modules/request/request.js
+index 198b760..fae5b1b 100644
+--- a/node_modules/request/request.js
++++ b/node_modules/request/request.js
+@@ -44,7 +44,7 @@ function filterForNonReserved (reserved, options) {
+   // Filter out properties that are not reserved.
+   // Reserved values are passed in at call site.
+ 
+-  var object = {}
++  var object = Object.create(null)
+   for (var i in options) {
+     var notReserved = (reserved.indexOf(i) === -1)
+     if (notReserved) {

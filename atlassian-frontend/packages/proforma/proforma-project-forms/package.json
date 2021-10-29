@@ -1,0 +1,84 @@
+{
+  "name": "@atlassian/proforma-project-forms",
+  "version": "0.8.36",
+  "description": "ProForma Project Forms list",
+  "author": "Atlassian Pty Ltd",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "atlassian": {
+    "team": "Jira Service Management: transFORMers",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@atlaskit/button": "^16.1.0",
+    "@atlaskit/flag": "^14.4.0",
+    "@atlaskit/modal-dialog": "^12.0.0",
+    "@atlaskit/page-header": "^10.2.1",
+    "@atlassian/proforma-common-core": "^2.2.0",
+    "@atlassian/proforma-translations": "^1.0.0",
+    "@babel/runtime": "^7.0.0",
+    "mobx": "^4.15.0",
+    "mobx-react-lite": "^1.5.2",
+    "react-intl": "^2.6.0",
+    "styled-components": "^3.2.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@af/proforma-mocks": "0.15.1",
+    "@atlaskit/build-utils": "*",
+    "@atlaskit/docs": "*",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/visual-regression": "*",
+    "@atlaskit/webdriver-runner": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "typescript": "3.9.6",
+    "wait-for-expect": "^1.2.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "code-structure": [
+        "tangerine-next"
+      ],
+      "import-structure": [
+        "atlassian-conventions"
+      ],
+      "circular-dependencies": [
+        "file-and-folder-level"
+      ]
+    },
+    "@repo/internal": {
+      "analytics": [
+        "analytics-next"
+      ],
+      "theming": [
+        "new-theming-api"
+      ],
+      "ui-components": [
+        "lite-mode"
+      ],
+      "deprecation": [
+        "no-deprecated-imports"
+      ]
+    }
+  },
+  "techstackIgnore": {
+    "stricter": [
+      "@atlassian/tangerine/project-structure"
+    ]
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

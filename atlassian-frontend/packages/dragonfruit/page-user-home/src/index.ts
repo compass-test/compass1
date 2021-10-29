@@ -1,0 +1,1 @@
+export { PageUserHome } from './ui';

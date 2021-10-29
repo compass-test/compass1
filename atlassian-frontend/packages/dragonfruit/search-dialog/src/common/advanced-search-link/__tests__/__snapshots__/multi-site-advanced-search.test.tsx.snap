@@ -1,0 +1,884 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSiteAdvancedSearch /> MultiSiteAdvancedSearch matches snapshot 1`] = `
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 12px 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 780px;
+  color: #091E42;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-6 {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  overflow: hidden;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-right: 2px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-overflow: ellipsis;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition: box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+  transition: box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+}
+
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4C9AFF inset;
+}
+
+.emotion-4:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-2 {
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  border-width: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  font-family: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background 0.1s ease-out,box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+  transition: background 0.1s ease-out,box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+  white-space: nowrap;
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+  cursor: pointer;
+  height: 1.7142857142857142em;
+  line-height: 1.7142857142857142em;
+  padding: 0 10px;
+  vertical-align: middle;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2:visited {
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+}
+
+.emotion-2:hover {
+  background: var(--background-subtleNeutral-hover,rgba(9,30,66,0.08));
+  color: var(--text-highEmphasis,#42526E) !important;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  -webkit-transition-duration: 0s,0.15s;
+  transition-duration: 0s,0.15s;
+}
+
+.emotion-2:focus {
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+  box-shadow: 0 0 0 2px var(--border-focus,#4C9AFF);
+  -webkit-transition-duration: 0s,0.2s;
+  transition-duration: 0s,0.2s;
+  outline: none;
+}
+
+.emotion-2:active {
+  background: var(--background-subtleNeutral-pressed,rgba(179,212,255,0.6));
+  color: var(--text-highEmphasis,#0052CC) !important;
+  -webkit-transition-duration: 0s,0s;
+  transition-duration: 0s,0s;
+}
+
+.emotion-2[data-firefox-is-active="true"] {
+  background: var(--background-subtleNeutral-pressed,rgba(179,212,255,0.6));
+  color: var(--text-highEmphasis,#0052CC) !important;
+  -webkit-transition-duration: 0s,0s;
+  transition-duration: 0s,0s;
+}
+
+.emotion-2[disabled] {
+  background: var(--background-disabled,rgba(9,30,66,0.04));
+  color: var(--text-disabled,#A5ADBA) !important;
+  cursor: not-allowed;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2[data-has-overlay="true"] {
+  cursor: default;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2[data-has-overlay="true"]:not([disabled]):hover,
+.emotion-2[data-has-overlay="true"]:not([disabled]):active {
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+}
+
+.emotion-2::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+  margin: 0 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<MultiSiteAdvancedSearchLink
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isLoading={false}
+  sites={
+    Array [
+      Object {
+        "advancedSearchUrl": "some-advanced-search-url",
+        "avatarUrl": "https://i.imgur.com/0YmmsuX.jpg",
+        "cloudId": "04c60c34-40ba-4ca3-ba25-36cd8e23c4c5",
+        "product": "CONFLUENCE",
+        "siteName": "Investor",
+        "siteUrl": "https://generating.atlassian.net",
+      },
+    ]
+  }
+>
+  <SearchFooterLinks
+    dropdownTriggerLabel="-4 more"
+    label="Search on:"
+    links={
+      Array [
+        Object {
+          "content": "Investor",
+          "href": "some-advanced-search-url",
+          "key": "04c60c34-40ba-4ca3-ba25-36cd8e23c4c5",
+        },
+      ]
+    }
+    maxPrimaryLinks={5}
+    onClick={[Function]}
+  >
+    <Styled(div)>
+      <div
+        className="emotion-7"
+      >
+        <Styled(div)>
+          <div
+            className="emotion-0"
+          >
+            Search on:
+          </div>
+        </Styled(div)>
+        <Styled(div)
+          key="04c60c34-40ba-4ca3-ba25-36cd8e23c4c5"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-6"
+            onClick={[Function]}
+          >
+            <Styled(Link)
+              href="some-advanced-search-url"
+            >
+              <Link
+                className="emotion-4"
+                href="some-advanced-search-url"
+              >
+                <a
+                  className="emotion-4"
+                  href="some-advanced-search-url"
+                >
+                  <Tooltip
+                    content="Investor"
+                    tag={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "render": [Function],
+                      }
+                    }
+                  >
+                    <ForwardRef
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseOut={[Function]}
+                      onMouseOver={[Function]}
+                      role="presentation"
+                    >
+                      <Styled(div)
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        role="presentation"
+                      >
+                        <div
+                          className="emotion-3"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseOut={[Function]}
+                          onMouseOver={[Function]}
+                          role="presentation"
+                        >
+                          <ForwardRef(Button)
+                            spacing="compact"
+                            tabIndex={-1}
+                          >
+                            <Consumer>
+                              <ForwardRef(ButtonWithMode)
+                                mode="light"
+                                spacing="compact"
+                                tabIndex={-1}
+                              >
+                                <ForwardRef(ButtonBase)
+                                  buttonCss={
+                                    Object {
+                                      "&::-moz-focus-inner": Object {
+                                        "border": 0,
+                                        "margin": 0,
+                                        "padding": 0,
+                                      },
+                                      "&:active": Object {
+                                        "background": "var(--background-subtleNeutral-pressed, rgba(179, 212, 255, 0.6))",
+                                        "color": "var(--text-highEmphasis, #0052CC) !important",
+                                        "transitionDuration": "0s, 0s",
+                                      },
+                                      "&:focus": Object {
+                                        "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                        "boxShadow": "0 0 0 2px var(--border-focus, #4C9AFF)",
+                                        "color": "var(--text-highEmphasis, #42526E) !important",
+                                        "outline": "none",
+                                        "transitionDuration": "0s, 0.2s",
+                                      },
+                                      "&:hover": Object {
+                                        "background": "var(--background-subtleNeutral-hover, rgba(9, 30, 66, 0.08))",
+                                        "color": "var(--text-highEmphasis, #42526E) !important",
+                                        "textDecoration": "inherit",
+                                        "transitionDuration": "0s, 0.15s",
+                                      },
+                                      "&:visited": Object {
+                                        "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                        "color": "var(--text-highEmphasis, #42526E) !important",
+                                      },
+                                      "&[data-firefox-is-active=\\"true\\"]": Object {
+                                        "background": "var(--background-subtleNeutral-pressed, rgba(179, 212, 255, 0.6))",
+                                        "color": "var(--text-highEmphasis, #0052CC) !important",
+                                        "transitionDuration": "0s, 0s",
+                                      },
+                                      "&[data-has-overlay=\\"true\\"]": Object {
+                                        "cursor": "default",
+                                        "textDecoration": "none",
+                                      },
+                                      "&[data-has-overlay=\\"true\\"]:not([disabled]):hover, &[data-has-overlay=\\"true\\"]:not([disabled]):active": Object {
+                                        "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                        "color": "var(--text-highEmphasis, #42526E) !important",
+                                      },
+                                      "&[disabled]": Object {
+                                        "background": "var(--background-disabled, rgba(9, 30, 66, 0.04))",
+                                        "color": "var(--text-disabled, #A5ADBA) !important",
+                                        "cursor": "not-allowed",
+                                        "textDecoration": "none",
+                                      },
+                                      "alignItems": "baseline",
+                                      "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                      "borderRadius": 3,
+                                      "borderWidth": 0,
+                                      "boxSizing": "border-box",
+                                      "color": "var(--text-highEmphasis, #42526E) !important",
+                                      "cursor": "pointer",
+                                      "display": "inline-flex",
+                                      "fontFamily": "inherit",
+                                      "fontSize": "inherit",
+                                      "fontStyle": "normal",
+                                      "fontWeight": 500,
+                                      "height": "1.7142857142857142em",
+                                      "justifyContent": "center",
+                                      "lineHeight": "1.7142857142857142em",
+                                      "maxWidth": "100%",
+                                      "padding": "0 10px",
+                                      "position": "relative",
+                                      "textAlign": "center",
+                                      "textDecoration": "none",
+                                      "transition": "background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38)",
+                                      "verticalAlign": "middle",
+                                      "whiteSpace": "nowrap",
+                                      "width": "auto",
+                                    }
+                                  }
+                                  onMouseDown={[Function]}
+                                  onMouseUp={[Function]}
+                                  spacing="compact"
+                                  tabIndex={-1}
+                                >
+                                  <button
+                                    className="emotion-2"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseUp={[Function]}
+                                    tabIndex={-1}
+                                    type="button"
+                                  >
+                                    <span
+                                      className="emotion-1"
+                                    >
+                                      Investor
+                                    </span>
+                                  </button>
+                                </ForwardRef(ButtonBase)>
+                              </ForwardRef(ButtonWithMode)>
+                            </Consumer>
+                          </ForwardRef(Button)>
+                        </div>
+                      </Styled(div)>
+                    </ForwardRef>
+                  </Tooltip>
+                </a>
+              </Link>
+            </Styled(Link)>
+          </div>
+        </Styled(div)>
+      </div>
+    </Styled(div)>
+  </SearchFooterLinks>
+</MultiSiteAdvancedSearchLink>
+`;
+
+exports[`<MultiSiteAdvancedSearch /> MultiSiteAdvancedSearch matches snapshot with custom component 1`] = `
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 12px 16px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 780px;
+  color: #091E42;
+}
+
+.emotion-0 {
+  margin-right: 4px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-7 {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+  overflow: hidden;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-right: 2px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-overflow: ellipsis;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition: box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+  transition: box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+}
+
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4C9AFF inset;
+}
+
+.emotion-4:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-2 {
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  border-width: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: inherit;
+  font-style: normal;
+  font-family: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background 0.1s ease-out,box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+  transition: background 0.1s ease-out,box-shadow 0.15s cubic-bezier(0.47,0.03,0.49,1.38);
+  white-space: nowrap;
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+  cursor: pointer;
+  height: 1.7142857142857142em;
+  line-height: 1.7142857142857142em;
+  padding: 0 10px;
+  vertical-align: middle;
+  width: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2:visited {
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+}
+
+.emotion-2:hover {
+  background: var(--background-subtleNeutral-hover,rgba(9,30,66,0.08));
+  color: var(--text-highEmphasis,#42526E) !important;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  -webkit-transition-duration: 0s,0.15s;
+  transition-duration: 0s,0.15s;
+}
+
+.emotion-2:focus {
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+  box-shadow: 0 0 0 2px var(--border-focus,#4C9AFF);
+  -webkit-transition-duration: 0s,0.2s;
+  transition-duration: 0s,0.2s;
+  outline: none;
+}
+
+.emotion-2:active {
+  background: var(--background-subtleNeutral-pressed,rgba(179,212,255,0.6));
+  color: var(--text-highEmphasis,#0052CC) !important;
+  -webkit-transition-duration: 0s,0s;
+  transition-duration: 0s,0s;
+}
+
+.emotion-2[data-firefox-is-active="true"] {
+  background: var(--background-subtleNeutral-pressed,rgba(179,212,255,0.6));
+  color: var(--text-highEmphasis,#0052CC) !important;
+  -webkit-transition-duration: 0s,0s;
+  transition-duration: 0s,0s;
+}
+
+.emotion-2[disabled] {
+  background: var(--background-disabled,rgba(9,30,66,0.04));
+  color: var(--text-disabled,#A5ADBA) !important;
+  cursor: not-allowed;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2[data-has-overlay="true"] {
+  cursor: default;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2[data-has-overlay="true"]:not([disabled]):hover,
+.emotion-2[data-has-overlay="true"]:not([disabled]):active {
+  background: var(--background-subtleNeutral-resting,rgba(9,30,66,0.04));
+  color: var(--text-highEmphasis,#42526E) !important;
+}
+
+.emotion-2::-moz-focus-inner {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-1 {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+  margin: 0 2px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<MultiSiteAdvancedSearchLink
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  isLoading={false}
+  linkComponent={[Function]}
+  sites={
+    Array [
+      Object {
+        "advancedSearchUrl": "some-advanced-search-url",
+        "avatarUrl": "https://i.imgur.com/0YmmsuX.jpg",
+        "cloudId": "04c60c34-40ba-4ca3-ba25-36cd8e23c4c5",
+        "product": "CONFLUENCE",
+        "siteName": "Investor",
+        "siteUrl": "https://generating.atlassian.net",
+      },
+    ]
+  }
+>
+  <SearchFooterLinks
+    dropdownTriggerLabel="-4 more"
+    label="Search on:"
+    linkComponent={[Function]}
+    links={
+      Array [
+        Object {
+          "content": "Investor",
+          "href": "some-advanced-search-url",
+          "key": "04c60c34-40ba-4ca3-ba25-36cd8e23c4c5",
+        },
+      ]
+    }
+    maxPrimaryLinks={5}
+    onClick={[Function]}
+  >
+    <Styled(div)>
+      <div
+        className="emotion-8"
+      >
+        <Styled(div)>
+          <div
+            className="emotion-0"
+          >
+            Search on:
+          </div>
+        </Styled(div)>
+        <Styled(div)
+          key="04c60c34-40ba-4ca3-ba25-36cd8e23c4c5"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-7"
+            onClick={[Function]}
+          >
+            <Styled(Link)
+              href="some-advanced-search-url"
+              linkComponent={[Function]}
+            >
+              <Link
+                className="emotion-4"
+                href="some-advanced-search-url"
+                linkComponent={[Function]}
+              >
+                <linkComponent
+                  className="emotion-4"
+                  href="some-advanced-search-url"
+                >
+                  <div
+                    className="emotion-4"
+                    href="some-advanced-search-url"
+                  >
+                    <Tooltip
+                      content="Investor"
+                      tag={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "render": [Function],
+                        }
+                      }
+                    >
+                      <ForwardRef
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onMouseDown={[Function]}
+                        onMouseOut={[Function]}
+                        onMouseOver={[Function]}
+                        role="presentation"
+                      >
+                        <Styled(div)
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseOut={[Function]}
+                          onMouseOver={[Function]}
+                          role="presentation"
+                        >
+                          <div
+                            className="emotion-3"
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseOut={[Function]}
+                            onMouseOver={[Function]}
+                            role="presentation"
+                          >
+                            <ForwardRef(Button)
+                              spacing="compact"
+                              tabIndex={-1}
+                            >
+                              <Consumer>
+                                <ForwardRef(ButtonWithMode)
+                                  mode="light"
+                                  spacing="compact"
+                                  tabIndex={-1}
+                                >
+                                  <ForwardRef(ButtonBase)
+                                    buttonCss={
+                                      Object {
+                                        "&::-moz-focus-inner": Object {
+                                          "border": 0,
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                        "&:active": Object {
+                                          "background": "var(--background-subtleNeutral-pressed, rgba(179, 212, 255, 0.6))",
+                                          "color": "var(--text-highEmphasis, #0052CC) !important",
+                                          "transitionDuration": "0s, 0s",
+                                        },
+                                        "&:focus": Object {
+                                          "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                          "boxShadow": "0 0 0 2px var(--border-focus, #4C9AFF)",
+                                          "color": "var(--text-highEmphasis, #42526E) !important",
+                                          "outline": "none",
+                                          "transitionDuration": "0s, 0.2s",
+                                        },
+                                        "&:hover": Object {
+                                          "background": "var(--background-subtleNeutral-hover, rgba(9, 30, 66, 0.08))",
+                                          "color": "var(--text-highEmphasis, #42526E) !important",
+                                          "textDecoration": "inherit",
+                                          "transitionDuration": "0s, 0.15s",
+                                        },
+                                        "&:visited": Object {
+                                          "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                          "color": "var(--text-highEmphasis, #42526E) !important",
+                                        },
+                                        "&[data-firefox-is-active=\\"true\\"]": Object {
+                                          "background": "var(--background-subtleNeutral-pressed, rgba(179, 212, 255, 0.6))",
+                                          "color": "var(--text-highEmphasis, #0052CC) !important",
+                                          "transitionDuration": "0s, 0s",
+                                        },
+                                        "&[data-has-overlay=\\"true\\"]": Object {
+                                          "cursor": "default",
+                                          "textDecoration": "none",
+                                        },
+                                        "&[data-has-overlay=\\"true\\"]:not([disabled]):hover, &[data-has-overlay=\\"true\\"]:not([disabled]):active": Object {
+                                          "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                          "color": "var(--text-highEmphasis, #42526E) !important",
+                                        },
+                                        "&[disabled]": Object {
+                                          "background": "var(--background-disabled, rgba(9, 30, 66, 0.04))",
+                                          "color": "var(--text-disabled, #A5ADBA) !important",
+                                          "cursor": "not-allowed",
+                                          "textDecoration": "none",
+                                        },
+                                        "alignItems": "baseline",
+                                        "background": "var(--background-subtleNeutral-resting, rgba(9, 30, 66, 0.04))",
+                                        "borderRadius": 3,
+                                        "borderWidth": 0,
+                                        "boxSizing": "border-box",
+                                        "color": "var(--text-highEmphasis, #42526E) !important",
+                                        "cursor": "pointer",
+                                        "display": "inline-flex",
+                                        "fontFamily": "inherit",
+                                        "fontSize": "inherit",
+                                        "fontStyle": "normal",
+                                        "fontWeight": 500,
+                                        "height": "1.7142857142857142em",
+                                        "justifyContent": "center",
+                                        "lineHeight": "1.7142857142857142em",
+                                        "maxWidth": "100%",
+                                        "padding": "0 10px",
+                                        "position": "relative",
+                                        "textAlign": "center",
+                                        "textDecoration": "none",
+                                        "transition": "background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38)",
+                                        "verticalAlign": "middle",
+                                        "whiteSpace": "nowrap",
+                                        "width": "auto",
+                                      }
+                                    }
+                                    onMouseDown={[Function]}
+                                    onMouseUp={[Function]}
+                                    spacing="compact"
+                                    tabIndex={-1}
+                                  >
+                                    <button
+                                      className="emotion-2"
+                                      disabled={false}
+                                      onClick={[Function]}
+                                      onMouseDown={[Function]}
+                                      onMouseUp={[Function]}
+                                      tabIndex={-1}
+                                      type="button"
+                                    >
+                                      <span
+                                        className="emotion-1"
+                                      >
+                                        Investor
+                                      </span>
+                                    </button>
+                                  </ForwardRef(ButtonBase)>
+                                </ForwardRef(ButtonWithMode)>
+                              </Consumer>
+                            </ForwardRef(Button)>
+                          </div>
+                        </Styled(div)>
+                      </ForwardRef>
+                    </Tooltip>
+                  </div>
+                </linkComponent>
+              </Link>
+            </Styled(Link)>
+          </div>
+        </Styled(div)>
+      </div>
+    </Styled(div)>
+  </SearchFooterLinks>
+</MultiSiteAdvancedSearchLink>
+`;

@@ -1,0 +1,33 @@
+query getInstalledComponentDetailApps($contextId: ID!) {
+  extensionContexts(
+    contextIds: [$contextId]
+  ) {
+    extensionsByType(type: "compass:componentPage") {
+      id
+      properties
+      environmentId
+      environmentType
+      type
+      appVersion
+      consentUrl
+      installationId
+      appVersion
+      appOwner {
+        accountId
+        name
+        picture
+      }
+      consentUrl
+      currentUserConsent {
+        user {
+          aaid
+        }
+        appEnvironmentVersion {
+          id
+        }
+        consentedAt
+      }
+      requiresUserConsent
+    }
+  }
+}

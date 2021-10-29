@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfluenceSearchClient collaborationGraph should get spaces from collaboration graph if enabled 1`] = `
+Object {
+  "analyticsType": "recent-person",
+  "avatarUrl": "http://cleta.com",
+  "contentType": "person",
+  "href": "/people/0b5bd6aa-c3a6-4744-b4d8-b158db093828",
+  "mentionName": "ivory",
+  "name": "ivory",
+  "presenceMessage": "ivory",
+  "resultId": "0b5bd6aa-c3a6-4744-b4d8-b158db093828",
+  "resultType": "person-result",
+  "userId": "0b5bd6aa-c3a6-4744-b4d8-b158db093828",
+}
+`;
+
+exports[`ConfluenceSearchClient search people single user response is mapped correctly 1`] = `
+Object {
+  "analyticsType": "result-person",
+  "avatarUrl": "http://lorempixel.com/640/480/people",
+  "contentType": "person",
+  "href": "/people/2a430a73-d9e9-4bcc-a46a-51618965ffea",
+  "mentionName": "nickname-t94ds",
+  "name": "Toby Lubowitz",
+  "presenceMessage": "",
+  "resultId": "people-2a430a73-d9e9-4bcc-a46a-51618965ffea",
+  "resultType": "person-result",
+  "userId": "2a430a73-d9e9-4bcc-a46a-51618965ffea",
+}
+`;
+
+exports[`ConfluenceSearchClient search transforms page blog response correctly 1`] = `
+Object {
+  "analyticsType": "result-confluence",
+  "containerId": "UNAVAILABLE",
+  "containerName": "Reichel, Bradtke and Kovacek",
+  "contentType": "confluence-blogpost",
+  "href": "http://localhost/qc8/gya",
+  "iconClass": "aui-iconfont-page-default",
+  "isRecentResult": false,
+  "lastModified": "2019-07-08T02:54:38.822Z",
+  "name": "quasi et pariatur dolorem natus",
+  "resultId": "1967a2a0-8073-4711-bc45-3349a9b3b563",
+  "resultType": "confluence-object-result",
+  "spaceId": "4d017581-6800-4144-913b-7f669f595103",
+}
+`;
+
+exports[`ConfluenceSearchClient search transforms people response correctly 1`] = `
+Object {
+  "analyticsType": "result-person",
+  "avatarUrl": "http://lorempixel.com/640/480/people",
+  "contentType": "person",
+  "href": "/people/89e3e771-faaa-45e4-9995-28f1430536bd",
+  "mentionName": "nickname-o3b2o",
+  "name": "Arielle Armstrong",
+  "presenceMessage": "",
+  "resultId": "people-89e3e771-faaa-45e4-9995-28f1430536bd",
+  "resultType": "person-result",
+  "userId": "89e3e771-faaa-45e4-9995-28f1430536bd",
+}
+`;
+
+exports[`ConfluenceSearchClient search transforms space response correctly 1`] = `
+Object {
+  "analyticsType": "result-confluence",
+  "avatarUrl": "http://localhosthttp://lorempixel.com/640/480/cats",
+  "contentType": "confluence-space",
+  "href": "http://localhost/spaces/KEY-WAY",
+  "id": "85e695c7-af30-4624-8ee0-4072f15fad4c",
+  "key": "KEY-WAY",
+  "name": "Morar - Hammes",
+  "resultId": "space-KEY-WAY",
+  "resultType": "generic-container-result",
+}
+`;

@@ -1,0 +1,9 @@
+fragment CompassComponentCommonDetail on CompassComponent {
+  ...CompassComponentCore
+  id
+  type
+  name
+  dataManager {
+    ecosystemAppId
+  }
+}

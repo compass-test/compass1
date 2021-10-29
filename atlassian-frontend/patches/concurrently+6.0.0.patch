@@ -1,0 +1,12 @@
+diff --git a/node_modules/concurrently/index.js b/node_modules/concurrently/index.js
+index 26f4661..d3192a7 100644
+--- a/node_modules/concurrently/index.js
++++ b/node_modules/concurrently/index.js
+@@ -20,6 +20,7 @@ module.exports = (commands, options = {}) => {
+ 
+     return concurrently(commands, {
+         maxProcesses: options.maxProcesses,
++        kill: options.kill,
+         raw: options.raw,
+         successCondition: options.successCondition,
+         cwd: options.cwd,

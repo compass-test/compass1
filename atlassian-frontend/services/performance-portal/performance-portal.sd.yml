@@ -1,0 +1,80 @@
+buildNumber: "${IMAGE_VERSION}"
+name: Atlassian Performance Portal
+
+organization: UI Platform
+notifications:
+  email: mreis@atlassian.com
+links:
+  healthcheck:
+    uri: /healthcheck
+  source:
+    url: git@bitbucket.org:atlassian/atlassian-frontend.git
+
+computeClassification: &default-data-classification
+  dataType:
+    - Usage/Telemetry                # reason: metrics
+    - Atlassian/Configuration        # reason: hold metrics details, etc name, owner, SLO
+    - PII/DirectRestrictedIdentifier # reason: owner details of metrics
+    - PII/DirectRestricted           # reason: owner details of metrics
+    - PII/IndirectRestricted         # reason: owner details of metrics
+
+compose:
+  slauth:
+    image: docker.atl-paas.net/sox/micros/slauth-sidecar
+    tag: stable
+    ports:
+      - 8080:8080
+    links:
+      - webserver
+  webserver:
+    image: "${IMAGE_NAME}"
+    tag: "${IMAGE_VERSION}"
+config:
+  environmentVariables:
+    NODE_ENV: "production"
+    GQL_SERVER_URL: https://perf-portal-gql.staging.atl-paas.net
+    SLAUTH_BACKEND: "http://webserver:8080"
+    SLAUTH_PLUGINS: "bypass,saml,staffcontext"
+    SLAUTH_BYPASS_ROUTES: "/healthcheck"
+    SLAUTH_SAML_RESOURCE_TYPE: centrify
+    SLAUTH_SAML_RESOURCE_NAME: centrify
+    SLAUTH_SAML_CENTRIFY: centrify
+environmentOverrides:
+  ddev:
+    config:
+      environmentVariables:
+        SLAUTH_DOMAIN_ALIAS: perfportal.dev.atl-paas.net
+    resources:
+      - type: centrify
+        name: centrify
+        attributes:
+          name: "${SERVICE_NAME}.dev"
+          description: "${SERVICE_NAME}.dev"
+          url: "https://perfportal.dev.atl-paas.net"
+          generateCert: true
+  stg-east:
+    config:
+      environmentVariables:
+        SLAUTH_DOMAIN_ALIAS: perfportal.staging.atl-paas.net
+    resources:
+      - type: centrify
+        name: centrify
+        attributes:
+          name: "${SERVICE_NAME}.staging"
+          description: "${SERVICE_NAME}.staging"
+          url: "https://perfportal.staging.atl-paas.net"
+          generateCert: true
+  prod-east:
+    config:
+      environmentVariables:
+        SLAUTH_DOMAIN_ALIAS: perfportal.prod.atl-paas.net
+        GQL_SERVER_URL: https://perf-portal-gql.prod.atl-paas.net
+    resources:
+      - type: centrify
+        name: centrify
+        attributes:
+          name: "${SERVICE_NAME}"
+          description: "${SERVICE_NAME}"
+          url: "https://perfportal.prod.atl-paas.net"
+          generateCert: true
+

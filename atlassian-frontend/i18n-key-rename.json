@@ -1,0 +1,11 @@
+{
+  "description": "This is placeholder content to allow embedding a description within a JSON file. Provide all keys below, in the format of old key : new key. This file will be reset to its original contents after the key rename has been executed",
+
+  "project-pages.improvement.activating.heading": "project-pages.confluence-activating.heading",
+  "project-pages.improvement.activating.description": "project-pages.confluence-activating.description",
+
+  "project-pages.improvement.unknown-error.heading": "project-pages.unknown-error.heading",
+  "project-pages.improvement.unknown-error.description": "project-pages.unknown-error.description",
+
+  "project-pages.improvement.connect-space.heading": "project-pages.connect-space.heading"
+}

@@ -1,0 +1,17 @@
+/**
+ * This file is used by the test scaling project to optimise test result caching
+ * Examples that are used by tests affect the outcome of tests so must be included when hashing
+ * They are defined here so the hashing algorithm doesn't need to search test files for example usage each time
+ */
+{
+  "testExamples": [
+    "02-add-payment-details-inc-cancel-vr.tsx",
+    "04-offsession-payment-confirm-vr.tsx",
+    "05-offsession-payment-confirm-update-payment-method-vr.tsx",
+    "06-error-loading-flow-data-vr.tsx",
+    "07-update-deferred-payment-method-vr.tsx",
+    "08-update-credit-card-payment-method-vr.tsx",
+    "09-update-credit-card-no-default-set-for-ig-vr.tsx",
+    "10-billing-flow-vr.tsx"
+  ]
+}

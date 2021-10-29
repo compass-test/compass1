@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResource should return "" as default Ari if the information cannot correctly compose an Ari 1`] = `
+Array [
+  Object {
+    "container": "Editor Media",
+    "contentType": "confluence.page",
+    "objectId": "",
+    "title": "Editor Media Planning - 2020-07-07",
+    "updatedTimestamp": "2020-07-07T03:24:39+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/EM/pages/1538426521/Editor+Media+Planning+-+2020-07-07",
+  },
+  Object {
+    "container": "Media Platform Team",
+    "contentType": "confluence.page",
+    "objectId": "",
+    "title": "Weekly Media Triad Meeting",
+    "updatedTimestamp": "2020-07-05T23:30:42+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/FIL/pages/873989347/Weekly+Media+Triad+Meeting",
+  },
+  Object {
+    "container": "Editor Media",
+    "contentType": "confluence.page",
+    "objectId": "",
+    "title": "Media test Media single",
+    "updatedTimestamp": "2020-05-05T06:06:28+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/EM/pages/1356074858/Media+test+Media+single",
+  },
+  Object {
+    "container": "Editor Media",
+    "contentType": "confluence.page",
+    "objectId": "",
+    "title": "Editor Media OKRs",
+    "updatedTimestamp": "2020-06-09T02:21:27+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/EM/pages/1385631549/Editor+Media+OKRs",
+  },
+  Object {
+    "container": "Editor",
+    "contentType": "default",
+    "objectId": "",
+    "title": "Media linking",
+    "updatedTimestamp": "2020-04-15T03:00:05+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/E/pages/998082697/Media+linking",
+  },
+  Object {
+    "container": "Editor",
+    "contentType": "confluence.blogpost",
+    "objectId": "",
+    "title": "Media linking",
+    "updatedTimestamp": "2020-04-15T03:00:05+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/E/pages/998082697/Media+linking",
+  },
+]
+`;
+
+exports[`SearchResource should search for Scope.ConfluencePageBlog 1`] = `
+Array [
+  Object {
+    "container": "Editor Media",
+    "contentType": "confluence.page",
+    "objectId": "ari:cloud:confluence:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:content/1538426521",
+    "title": "Editor Media Planning - 2020-07-07",
+    "updatedTimestamp": "2020-07-07T03:24:39+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/EM/pages/1538426521/Editor+Media+Planning+-+2020-07-07",
+  },
+  Object {
+    "container": "Media Platform Team",
+    "contentType": "confluence.page",
+    "objectId": "ari:cloud:confluence:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:content/873989347",
+    "title": "Weekly Media Triad Meeting",
+    "updatedTimestamp": "2020-07-05T23:30:42+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/FIL/pages/873989347/Weekly+Media+Triad+Meeting",
+  },
+  Object {
+    "container": "Editor Media",
+    "contentType": "confluence.page",
+    "objectId": "ari:cloud:confluence:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:content/1356074858",
+    "title": "Media test Media single",
+    "updatedTimestamp": "2020-05-05T06:06:28+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/EM/pages/1356074858/Media+test+Media+single",
+  },
+  Object {
+    "container": "Editor Media",
+    "contentType": "confluence.page",
+    "objectId": "ari:cloud:confluence:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:content/1385631549",
+    "title": "Editor Media OKRs",
+    "updatedTimestamp": "2020-06-09T02:21:27+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/EM/pages/1385631549/Editor+Media+OKRs",
+  },
+  Object {
+    "container": "Editor",
+    "contentType": "default",
+    "objectId": "ari:cloud:confluence:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:content/998082697",
+    "title": "Media linking",
+    "updatedTimestamp": "2020-04-15T03:00:05+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/E/pages/998082697/Media+linking",
+  },
+  Object {
+    "container": "Editor",
+    "contentType": "confluence.blogpost",
+    "objectId": "ari:cloud:confluence:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:content/998082697",
+    "title": "Media linking",
+    "updatedTimestamp": "2020-04-15T03:00:05+00:00",
+    "url": "https://product-fabric.atlassian.net/wiki/spaces/E/pages/998082697/Media+linking",
+  },
+]
+`;
+
+exports[`SearchResource should search for Scope.JiraIssue 1`] = `
+Array [
+  Object {
+    "container": "Editor Media",
+    "contentType": "jira.issue.task",
+    "objectId": "ari:cloud:jira:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:issue/128578",
+    "title": "FE error causing publishing errors - External Media Node must have a 'url' attribute",
+    "updatedTimestamp": "2020-07-08T14:59:56.112+1000",
+    "url": "https://product-fabric.atlassian.net/browse/EDM-627",
+  },
+  Object {
+    "container": "Confluence Editor - Reactor Core",
+    "contentType": "jira.issue.bug",
+    "objectId": "ari:cloud:jira:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:issue/162716",
+    "title": "[BE] [SLA] [Edit Page] External media nodes are missing 'url' attribute",
+    "updatedTimestamp": "2020-07-08T00:43:47.608+1000",
+    "url": "https://product-fabric.atlassian.net/browse/CERN-374",
+  },
+  Object {
+    "container": "",
+    "contentType": "jira.issue.story",
+    "objectId": "ari:cloud:jira:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:issue/167819",
+    "title": "Media file fails to insert",
+    "updatedTimestamp": "2020-07-08T09:02:18.334+1000",
+    "url": "https://product-fabric.atlassian.net/browse/EDM-833",
+  },
+  Object {
+    "container": "Editor Media",
+    "contentType": "jira.issue.task",
+    "objectId": "ari:cloud:jira:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:issue/169212",
+    "title": "Create Editor Media amplitude dashboard",
+    "updatedTimestamp": "2020-07-08T09:02:18.548+1000",
+    "url": "https://product-fabric.atlassian.net/browse/EDM-848",
+  },
+  Object {
+    "container": "Editor Media",
+    "contentType": "jira.issue",
+    "objectId": "ari:cloud:jira:DUMMY-158c8204-ff3b-47c2-adbb-a0906ccc722b:issue/170464",
+    "title": "We've had a bunch of performance issues in Smart Links - all fixed, but we should monitor/instrument them (4 votes)",
+    "updatedTimestamp": "2020-06-19T16:00:12.589+1000",
+    "url": "https://product-fabric.atlassian.net/browse/EDM-888",
+  },
+]
+`;

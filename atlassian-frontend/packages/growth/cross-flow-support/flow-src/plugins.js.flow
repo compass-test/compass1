@@ -1,0 +1,10 @@
+/**
+ * This declaration file should be manually updated to keep definitions
+ * in sync with original TS sources.
+ *
+ * Original source: src/plugins.ts
+ *
+ * @flow strict
+ */
+// eslint-disable-next-line @atlassian/tangerine/export/no-export-all
+export * from '@atlassiansox/cross-flow-base-types';

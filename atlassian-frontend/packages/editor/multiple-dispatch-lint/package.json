@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "name": "@atlaskit/editor-multiple-dispatch-lint",
+  "private": true,
+  "atlassian": {
+    "team": "Editor",
+    "releaseModel": "scheduled"
+  },
+  "scripts": {
+    "lint:multidispatch": "ts-node main.ts",
+    "test:unit": "jest",
+    "test:lint:debug": "node --inspect-brk -r ts-node/register main.ts",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
+  },
+  "dependencies": {
+    "@types/node": "~12.0.12",
+    "glob": "^7.1.2",
+    "typescript": "3.9.6"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/prosemirror-state": "^1.2.0",
+    "jest": "^26.4.2",
+    "ts-jest": "24.3.0",
+    "ts-node": "^10.0.0"
+  },
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

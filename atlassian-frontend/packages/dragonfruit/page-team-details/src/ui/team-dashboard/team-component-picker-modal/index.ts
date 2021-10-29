@@ -1,0 +1,1 @@
+export { TeamComponentPickerModal } from './main';

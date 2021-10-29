@@ -1,0 +1,10 @@
+fragment CompassRelationshipInRelationshipView on CompassRelationship{
+  ...CompassRelationshipCore
+
+  startNode {
+    ...CompassComponentInRelationshipView
+  }
+  endNode {
+    ...CompassComponentInRelationshipView
+  }
+}

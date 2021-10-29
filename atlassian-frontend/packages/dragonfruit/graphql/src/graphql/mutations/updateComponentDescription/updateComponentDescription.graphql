@@ -1,0 +1,16 @@
+mutation updateComponentDescription($input: UpdateCompassComponentInput!) {
+  compass {
+    updateComponent(input: $input) {
+      success
+
+      componentDetails {
+        ...CompassComponentCore
+        description
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

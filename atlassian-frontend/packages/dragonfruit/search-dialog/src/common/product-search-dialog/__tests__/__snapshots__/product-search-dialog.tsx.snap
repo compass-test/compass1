@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductSearchDialog /> matches snapshot when collapsed 1`] = `
+<ProductProvider
+  activeIndex={0}
+  primaryProduct=""
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <InjectIntl(MessagesIntlProvider)>
+    <BuildVersionAnalyticContext>
+      <ContextProvider>
+        <SearchAnchor
+          isExpanded={false}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+        >
+          <KeyboardHighlightProvider
+            listenerNode={null}
+          >
+            <SearchSessionProvider
+              sessionKey="ssid_provider_false"
+            >
+              <DummyChild />
+            </SearchSessionProvider>
+          </KeyboardHighlightProvider>
+        </SearchAnchor>
+      </ContextProvider>
+    </BuildVersionAnalyticContext>
+  </InjectIntl(MessagesIntlProvider)>
+</ProductProvider>
+`;
+
+exports[`<ProductSearchDialog /> matches snapshot when expanded 1`] = `
+<ProductProvider
+  activeIndex={0}
+  primaryProduct=""
+  products={
+    Array [
+      "CONFLUENCE",
+    ]
+  }
+>
+  <InjectIntl(MessagesIntlProvider)>
+    <BuildVersionAnalyticContext>
+      <ContextProvider>
+        <SearchAnchor
+          isExpanded={true}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+        >
+          <KeyboardHighlightProvider
+            listenerNode={null}
+          >
+            <SearchSessionProvider
+              sessionKey="ssid_provider_true"
+            >
+              <_default />
+              <DummyChild />
+            </SearchSessionProvider>
+          </KeyboardHighlightProvider>
+        </SearchAnchor>
+      </ContextProvider>
+    </BuildVersionAnalyticContext>
+  </InjectIntl(MessagesIntlProvider)>
+</ProductProvider>
+`;

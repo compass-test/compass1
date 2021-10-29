@@ -1,0 +1,33 @@
+{
+  "name": "@atlassian/stricter-plugin-techstack",
+  "version": "0.1.6",
+  "description": "Stricter rules for techstack",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "src/index.js",
+  "sideEffects": false,
+  "atlassian": {
+    "team": "AFP: Monorepo",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@atlassian/techstack-runtime": "^0.9.1",
+    "lodash": "^4.17.15"
+  },
+  "peerDependencies": {
+    "stricter": "^0.5.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0"
+  }
+}

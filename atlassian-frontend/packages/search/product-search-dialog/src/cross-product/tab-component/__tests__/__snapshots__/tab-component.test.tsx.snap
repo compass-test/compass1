@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabComponent /> renders the Confluence Search Dialog Content 1`] = `
+<AsyncConfluence
+  debounceTime={0}
+  formatDate={[MockFunction]}
+  isExpanded={true}
+  onRetry={[Function]}
+  query=""
+  queryVersion={0}
+  setAdditionalAnalyticsContext={[Function]}
+/>
+`;
+
+exports[`<TabComponent /> renders the Confluence Search Dialog Content as the primary content 1`] = `
+<AsyncConfluence
+  debounceTime={0}
+  formatDate={[MockFunction]}
+  isExpanded={true}
+  linkComponent={[Function]}
+  onRetry={[Function]}
+  query=""
+  queryVersion={0}
+  setAdditionalAnalyticsContext={[Function]}
+/>
+`;
+
+exports[`<TabComponent /> renders the Jira Search Dialog Content 1`] = `
+<AsyncJira
+  debounceTime={0}
+  formatDate={[MockFunction]}
+  isExpanded={true}
+  onNavigate={[Function]}
+  onRetry={[Function]}
+  query=""
+  queryVersion={0}
+  setAdditionalAnalyticsContext={[Function]}
+/>
+`;
+
+exports[`<TabComponent /> renders the Jira Search Dialog Content as the primary content 1`] = `
+<AsyncJira
+  debounceTime={0}
+  formatDate={[MockFunction]}
+  isExpanded={true}
+  linkComponent={[Function]}
+  onNavigate={[MockFunction]}
+  onRetry={[Function]}
+  query=""
+  queryVersion={0}
+  setAdditionalAnalyticsContext={[Function]}
+/>
+`;

@@ -1,0 +1,7 @@
+
+fragment CompassComponentListView on CompassComponent {
+  ...CompassComponentCore
+
+  name
+  type
+}

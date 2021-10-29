@@ -1,0 +1,8 @@
+
+fragment CommonMutationError on MutationError {
+  message
+
+  extensions {
+    errorType
+  }
+}

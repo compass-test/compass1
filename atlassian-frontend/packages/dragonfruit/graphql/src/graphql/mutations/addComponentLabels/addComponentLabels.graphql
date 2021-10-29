@@ -1,0 +1,13 @@
+mutation addComponentLabels($input: AddCompassComponentLabelsInput!) {
+  compass {
+    addComponentLabels(input: $input) {
+      success
+      addedLabels {
+        name
+      }
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

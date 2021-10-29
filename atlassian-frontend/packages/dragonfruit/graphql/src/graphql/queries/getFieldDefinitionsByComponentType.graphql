@@ -1,0 +1,23 @@
+query getFieldDefinitionsByComponentType($cloudId: ID!, $type: CompassComponentType!) {
+  compass {
+    fieldDefinitionsByComponentType(cloudId: $cloudId, input: $type) {
+      ... on CompassFieldDefinitions {
+        definitions {
+          id
+          name
+          type
+          description
+          options {
+            ... on CompassEnumFieldDefinitionOptions {
+              values
+              default
+            }
+          }
+        }
+      }
+      ... on QueryError {
+        ...CommonQueryError
+      }
+    }
+  }
+}

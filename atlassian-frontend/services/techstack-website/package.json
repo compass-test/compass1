@@ -1,0 +1,49 @@
+{
+  "name": "@atlassian/techstack-website",
+  "version": "0.2.8",
+  "private": true,
+  "description": "Techstack Website",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "author": "Atlassian Pty Ltd",
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "dependencies": {
+    "@atlaskit/multi-entry-tools": "^0.0.5",
+    "@atlassian/techstack-visualisation": "^0.4.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react-dom": "^16.8.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "webpack-dev-server": "webpack-dev-server",
+    "dev": "webpack-dev-server --mode=development",
+    "prod": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@atlaskit/css-reset": "^6.0.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^0.28.0",
+    "style-loader": "^0.16.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

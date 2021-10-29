@@ -1,0 +1,57 @@
+{
+  "name": "@atlassian/prosemirror-react-view",
+  "version": "0.2.6",
+  "description": "A React implementation of prosemirror-view package",
+  "private": true,
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Editor",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@types/prosemirror-commands": "^1.0.1",
+    "@types/prosemirror-model": "^1.11.0",
+    "@types/prosemirror-state": "^1.2.0",
+    "lodash": "^4.17.15",
+    "prosemirror-commands": "^1.1.4",
+    "prosemirror-model": "1.11.0",
+    "prosemirror-state": "1.3.3",
+    "react-property": "^1.0.1",
+    "style-to-object": "^0.3.0",
+    "use-callback-ref": "^1.2.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/editor-common": "^60.1.0",
+    "@atlaskit/editor-test-helpers": "^15.4.0",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^8.0.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "styled-components": "^3.2.6",
+    "typescript": "3.9.6"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions",
+      "circular-dependencies": [
+        "file-level"
+      ]
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

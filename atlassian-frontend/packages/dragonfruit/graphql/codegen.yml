@@ -1,0 +1,61 @@
+overwrite: true
+schema:
+  - https://api.atlassian.com/graphql
+  - https://api.stg.atlassian.com/graphql
+  - src/graphql/client-schema.graphql # Include our local schema for introspection and IDE code completion
+documents: src/**/*.graphql
+hooks:
+  afterOneFileWrite:
+    - prettier --write
+generates:
+  # Introspect the schema and generate a human and machine readable version for IDE code completion
+  ./schema.graphql:
+    plugins:
+      - schema-ast
+
+  # Introspect the schema into a json file that can be used to create an executable auto mock provider
+  src/__generated__/schema.json:
+    plugins:
+      - introspection
+    config:
+      minify: true
+
+  # Generate Typescript types from the schema, and Apollo operations from our queries and mutations
+  src/__generated__/graphql.ts:
+    plugins:
+      - add: &add-ts
+          content: |
+            //==============================================================
+            /* tslint:disable */
+            /* eslint-disable */
+            /* prettier-ignore */
+            // @generated
+            // This file was automatically generated and should not be edited.
+            //==============================================================
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      # Creates a convenient function for refetchign queries after a mutation
+      # https://www.apollographql.com/docs/react/caching/advanced-topics/#rerunning-queries-after-a-mutation
+      withRefetchFn: true
+      # DocumentNodes will be generated instead of gql templates, which means we don't need to ship gql to the customer
+      documentMode: documentNode
+      # Adds the __PURE__ comment, which marks variables as side-effect free and allows for easy tree-shaking
+      pureMagicComment: true
+      # Convert all of our enums to uppercase
+      namingConvention:
+        enumValues: change-case#upperCase
+
+  # In order for us to query unions, the Apollo client needs to understand the polymorphic relationship between the types.
+  # Since we're using GraphQL codegen, we can generate this automatically.
+  ./src/__generated__/fragment-matcher.ts:
+    plugins:
+      - add: *add-ts
+      - fragment-matcher
+
+  # We also generate TypedTypePolicies so that the typePolice configuration can be validated against the schema
+  ./src/__generated__/apollo-helpers.ts:
+    plugins:
+      - add: *add-ts
+      - typescript-apollo-client-helpers

@@ -1,0 +1,100 @@
+[{
+  "env": "dev",
+  "product": "jira",
+  "subproduct": "platform",
+  "version": "1.0.0",
+  "origin": "web",
+  "platform": "web",
+  "tenantIdType": "cloudId",
+  "tenantId": "e433828a-6e8c-419f-bfb4-dac258ea2886",
+  "userIdType": "atlassianAccount",
+  "source": "@atlaskit/feature-flag-client",
+  "actionSubject": "feature",
+  "action": "exposed",
+  "tags": [],
+  "eventType": "operational",
+  "tabId": "066ed234-52b1-43ad-8fd3-b2eddb8e2824",
+  "sessionId": "1605514166708",
+  "taskSessions": {}
+},
+
+{
+  "env": "dev",
+  "product": "jira",
+  "subproduct": "platform",
+  "version": "1.0.0",
+  "origin": "web",
+  "platform": "web",
+  "tenantIdType": "cloudId",
+  "tenantId": "e433828a-6e8c-419f-bfb4-dac258ea2886",
+  "userIdType": "atlassianAccount",
+  "source": "@atlaskit/feature-flag-client",
+  "actionSubject": "feature",
+  "action": "exposed",
+  "tags": [
+    "autoExposure",
+    "measurement"
+  ],
+  "eventType": "operational",
+  "tabId": "066ed234-52b1-43ad-8fd3-b2eddb8e2824",
+  "sessionId": "1605514166708",
+  "taskSessions": {}
+},
+
+{
+  "env": "dev",
+  "product": "jira",
+  "subproduct": "platform",
+  "version": "1.0.0",
+  "origin": "web",
+  "platform": "web",
+  "tenantIdType": "cloudId",
+  "tenantId": "e433828a-6e8c-419f-bfb4-dac258ea2886",
+  "userIdType": "atlassianAccount",
+  "source": "@atlaskit/feature-flag-client",
+  "actionSubject": "feature",
+  "action": "exposed",
+  "attributes": {
+    "flagKey": "empanada.nin-export-issues-dashboard-gadgets_yb8zi",
+    "value": false,
+    "reason": "RULE_MATCH",
+    "ruleId": "111-bcbcbcb-dddd"
+  },
+  "tags": [
+    "autoExposure",
+    "measurement"
+  ],
+  "eventType": "track",
+  "tabId": "066ed234-52b1-43ad-8fd3-b2eddb8e2824",
+  "sessionId": "1605514166708",
+  "taskSessions": {}
+},
+
+{
+  "env": "dev",
+  "product": "jira",
+  "subproduct": "platform",
+  "version": "1.0.0",
+  "origin": "web",
+  "platform": "web",
+  "tenantIdType": "cloudId",
+  "tenantId": "e433828a-6e8c-419f-bfb4-dac258ea2886",
+  "userIdType": "atlassianAccount",
+  "source": "@atlaskit/feature-flag-client",
+  "actionSubject": "feature",
+  "action": "exposed",
+  "attributes": {
+    "flagKey": "empanada.nin-export-issues-dashboard-gadgets_yb8zi",
+    "value": false,
+    "reason": "RULE_MATCH",
+    "ruleId": "111-bcbcbcb-dddd"
+  },
+  "tags": [
+    "autoExposure",
+    "measurement"
+  ],
+  "eventType": "operational",
+  "tabId": "066ed234-52b1-43ad-8fd3-b2eddb8e2824",
+  "sessionId": "1605514166708",
+  "taskSessions": {}
+}]

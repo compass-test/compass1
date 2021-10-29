@@ -1,0 +1,30 @@
+{
+  "name": "@repo/internal-techstack",
+  "version": "0.9.0",
+  "description": "Definition of the atlassian-frontend repository's internal frontend techstack",
+  "private": true,
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "src/index.js",
+  "sideEffects": false,
+  "atlassian": {
+    "team": "AFP: Monorepo",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@atlassian/eslint-plugin-tangerine": "^0.7.0",
+    "@atlassian/eslint-resolver-plugin-tangerine": "^0.2.0",
+    "@repo/eslint-plugin-internal": "^0.2.0",
+    "eslint-plugin-react": "^7.17.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0"
+  }
+}

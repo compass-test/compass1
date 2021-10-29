@@ -1,0 +1,24 @@
+mutation updateComponentFieldTier($input: UpdateCompassComponentInput!) {
+  compass {
+    updateComponent(input: $input){
+      success
+
+      componentDetails {
+        ...CompassComponentCore
+
+        fields {
+          ... on CompassEnumField {
+            definition {
+              id
+            }
+            value
+          }
+        }
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

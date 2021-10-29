@@ -1,0 +1,12 @@
+{
+  "Team A": {
+    "contributors": ["user-a", "user-b"],
+    "directly-responsible-individual": "user-a",
+    "packages": ["@atlaskit/package-a", "@atlaskit/package-a2"]
+  },
+  "Team B": {
+    "contributors": ["user-c", "user-d"],
+    "directly-responsible-individual": "user-d",
+    "packages": ["@atlassian/package-b"]
+  }
+}

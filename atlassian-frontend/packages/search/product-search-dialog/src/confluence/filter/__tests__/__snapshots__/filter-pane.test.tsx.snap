@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterPane /> does not render People Filter if user is anonymous 1`] = `
+<MockConfluenceClientsProvider>
+  <FilterPane
+    isLoading={false}
+    query=""
+  >
+    <Component
+      isLoading={false}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={false}
+      query=""
+    >
+      <div />
+    </Component>
+    <FeedbackCollectorButtonContainer>
+      <div>
+        <FeedbackCollector>
+          <div />
+        </FeedbackCollector>
+      </div>
+    </FeedbackCollectorButtonContainer>
+  </FilterPane>
+</MockConfluenceClientsProvider>
+`;
+
+exports[`<FilterPane /> does not render filter while loading 1`] = `
+<MockConfluenceClientsProvider
+  mode="loading"
+>
+  <FilterPane
+    isLoading={false}
+    query=""
+  >
+    <Component
+      isLoading={true}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={true}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={false}
+      query=""
+    >
+      <div />
+    </Component>
+    <FeedbackCollectorButtonContainer>
+      <div>
+        <FeedbackCollector>
+          <div />
+        </FeedbackCollector>
+      </div>
+    </FeedbackCollectorButtonContainer>
+  </FilterPane>
+</MockConfluenceClientsProvider>
+`;
+
+exports[`<FilterPane /> renders filters 1`] = `
+<MockConfluenceClientsProvider>
+  <FilterPane
+    isLoading={false}
+    query=""
+  >
+    <Component
+      isLoading={false}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={false}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={false}
+      query=""
+    >
+      <div />
+    </Component>
+    <FeedbackCollectorButtonContainer>
+      <div>
+        <FeedbackCollector>
+          <div />
+        </FeedbackCollector>
+      </div>
+    </FeedbackCollectorButtonContainer>
+  </FilterPane>
+</MockConfluenceClientsProvider>
+`;
+
+exports[`<FilterPane /> renders no filters if error 1`] = `
+<MockConfluenceClientsProvider
+  mode="error"
+>
+  <FilterPane
+    isLoading={false}
+    query=""
+  >
+    <Component
+      isLoading={false}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={false}
+    >
+      <div />
+    </Component>
+    <Component
+      isLoading={false}
+      query=""
+    >
+      <div />
+    </Component>
+    <FeedbackCollectorButtonContainer>
+      <div>
+        <FeedbackCollector>
+          <div />
+        </FeedbackCollector>
+      </div>
+    </FeedbackCollectorButtonContainer>
+  </FilterPane>
+</MockConfluenceClientsProvider>
+`;

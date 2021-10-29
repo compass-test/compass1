@@ -1,0 +1,1 @@
+export const commerceBilingStatement = `Your billing statement will display Atlassian B.V., located in Amsterdam, Netherlands. Atlassian Pty Limited, our principal place of business, is at Level 6, 341 George Street, Sydney NSW Australia 2000.`;

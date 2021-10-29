@@ -1,0 +1,111 @@
+{
+  "name": "@af/af-service-dashboard",
+  "version": "0.15.0",
+  "private": true,
+  "description": "Dashboard for service deployments from atlassian-frontend",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "author": "Atlassian Pty Ltd",
+  "atlassian": {
+    "team": "AFP: Monorepo",
+    "releaseModel": "continuous"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev:server": "./scripts/dev-server.sh",
+    "dev:ui": "webpack-dev-server --mode=development --config=webpack.config.js",
+    "dev": "concurrently \"yarn dev:ui\" \"yarn dev:server\"",
+    "build:ui": "webpack --mode=production --config=webpack.config.js",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build:js": "concurrently --kill-others-on-fail \"yarn build:ui\" \"yarn build:server\"",
+    "build:docker": "docker build --tag $IMAGE_TAG .",
+    "pre-build": "cd ../.. && git lfs pull --include \"services/af-service-dashboard/public/**/*.svg,services/af-service-dashboard/public/**/*.png\"",
+    "build": "scripts/build.sh",
+    "pre-deploy": "scripts/pre-deploy.sh",
+    "deploy": "scripts/deploy.sh",
+    "deploy:local": "yarn build && yarn pre-deploy && yarn deploy",
+    "typeorm:cli": "ts-node -P tsconfig.json ./node_modules/typeorm/cli.js -f src/server/db/config.ts",
+    "migration:generate": "yarn typeorm:cli migration:generate -n",
+    "migration:create": "yarn typeorm:cli migration:create -n",
+    "migration:run": "yarn typeorm:cli migration:run",
+    "migration:show": "yarn typeorm:cli migration:show"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bunyan": "^2.0.4",
+    "compression": "^1.7.4",
+    "date-fns": "^2.17.0",
+    "express": "^4.17.1",
+    "hot-shots": "^8.3.0",
+    "pg": "^7.18.2",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.0.0",
+    "typeorm": "^0.2.29",
+    "uuid": "^3.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/atlassian-navigation": "^1.1.0",
+    "@atlaskit/avatar": "^20.3.0",
+    "@atlaskit/empty-state": "^7.2.0",
+    "@atlaskit/icon": "^21.8.0",
+    "@atlaskit/logo": "^13.5.0",
+    "@atlaskit/lozenge": "^11.0.0",
+    "@atlaskit/modal-dialog": "^12.0.0",
+    "@atlaskit/multi-entry-tools": "^0.0.5",
+    "@atlaskit/select": "^15.2.0",
+    "@atlaskit/spinner": "^15.0.6",
+    "@atlaskit/tag": "^11.1.2",
+    "@atlaskit/toggle": "^12.0.1",
+    "@atlaskit/tooltip": "^17.3.1",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.7",
+    "@types/compression": "^1.7.0",
+    "@types/express": "^4.17.9",
+    "@types/js-cookie": "^2.2.6",
+    "@types/node": "~12.0.12",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-typescript-metadata": "^0.3.1",
+    "concurrently": "^6.0.0",
+    "css-loader": "^0.28.0",
+    "html-webpack-plugin": "^3.2.0",
+    "js-cookie": "^2.2.1",
+    "nodemon": "^2.0.2",
+    "react-animate-height": "^2.0.5",
+    "react-dom": "^16.8.0",
+    "react-helmet": "^6.1.0",
+    "react-resource-router": "^0.14.2",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "af:services": {
+    "serviceName": "af-service-dashboard",
+    "master": {
+      "continuous": {
+        "env": "prod-east"
+      }
+    },
+    "slackChannelId": "C01GWT84NH5"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

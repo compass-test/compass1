@@ -1,0 +1,13 @@
+/* This file can be used to turn eslint rules off while testing by overriding the rule's rule ID.*/
+
+// {
+//   "overrides": [
+//     {
+//       "files": ["./files/*.ts"],
+//       "rules": {
+//         "import/no-unresolved": "off",
+//         "import/no-extraneous-dependencies":"off"
+//       }
+//     }
+//   ]
+// }

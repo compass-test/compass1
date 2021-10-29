@@ -1,0 +1,53 @@
+{
+  "response": {
+    "title": "Pull Request",
+    "source": {
+      "branch": {
+        "name": "branch"
+      },
+      "commit": {
+        "hash": "abcdefg"
+      }
+    },
+    "state": "OPEN",
+    "participants": [
+      {
+        "role": "PARTICIPANT",
+        "user": {
+          "account_id": "user-a"
+        },
+        "approved": false
+      },
+      {
+        "role": "REVIEWER",
+        "user": {
+          "account_id": "user-b"
+        },
+        "approved": true
+      },
+      {
+        "role": "REVIEWER",
+        "user": {
+          "account_id": "user-c"
+        },
+        "approved": false
+      }
+    ],
+    "author": {
+      "account_id": "user-a"
+    }
+  },
+  "pullrequest": {
+    "title": "Pull Request",
+    "sourceBranch": "branch",
+    "state": "OPEN",
+    "approvals": [
+      "user-b"
+    ],
+    "reviewers": [
+      "user-b",
+      "user-c"
+    ],
+    "author": "user-a"
+  }
+}

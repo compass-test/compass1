@@ -1,0 +1,35 @@
+{
+  "name": "@atlaskit/measure",
+  "version": "0.5.11",
+  "private": true,
+  "description": "Tool for measuring bundle size of an individual package in Atlassian Frontend",
+  "main": "./cli.js",
+  "bin": {
+    "measure": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@atlaskit/build-utils": "^2.6.15",
+    "@atlaskit/webpack-config": "^2.1.1",
+    "axios": "^0.21.1",
+    "bolt": "^0.24.10",
+    "chalk": "^2.1.0",
+    "gzip-size": "^5.0.0",
+    "meow": "^6.0.0",
+    "minimatch": "^3.0.4",
+    "ora": "^3.0.0",
+    "pretty-bytes": "^5.1.0",
+    "webpack": "^4.41.3"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0"
+  }
+}

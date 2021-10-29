@@ -1,0 +1,17 @@
+mutation updateComponentOwner($input: UpdateCompassComponentInput!) {
+  compass {
+    updateComponent(input: $input) {
+      success
+
+      componentDetails {
+        ...CompassComponentCore
+        # We're only interested in the list fields we updated
+        ownerId
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

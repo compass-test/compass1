@@ -1,0 +1,12 @@
+dev:
+  records:
+    - type: Simple
+      env: ddev
+staging:
+  records:
+    - type: Simple
+      env: stg-east
+production:
+  records:
+    - type: Simple
+      env: prod-east

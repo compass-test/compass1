@@ -1,0 +1,1 @@
+export { SidebarOverride } from './main';

@@ -1,0 +1,1 @@
+export { AnnouncementListItem } from './styled';

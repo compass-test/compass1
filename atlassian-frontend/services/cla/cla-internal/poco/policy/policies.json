@@ -1,0 +1,42 @@
+{
+  "allow": [
+    {
+      "description": "Allow unauthenticated requests to our public and healthcheck endpoints",
+      "methods": [
+        "GET"
+      ],
+      "paths": [
+        "/",
+        "/api/*",
+        "/corporate",
+        "/healthcheck",
+        "/individual",
+        "/_next/**"
+      ],
+      "principals": {
+        "open": {
+          "reason": "Internally available endpoints"
+        }
+      }
+    },
+    {
+      "description": "Allow ASAP authorized services access to /api endpoints",
+      "methods": [
+        "*"
+      ],
+      "paths": [
+        "/api/contributor/*",
+        "/api/pull-requests/*"
+      ],
+      "principals": {
+        "asap": {
+          "issuers": [
+            "micros/cla-bot",
+            "micros/cla-external",
+            "micros/cronman-scheduler"
+          ]
+        }
+      }
+    }
+  ]
+}

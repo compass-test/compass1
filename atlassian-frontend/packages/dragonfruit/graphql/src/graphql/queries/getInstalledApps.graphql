@@ -1,0 +1,44 @@
+query getInstalledApps($contextId: ID!) {
+  extensionContexts(
+    contextIds: [$contextId]
+  ) {
+    extensionsByType(type: "compass:adminPage") {
+      id
+      properties
+      environmentId
+      environmentType
+      type
+      appVersion
+      consentUrl
+      installationId
+      appVersion
+      appOwner {
+        accountId
+        name
+        picture
+      }
+      consentUrl
+      currentUserConsent {
+        user {
+          aaid
+        }
+        appEnvironmentVersion {
+          id
+        }
+        consentedAt
+      }
+      requiresUserConsent
+    }
+    installations {
+      nodes {
+        id
+        app {
+          ...AppListView
+        }
+        appEnvironment {
+          key
+        }
+      }
+    }
+  }
+}

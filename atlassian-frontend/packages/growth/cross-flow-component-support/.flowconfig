@@ -1,0 +1,16 @@
+[ignore]
+<PROJECT_ROOT>/dist/.*
+.*/node_modules/.*
+
+[include]
+../cross-flow-api-internals
+../cross-flow-base-types
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='@atlassiansox/cross-flow-api-internals' -> '<PROJECT_ROOT>/../cross-flow-api-internals/flow-src/index.js.flow'
+module.name_mapper='@atlassiansox/cross-flow-base-types' -> '<PROJECT_ROOT>/../cross-flow-base-types/flow-src/index.js.flow'
+[strict]

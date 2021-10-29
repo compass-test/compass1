@@ -1,0 +1,43 @@
+query getComponentDependencyAnnouncements($id: ID!) {
+  compass {
+    component(id: $id) {
+      __typename
+      ...on CompassComponent {
+        id
+        relationships(query: {filters: {types: [DEPENDS_ON]}}) {
+          __typename
+          ...on CompassRelationshipConnection {
+            nodes {
+              type
+              startNode {
+                id
+              }
+              endNode {
+                id
+                name
+                type
+                announcements {
+                  id
+                   component {
+                     id
+                     name
+                     type
+                   }
+                  title
+                  description
+                  targetDate
+                  acknowledgements {
+                    component {
+                      id
+                    }
+                    hasAcknowledged
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

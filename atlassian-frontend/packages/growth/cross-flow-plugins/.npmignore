@@ -1,0 +1,4 @@
+build/
+src/
+index.ts
+tsconfig.json

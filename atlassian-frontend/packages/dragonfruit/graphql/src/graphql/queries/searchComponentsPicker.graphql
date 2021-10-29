@@ -1,0 +1,18 @@
+query searchComponentsPicker($cloudId: String!, $query: CompassSearchComponentQuery) {
+  compass {
+    searchComponents(cloudId: $cloudId, query: $query) {
+      ... on CompassSearchComponentConnection {
+        nodes {
+          component {
+            ...CompassComponentCore
+            name
+            type
+          }
+        }
+      }
+      ... on QueryError {
+        ...CommonQueryError
+      }
+    }
+  }
+}

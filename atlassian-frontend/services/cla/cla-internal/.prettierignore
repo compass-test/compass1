@@ -1,0 +1,3 @@
+db/migrations/
+db/seeders/
+.next/

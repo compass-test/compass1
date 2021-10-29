@@ -1,0 +1,153 @@
+{
+  "hero": {
+    "publicURL": "/static/7a915029edbfa401aa9170503264129e/homepage@2x.png"
+  },
+  "featuredImageComponents": {
+    "publicURL": "/static/37fda454c8a0ec66226638dc90e0276c/homepage-components@2x.png"
+  },
+  "featuredImagePatterns": {
+    "publicURL": "/static/812d8127789e6314df64a135fc979ad4/homepage-patterns@2x.png"
+  },
+  "brand": {
+    "nodes": [
+      {
+        "title": "Mission",
+        "slug": "mission",
+        "description": {
+          "description": "Our mission is to unleash the potential in every team. "
+        },
+        "iconGlyphName": "emoji/flags"
+      },
+      {
+        "title": "Personality",
+        "slug": "personality",
+        "description": {
+          "description": "Our personality describes the tone we use for external communications. It should be expressed as an embodiment of our values."
+        },
+        "iconGlyphName": "emoji/emoji"
+      },
+      {
+        "title": "Promise",
+        "slug": "promise",
+        "description": {
+          "description": "Our promise is that our tools and practices will help teams work better together in an agile, open, and scalable way."
+        },
+        "iconGlyphName": "star"
+      }
+    ]
+  },
+  "foundations": {
+    "nodes": [
+      {
+        "title": "Color",
+        "slug": "color",
+        "description": {
+          "description": "Color distinguishes our brand and helps us create consistent experiences across products."
+        },
+        "iconGlyphName": "editor/background-color"
+      },
+      {
+        "title": "Iconography",
+        "slug": "iconography",
+        "description": {
+          "description": "Icons are visual representations of commands, devices, directories, or common actions."
+        },
+        "iconGlyphName": "star"
+      },
+      {
+        "title": "Typography",
+        "slug": "typography",
+        "description": {
+          "description": "Typography is our system of fonts. Each font conveys the appropriate sentiment to assist our users through each stage of their journey. "
+        },
+        "iconGlyphName": "editor/text-style"
+      }
+    ]
+  },
+  "content": {
+    "nodes": [
+      {
+        "title": "Glossary",
+        "slug": "glossary",
+        "description": {
+          "description": "A list of words that are defined in terms of how we use them at Atlassian. "
+        },
+        "iconGlyphName": "status"
+      },
+      {
+        "title": "Language and grammar",
+        "slug": "language-and-grammar",
+        "description": {
+          "description": "Use conventions to make your writing clear, consistent, and localizable. "
+        },
+        "iconGlyphName": "editor/quote"
+      },
+      {
+        "title": "Writing style",
+        "slug": "writing-style",
+        "description": {
+          "description": "The Atlassian writing style reflects our core company values, company mission, design principles, and our voice and tone."
+        },
+        "iconGlyphName": "edit"
+      }
+    ]
+  },
+  "resources": {
+    "nodes": [
+      {
+        "title": "Figma library",
+        "slug": "figma-library",
+        "category": "Resources",
+        "description": {
+          "description": "Our Figma libraries contain the latest foundations, components, and patterns for designing and building Atlassian products."
+        },
+        "iconGlyphName": "figma"
+      },
+      {
+        "title": "Fonts",
+        "slug": "fonts",
+        "category": "Resources",
+        "description": {
+          "description": "Our fonts have been chosen to communicate in a way that helps our users achieve their goals. "
+        },
+        "iconGlyphName": "editor/text-style"
+      },
+      {
+        "title": "Illustration library",
+        "slug": "illustration-library",
+        "category": "Resources",
+        "description": {
+          "description": "A catalog of our visual storytelling assets."
+        },
+        "iconGlyphName": "edit-filled"
+      },
+      {
+        "title": "Logos",
+        "slug": "logo",
+        "category": "Resources",
+        "description": {
+          "description": "Atlassian’s official logos and lockups for all programs, properties, and products."
+        },
+        "iconGlyphName": "logo-library"
+      },
+      {
+        "title": "Presentation kit",
+        "slug": "presentation-kit",
+        "category": "Resources",
+        "description": {
+          "description": "Our complete kit of presentation assets in Keynote and Powerpoint as well as graphic assets, sample decks, and more."
+        },
+        "iconGlyphName": "screen"
+      },
+      {
+        "title": "Templates",
+        "slug": "templates",
+        "category": "Resources",
+        "description": {
+          "description": "Various print templates such as posters and letterheads."
+        },
+        "iconGlyphName": "editor/media-wrap-left"
+      }
+    ]
+  }
+}

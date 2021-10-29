@@ -1,0 +1,27 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "module": "commonjs",
+    "target": "es2017",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": [
+      "es5",
+      "scripthost",
+      "es2015",
+      "es2016",
+      "es2017",
+      "ES2019.Object"
+    ],
+    "types": ["node", "jest"],
+  },
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // It is faster to skip typechecking.
+    "transpileOnly": true,
+    // We must load files for third party defs - https://typestrong.org/ts-node/docs/types
+    "files": true,
+  }
+}

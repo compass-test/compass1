@@ -1,0 +1,29 @@
+{
+  "name": "@atlassian/eslint-resolver-plugin-tangerine",
+  "version": "0.2.0",
+  "description": "Custom eslint resolvers for eslint rules",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "src/index.js",
+  "sideEffects": false,
+  "atlassian": {
+    "team": "AFP: Monorepo",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "outdent": "^0.5.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0"
+  }
+}

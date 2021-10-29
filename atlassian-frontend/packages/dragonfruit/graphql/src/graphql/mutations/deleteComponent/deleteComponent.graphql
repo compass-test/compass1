@@ -1,0 +1,13 @@
+mutation deleteComponent($input: DeleteCompassComponentInput!) {
+
+  compass {
+    deleteComponent(input: $input) {
+      deletedComponentId
+      success
+      errors {
+        ...CommonMutationError
+      }
+      _isOptimistic @client
+    }
+  }
+}

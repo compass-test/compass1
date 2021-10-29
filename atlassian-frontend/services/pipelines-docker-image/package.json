@@ -1,0 +1,20 @@
+{
+  "name": "@atlaskit/pipelines-docker-image",
+  "version": "7.0.0",
+  "private": true,
+  "description": "Docker image used to set up the Atlaskit repo in pipelines",
+  "scripts": {
+    "deploy": "./publish.sh $npm_package_version"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "dependencies": {},
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0"
+  }
+}

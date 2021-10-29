@@ -1,0 +1,387 @@
+common:
+  libraryType: 'client'
+  source: 'searchDialog'
+  product: 'fabricElements'
+
+context:
+  SearchSessionContext: &SearchSessionContext
+    searchSessionId:
+      type: string
+      description: A GUID to tie together searches within a 'session'. A session is an attempt to search for something without changing context, for example a session can start when the user opens the search dialog and ends when it's closed. A single session can include multiple actual searches.
+  FrontendVersionContext: &FrontendVersionContext
+    frontend:
+      type: string
+      description: the version of the frontend that is published
+  AbTestContext: &AbTestContext
+    abTest:
+      type: object
+      description: information containing the experiment context
+  QueryContext: &QueryContext
+    queryHash:
+      type: string
+      description: A SHA1 hash representation of the query. Used to tie backend and frontend events along with queryVersion.
+    queryLength:
+      type: number
+      description: the number of characters in the query including spaces
+    queryVersion:
+      type: number
+      description: a number that is used to a uniquely identify a specific search when combined with the query hash. The number here will increment whenever a search is made and does not take into consideration if the search fails or whether the search is shown to the user.
+    wordCount:
+      type: number
+      description: a number representing the number of space delimited words in a string query. This is not accurate for non-english languages.
+  SearchResultsContext: &SearchResultsContext
+    sectionCount:
+      type: number
+      description: the number of search result sections were shown
+    resultCount:
+      type: number
+      description: the number of results that were shown
+  IndividualSearchResultContext: &IndividualSearchResultContext
+    containerId:
+      type: string
+      required: false
+      description: the id of the container of the selected results (usually project or space)
+    globalIndex:
+      type: number
+      description: the index of the clicked element relative to all other search results shown. This starts at 0.
+    indexWithinSection:
+      type: number
+      description: the index of the clicked element relative to all search results in the same result section. This starts at 0.
+    isCached:
+      type: boolean
+      description: whether the search results was served from the cache
+    sectionId:
+      type:
+        [
+          'confluence-people',
+          'confluence-item',
+          'confluence-space',
+          'confluence-people',
+          'jira-issue',
+          'jira-board-project-filter',
+        ]
+      description: an identifier for the section the result is in
+    sectionIndex:
+      type: number
+      description: the index of the section the result is in relative to all other sections. This starts at 0.
+  FilterContext: &FilterContext
+    filterId:
+      type: string
+      description: id of of the filter. e.g. this would be the accountId if we're filtering by a user.
+    filterType:
+      type:
+        [
+          'space',
+          'contributor',
+          'project',
+          'assignee',
+          'site',
+          'binary_status_category',
+        ]
+      description: type of the filter.
+    filterSource:
+      type:
+        [
+          'COLLABORATION_GRAPH',
+          'RECENT',
+          'SEARCH',
+          'CURRENT_USER',
+          'EXTERNAL',
+          'STATIC',
+        ]
+      description: data source from which the filter came
+  TriggerContext: &TriggerContext
+    trigger:
+      type: ['shortcut', 'return', 'click', 'textEntered']
+      description: type of user action that caused the event. 'shortcut' means a global shortcut, 'return' means the enter key, 'click' means mouse click and 'textEntered' means the trigger is from any other key on an input field.
+  AdvancedSearchLinkContext: &AdvancedSearchLinkContext
+    <<: *TriggerContext
+    isLoading:
+      type: boolean
+      description: whether search results were loading when the event was triggered
+    newTab:
+      type: boolean
+      description: whether the advanced search will open in a new tab
+  ShowMoreContext: &ShowMoreContext
+    total:
+      type: number
+      description: the number of results available
+    currentSize:
+      type: number
+      description: the number of results currently displayed
+    pageSize:
+      type: number
+      description: the number of results requested
+  AllCommonContext: &AllCommonContext
+    <<: *SearchSessionContext
+    <<: *FrontendVersionContext
+    <<: *AbTestContext
+    <<: *QueryContext
+
+events:
+  - experiment loaded:
+      type: operational
+      description: fired when the experiment has been loaded
+      attributes:
+        <<: *FrontendVersionContext
+        <<: *AbTestContext
+        isMultiProduct:
+          type: boolean
+          description: specifies whether or not the user has access to multi-product search
+        experimentRequestDuration:
+          type: number
+          description: the time between when the experiment request is fired and when the client gets the response
+
+  - text entered:
+      type: track
+      description: fired when text is entered into the search dialog
+      attributes:
+        <<: *AllCommonContext
+
+  # Migrate to above track event to UI event  =>
+  # - text entered (searchDialogTextField):
+  #     type: track
+  #     description: fired when text is entered into the search dialog
+  #     attributes:
+  #       <<: *AllCommonContext
+
+  - advancedSearchLink selected:
+      type: track
+      description: fired when the advanced search link is selected
+      attributes:
+        <<: *AllCommonContext
+        <<: *AdvancedSearchLinkContext
+
+  # Migrate to above track event to UI event  =>
+  # - advancedSearchLink selected (confluenceAdvancedSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for confluence is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (confluencePeopleSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for confluence people is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (jiraIssuesSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for jira issues is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (jiraBoardsSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for jira boards is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (jiraFiltersSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for jira filters is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (jiraProjectsSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for jira projects is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (jiraPeopleSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for jira people is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  # - advancedSearchLink selected (noResultsAdvancedSearchLink):
+  #     type: track
+  #     description: fired when the advanced search link for no results is selected
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *AdvancedSearchLinkContext
+
+  - moreFilterLink selected:
+      type: ui
+      description: fired when the more filter link is selected
+      attributes:
+        <<: *AllCommonContext
+        <<: *TriggerContext
+        selectedFiltersCount:
+          type: number
+          description: the number of filters already selected
+
+  - button clicked (showMoreButton):
+      type: ui
+      description: fired when the show more button in search results is clicked
+      attributes:
+        <<: *AllCommonContext
+        <<: *ShowMoreContext
+
+  - button clicked (showAllLink):
+      type: ui
+      description: fired when the show all link in search results is clicked
+      attributes:
+        <<: *AllCommonContext
+        <<: *ShowMoreContext
+
+  - searchResults shown (preQuerySearchResults):
+      type: ui
+      description: when the pre query search results are shown to the user
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        timeToQueryMs:
+          type: number
+          description: the time from previous query
+        results:
+          type: array
+          description: an array containing the result details
+
+  - searchResults shown (cachedResults):
+      type: ui
+      description: when the cached (faster search) search results are shown to the user
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        timeToQueryMs:
+          type: number
+          description: the time from previous query
+        results:
+          type: array
+          description: an array containing the result details
+
+  - searchResults shown (postQuerySearchResults):
+      type: ui
+      description: when the post query search results are shown to the user
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        timeToQueryMs:
+          type: number
+          description: the time from previous query
+        results:
+          type: array
+          description: an array containing the result details
+
+  - searchResult highlighted (preQuerySearchResults):
+      type: ui
+      description: when the pre query search results are highlighted with the keyboard
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        <<: *IndividualSearchResultContext
+
+  - searchResult highlighted (cachedResults):
+      type: ui
+      description: when the cached (faster search) search results are highlighted with the keyboard
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        <<: *IndividualSearchResultContext
+
+  - searchResult highlighted (postQuerySearchResults):
+      type: ui
+      description: when the post query search results are highlighted with the keyboard
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        <<: *IndividualSearchResultContext
+
+  - searchResult selected:
+      type: track
+      description: when a search result is selected, either by mouse or keyboard
+      attributes:
+        <<: *AllCommonContext
+        <<: *SearchResultsContext
+        <<: *IndividualSearchResultContext
+
+  # Migrate to above track event to UI event  =>
+  # - searchResult selected (preQuerySearchResults):
+  #     type: track
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *SearchResultsContext
+  #       <<: *IndividualSearchResultContext
+
+  # - searchResult selected (cachedResults):
+  #     type: track
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *SearchResultsContext
+  #       <<: *IndividualSearchResultContext
+
+  # - searchResult selected (postQuerySearchResults):
+  #     type: track
+  #     attributes:
+  #       <<: *AllCommonContext
+  #       <<: *SearchResultsContext
+  #       <<: *IndividualSearchResultContext
+
+  - searchRequest completed:
+      type: track
+      description: fired when the search request has completed
+      attributes:
+        <<: *AllCommonContext
+        postQueryRequestDurationMs:
+          type: number
+          description: the time taken to complete the request
+
+  - viewed searchDialogPreQueryScreen:
+      type: screen
+      description: fired when the search dialog pre query screen is displayed
+      attributes:
+        <<: *AllCommonContext
+        <<: *TriggerContext
+
+  - searchDialog dismissed:
+      type: ui
+      description: fired when the search dialog is closed
+      attributes:
+        <<: *AllCommonContext
+
+  - filter selected (searchDialogFilter):
+      type: ui
+      description: fired when one of the filters in the search dialog is checked
+      attributes:
+        <<: *AllCommonContext
+        <<: *FilterContext
+
+  - filter unselected (searchDialogFilter):
+      type: ui
+      description: fired when one of the filters in the search dialog is unchecked
+      attributes:
+        <<: *AllCommonContext
+        <<: *FilterContext
+
+  - button clicked (searchDialogClearFilters):
+      type: ui
+      description: fired when the clear filters button is clicked
+      attributes:
+        <<: *AllCommonContext
+
+  - tab clicked (crossProductSearchTab):
+      type: ui
+      description: fired when a tab is clicked in cross-product search
+      attributes:
+        <<: *AllCommonContext
+        tabName:
+          type: string
+          description: the name of the tab/product that was clicked
+
+  - searchDialogPane loadComplete:
+      type: track
+      description: fired when the search dialog tab is async loaded, used to track how long it takes to async load a search dialog pane
+      attributes:
+        <<: *AllCommonContext
+        durationMs:
+          type: number
+          description: the time taken to render the search pane

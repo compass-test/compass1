@@ -1,0 +1,11 @@
+mutation removeComponentLabels($input: RemoveCompassComponentLabelsInput!) {
+  compass {
+    removeComponentLabels(input: $input) {
+      success
+      errors {
+        ...CommonMutationError
+      }
+      removedLabelNames
+    }
+  }
+}

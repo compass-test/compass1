@@ -1,0 +1,6 @@
+node_modules
+*.zip
+dist/
+yarn.lock
+secrets.json
+.asap-config

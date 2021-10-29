@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    #app {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      border: 1px solid #ededed;
+      border-radius: 3px;
+      box-sizing: border-box;
+      padding-top: 11px; /* Confluence title <h1> has padding-top: 3px. Total padding on top is 16px */
+    }
+
+    iframe[data-testid="confluence-page-iframe"]{
+      border-radius: 3px;
+      padding-left: 16px;
+      box-sizing: border-box;
+    }
+  </style>
+
+  <title>Atlassian</title>
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/@atlaskit/css-reset/dist/bundle.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+</html>

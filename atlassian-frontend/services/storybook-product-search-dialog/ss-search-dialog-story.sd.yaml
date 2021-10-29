@@ -1,0 +1,14 @@
+version: 2
+notifications:
+  email: czeng@atlassian.com
+organization: Engineering-Smarts
+static:
+  content: .out
+  indexDocument: index.html
+  files:
+    - match: '.*\.html'
+      params:
+        CacheControl: max-age=300
+    - match: '.*\.js'
+      params:
+        CacheControl: max-age=31536000, immutable

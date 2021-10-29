@@ -1,0 +1,25 @@
+query searchJiraProjects($cloudId: ID!, $first: Int, $last: Int, $after: String, $before: String, $filter: JiraProjectFilterInput!) {
+  jira {
+    allJiraProjects(cloudId: $cloudId, first: $first, last: $last, after: $after, before: $before, filter: $filter) {
+        edges {
+            node {
+                id
+                key
+                name
+                cloudId
+                description
+                avatar {
+                    xsmall
+                }
+            }
+            cursor
+        }
+        pageInfo {
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+        }
+    }
+  }
+}

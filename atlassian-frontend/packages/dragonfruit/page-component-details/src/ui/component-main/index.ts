@@ -1,0 +1,1 @@
+export { ComponentMain } from './main';

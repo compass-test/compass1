@@ -1,0 +1,17 @@
+{
+  "name": "@atlaskit/resolvers",
+  "version": "0.0.3",
+  "private": true,
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "dependencies": {
+    "enhanced-resolve": "3.4.1",
+    "json5": "^2.1.0",
+    "resolve-from": "^4.0.0"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0"
+  }
+}

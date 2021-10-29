@@ -1,0 +1,40 @@
+/**
+ * This declaration file should be manually updated to keep definitions
+ * in sync with original TS sources.
+ *
+ * Original source: src/jira.ts
+ *
+ * @flow strict
+ */
+import { type ComponentType, type Node } from 'react';
+import type { PluginCollection } from '@atlassiansox/cross-flow-base-types';
+
+export {
+  useCrossFlow,
+  withCrossFlow,
+  WithCrossFlowProps,
+  Journeys,
+  Targets,
+  Reasons,
+  TargetType,
+} from '@atlassiansox/cross-flow-api-internals';
+
+interface AnalyticsWebClientInterface {
+  sendUIEvent: (event: any) => void;
+  sendOperationalEvent: (event: any) => void;
+  sendTrackEvent: (event: any) => void;
+  sendScreenEvent: (event: any) => void;
+}
+
+type JiraProps = {
+  cloudId: string,
+  analyticsClient:
+    | AnalyticsWebClientInterface
+    | Promise<AnalyticsWebClientInterface>,
+  locale: string,
+  plugins?: PluginCollection,
+  children?: Node,
+};
+
+type JiraProvider = ComponentType<JiraProps>;
+declare export default JiraProvider;

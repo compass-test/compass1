@@ -1,0 +1,1 @@
+export { RightSidebarContainer } from './styled';

@@ -1,0 +1,6 @@
+{
+    "extends": "../tsconfig",
+    "include": [
+        "0-type-compat.ts"
+    ]
+}

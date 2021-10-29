@@ -1,0 +1,24 @@
+/**
+ * This declaration file should be manually updated to keep definitions
+ * in sync with original TS sources.
+ *
+ * Original source: src/index.ts
+ *
+ * @flow strict
+ */
+export {
+  useCrossFlow,
+  withCrossFlow,
+  Journeys,
+  Targets,
+  Reasons,
+} from '@atlassiansox/cross-flow-api-internals';
+
+export type {
+  CompletionStatus,
+  CrossFlowContextType,
+  Options,
+  ReasonType,
+  WithCrossFlowProps,
+  TargetType,
+} from '@atlassiansox/cross-flow-api-internals';

@@ -1,0 +1,31 @@
+{
+  "name": "@repo/repo-stats",
+  "version": "0.0.6",
+  "private": true,
+  "description": "Get statistics about a repository",
+  "bin": {
+    "repo-stats": "./bin/repo-stats.js"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "dependencies": {
+    "@atlassiansox/analytics-node-client": "^1.1.4",
+    "@manypkg/get-packages": "^1.0.1",
+    "chalk": "^2.1.0",
+    "date-fns": "^2.17.0",
+    "meow": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "p-limit": "^2.2.1",
+    "simple-git": "^1.130.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@types/node": "~12.0.12",
+    "ts-node": "^10.0.0"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

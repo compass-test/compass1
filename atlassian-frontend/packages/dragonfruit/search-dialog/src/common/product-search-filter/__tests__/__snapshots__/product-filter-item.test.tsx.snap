@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductFilterItem /> matches snapshot 1`] = `
+<ProductFilterItem
+  filterSource="COLLABORATION_GRAPH"
+  filterType="space"
+  icon={<Icon />}
+  label="some label"
+  value="some value"
+>
+  <FilterItem
+    icon={<Icon />}
+    isDisabled={false}
+    label="some label"
+    onChange={[Function]}
+    value="some value"
+  >
+    <div />
+  </FilterItem>
+</ProductFilterItem>
+`;

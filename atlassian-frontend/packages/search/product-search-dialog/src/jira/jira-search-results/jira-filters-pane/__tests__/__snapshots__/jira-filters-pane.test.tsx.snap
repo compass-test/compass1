@@ -1,0 +1,761 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<JiraFilterPane /> does not render Assignee Filter if user is anonymous 1`] = `
+.emotion-2 {
+  padding-bottom: 28px;
+}
+
+.emotion-0 {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6B778C;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+<MockJiraClientsProvider
+  clientOverrides={
+    Object {
+      "currentUserClient": undefined,
+    }
+  }
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <UserProvider>
+    <JiraFilterPane
+      isLoading={false}
+      query=""
+    >
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <InjectIntl(BinaryStatusCategoryFilter)>
+        <BinaryStatusCategoryFilter
+          intl={
+            Object {
+              "defaultFormats": Object {},
+              "defaultLocale": "en",
+              "formatDate": [Function],
+              "formatHTMLMessage": [Function],
+              "formatMessage": [Function],
+              "formatNumber": [Function],
+              "formatPlural": [Function],
+              "formatRelative": [Function],
+              "formatTime": [Function],
+              "formats": Object {},
+              "formatters": Object {
+                "getDateTimeFormat": [Function],
+                "getMessageFormat": [Function],
+                "getNumberFormat": [Function],
+                "getPluralFormat": [Function],
+                "getRelativeFormat": [Function],
+              },
+              "locale": "en",
+              "messages": Object {},
+              "now": [Function],
+              "textComponent": "span",
+              "timeZone": null,
+            }
+          }
+        >
+          <RowFilterGroup
+            isLoading={false}
+            title="Filter by status"
+          >
+            <Styled(div)>
+              <div
+                className="emotion-2"
+              >
+                <Styled(div)>
+                  <div
+                    className="emotion-0"
+                  >
+                    Filter by status
+                  </div>
+                </Styled(div)>
+                <Styled(div)>
+                  <div
+                    className="emotion-1"
+                  />
+                </Styled(div)>
+              </div>
+            </Styled(div)>
+          </RowFilterGroup>
+        </BinaryStatusCategoryFilter>
+      </InjectIntl(BinaryStatusCategoryFilter)>
+      <MoreFilters
+        isLoading={false}
+        query=""
+      >
+        <div />
+      </MoreFilters>
+      <FeedbackCollectorButtonContainer>
+        <div>
+          <FeedbackCollector>
+            <div />
+          </FeedbackCollector>
+        </div>
+      </FeedbackCollectorButtonContainer>
+    </JiraFilterPane>
+  </UserProvider>
+</MockJiraClientsProvider>
+`;
+
+exports[`<JiraFilterPane /> does not render filter while loading 1`] = `
+.emotion-2 {
+  padding-bottom: 28px;
+}
+
+.emotion-0 {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6B778C;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+<MockJiraClientsProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  mode="loading"
+>
+  <UserProvider
+    user={
+      Object {
+        "avatarUrl": "http://lorempixel.com/24/24/people",
+        "email": "user@example.com",
+        "id": "fh8321hf982h3f-fgdfgg3g-fn",
+        "name": "John Doe",
+      }
+    }
+  >
+    <JiraFilterPane
+      isLoading={true}
+      query=""
+    >
+      <Component
+        isLoading={true}
+      >
+        <div />
+      </Component>
+      <Component
+        isLoading={true}
+      >
+        <div />
+      </Component>
+      <InjectIntl(BinaryStatusCategoryFilter)>
+        <BinaryStatusCategoryFilter
+          intl={
+            Object {
+              "defaultFormats": Object {},
+              "defaultLocale": "en",
+              "formatDate": [Function],
+              "formatHTMLMessage": [Function],
+              "formatMessage": [Function],
+              "formatNumber": [Function],
+              "formatPlural": [Function],
+              "formatRelative": [Function],
+              "formatTime": [Function],
+              "formats": Object {},
+              "formatters": Object {
+                "getDateTimeFormat": [Function],
+                "getMessageFormat": [Function],
+                "getNumberFormat": [Function],
+                "getPluralFormat": [Function],
+                "getRelativeFormat": [Function],
+              },
+              "locale": "en",
+              "messages": Object {},
+              "now": [Function],
+              "textComponent": "span",
+              "timeZone": null,
+            }
+          }
+        >
+          <RowFilterGroup
+            isLoading={false}
+            title="Filter by status"
+          >
+            <Styled(div)>
+              <div
+                className="emotion-2"
+              >
+                <Styled(div)>
+                  <div
+                    className="emotion-0"
+                  >
+                    Filter by status
+                  </div>
+                </Styled(div)>
+                <Styled(div)>
+                  <div
+                    className="emotion-1"
+                  />
+                </Styled(div)>
+              </div>
+            </Styled(div)>
+          </RowFilterGroup>
+        </BinaryStatusCategoryFilter>
+      </InjectIntl(BinaryStatusCategoryFilter)>
+      <MoreFilters
+        isLoading={true}
+        query=""
+      >
+        <div />
+      </MoreFilters>
+      <FeedbackCollectorButtonContainer>
+        <div>
+          <FeedbackCollector>
+            <div />
+          </FeedbackCollector>
+        </div>
+      </FeedbackCollectorButtonContainer>
+    </JiraFilterPane>
+  </UserProvider>
+</MockJiraClientsProvider>
+`;
+
+exports[`<JiraFilterPane /> renders filters 1`] = `
+.emotion-2 {
+  padding-bottom: 28px;
+}
+
+.emotion-0 {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6B778C;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+<MockJiraClientsProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <UserProvider
+    user={
+      Object {
+        "avatarUrl": "http://lorempixel.com/24/24/people",
+        "email": "user@example.com",
+        "id": "fh8321hf982h3f-fgdfgg3g-fn",
+        "name": "John Doe",
+      }
+    }
+  >
+    <JiraFilterPane
+      isLoading={false}
+      query=""
+    >
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <InjectIntl(BinaryStatusCategoryFilter)>
+        <BinaryStatusCategoryFilter
+          intl={
+            Object {
+              "defaultFormats": Object {},
+              "defaultLocale": "en",
+              "formatDate": [Function],
+              "formatHTMLMessage": [Function],
+              "formatMessage": [Function],
+              "formatNumber": [Function],
+              "formatPlural": [Function],
+              "formatRelative": [Function],
+              "formatTime": [Function],
+              "formats": Object {},
+              "formatters": Object {
+                "getDateTimeFormat": [Function],
+                "getMessageFormat": [Function],
+                "getNumberFormat": [Function],
+                "getPluralFormat": [Function],
+                "getRelativeFormat": [Function],
+              },
+              "locale": "en",
+              "messages": Object {},
+              "now": [Function],
+              "textComponent": "span",
+              "timeZone": null,
+            }
+          }
+        >
+          <RowFilterGroup
+            isLoading={false}
+            title="Filter by status"
+          >
+            <Styled(div)>
+              <div
+                className="emotion-2"
+              >
+                <Styled(div)>
+                  <div
+                    className="emotion-0"
+                  >
+                    Filter by status
+                  </div>
+                </Styled(div)>
+                <Styled(div)>
+                  <div
+                    className="emotion-1"
+                  />
+                </Styled(div)>
+              </div>
+            </Styled(div)>
+          </RowFilterGroup>
+        </BinaryStatusCategoryFilter>
+      </InjectIntl(BinaryStatusCategoryFilter)>
+      <MoreFilters
+        isLoading={false}
+        query=""
+      >
+        <div />
+      </MoreFilters>
+      <FeedbackCollectorButtonContainer>
+        <div>
+          <FeedbackCollector>
+            <div />
+          </FeedbackCollector>
+        </div>
+      </FeedbackCollectorButtonContainer>
+    </JiraFilterPane>
+  </UserProvider>
+</MockJiraClientsProvider>
+`;
+
+exports[`<JiraFilterPane /> renders filters without current user assignee user invalid 1`] = `
+.emotion-2 {
+  padding-bottom: 28px;
+}
+
+.emotion-0 {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6B778C;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+<MockJiraClientsProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+>
+  <UserProvider
+    user={
+      Object {
+        "name": "Test",
+      }
+    }
+  >
+    <JiraFilterPane
+      isLoading={false}
+      query=""
+    >
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <InjectIntl(BinaryStatusCategoryFilter)>
+        <BinaryStatusCategoryFilter
+          intl={
+            Object {
+              "defaultFormats": Object {},
+              "defaultLocale": "en",
+              "formatDate": [Function],
+              "formatHTMLMessage": [Function],
+              "formatMessage": [Function],
+              "formatNumber": [Function],
+              "formatPlural": [Function],
+              "formatRelative": [Function],
+              "formatTime": [Function],
+              "formats": Object {},
+              "formatters": Object {
+                "getDateTimeFormat": [Function],
+                "getMessageFormat": [Function],
+                "getNumberFormat": [Function],
+                "getPluralFormat": [Function],
+                "getRelativeFormat": [Function],
+              },
+              "locale": "en",
+              "messages": Object {},
+              "now": [Function],
+              "textComponent": "span",
+              "timeZone": null,
+            }
+          }
+        >
+          <RowFilterGroup
+            isLoading={false}
+            title="Filter by status"
+          >
+            <Styled(div)>
+              <div
+                className="emotion-2"
+              >
+                <Styled(div)>
+                  <div
+                    className="emotion-0"
+                  >
+                    Filter by status
+                  </div>
+                </Styled(div)>
+                <Styled(div)>
+                  <div
+                    className="emotion-1"
+                  />
+                </Styled(div)>
+              </div>
+            </Styled(div)>
+          </RowFilterGroup>
+        </BinaryStatusCategoryFilter>
+      </InjectIntl(BinaryStatusCategoryFilter)>
+      <MoreFilters
+        isLoading={false}
+        query=""
+      >
+        <div />
+      </MoreFilters>
+      <FeedbackCollectorButtonContainer>
+        <div>
+          <FeedbackCollector>
+            <div />
+          </FeedbackCollector>
+        </div>
+      </FeedbackCollectorButtonContainer>
+    </JiraFilterPane>
+  </UserProvider>
+</MockJiraClientsProvider>
+`;
+
+exports[`<JiraFilterPane /> renders no filters if error 1`] = `
+.emotion-2 {
+  padding-bottom: 28px;
+}
+
+.emotion-0 {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6B778C;
+  padding-bottom: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+<MockJiraClientsProvider
+  intl={
+    Object {
+      "defaultFormats": Object {},
+      "defaultLocale": "en",
+      "formatDate": [Function],
+      "formatHTMLMessage": [Function],
+      "formatMessage": [Function],
+      "formatNumber": [Function],
+      "formatPlural": [Function],
+      "formatRelative": [Function],
+      "formatTime": [Function],
+      "formats": Object {},
+      "formatters": Object {
+        "getDateTimeFormat": [Function],
+        "getMessageFormat": [Function],
+        "getNumberFormat": [Function],
+        "getPluralFormat": [Function],
+        "getRelativeFormat": [Function],
+      },
+      "locale": "en",
+      "messages": Object {},
+      "now": [Function],
+      "textComponent": "span",
+      "timeZone": null,
+    }
+  }
+  mode="error"
+>
+  <UserProvider
+    user={
+      Object {
+        "avatarUrl": "http://lorempixel.com/24/24/people",
+        "email": "user@example.com",
+        "id": "fh8321hf982h3f-fgdfgg3g-fn",
+        "name": "John Doe",
+      }
+    }
+  >
+    <JiraFilterPane
+      isLoading={false}
+      query=""
+    >
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <Component
+        isLoading={false}
+      >
+        <div />
+      </Component>
+      <InjectIntl(BinaryStatusCategoryFilter)>
+        <BinaryStatusCategoryFilter
+          intl={
+            Object {
+              "defaultFormats": Object {},
+              "defaultLocale": "en",
+              "formatDate": [Function],
+              "formatHTMLMessage": [Function],
+              "formatMessage": [Function],
+              "formatNumber": [Function],
+              "formatPlural": [Function],
+              "formatRelative": [Function],
+              "formatTime": [Function],
+              "formats": Object {},
+              "formatters": Object {
+                "getDateTimeFormat": [Function],
+                "getMessageFormat": [Function],
+                "getNumberFormat": [Function],
+                "getPluralFormat": [Function],
+                "getRelativeFormat": [Function],
+              },
+              "locale": "en",
+              "messages": Object {},
+              "now": [Function],
+              "textComponent": "span",
+              "timeZone": null,
+            }
+          }
+        >
+          <RowFilterGroup
+            isLoading={false}
+            title="Filter by status"
+          >
+            <Styled(div)>
+              <div
+                className="emotion-2"
+              >
+                <Styled(div)>
+                  <div
+                    className="emotion-0"
+                  >
+                    Filter by status
+                  </div>
+                </Styled(div)>
+                <Styled(div)>
+                  <div
+                    className="emotion-1"
+                  />
+                </Styled(div)>
+              </div>
+            </Styled(div)>
+          </RowFilterGroup>
+        </BinaryStatusCategoryFilter>
+      </InjectIntl(BinaryStatusCategoryFilter)>
+      <MoreFilters
+        isLoading={false}
+        query=""
+      >
+        <div />
+      </MoreFilters>
+      <FeedbackCollectorButtonContainer>
+        <div>
+          <FeedbackCollector>
+            <div />
+          </FeedbackCollector>
+        </div>
+      </FeedbackCollectorButtonContainer>
+    </JiraFilterPane>
+  </UserProvider>
+</MockJiraClientsProvider>
+`;

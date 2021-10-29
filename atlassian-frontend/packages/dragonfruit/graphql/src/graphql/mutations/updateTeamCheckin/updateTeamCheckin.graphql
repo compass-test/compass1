@@ -1,0 +1,26 @@
+mutation updateTeamCheckin($input: CompassUpdateTeamCheckinInput!) {
+  compass {
+    updateTeamCheckin(input: $input) {
+      success
+
+      updatedTeamCheckin {
+        __typename
+        teamId
+        id
+        mood
+        response1
+        response2
+        response3
+        changeMetadata {
+          createdAt
+          lastUserModificationAt
+        }
+        ...CompassTeamCheckinCore
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

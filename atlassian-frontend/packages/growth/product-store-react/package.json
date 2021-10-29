@@ -1,0 +1,39 @@
+{
+  "name": "@atlassiansox/product-store-react",
+  "version": "1.2.1",
+  "description": "Product Store Integration react component",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Growth: Crossflow",
+    "releaseModel": "continuous"
+  },
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@atlassiansox/cross-flow-base-types": "^1.0.0",
+    "@atlassiansox/iframe-plugin": "^9.1.0",
+    "@babel/runtime": "^7.0.0",
+    "query-string": "^5.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/drawer": "^7.0.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@storybook/addon-knobs": "^5.3.18",
+    "enzyme": "^3.10.0",
+    "typescript": "3.9.6"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

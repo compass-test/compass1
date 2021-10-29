@@ -1,0 +1,49 @@
+{
+  "name": "@atlassian/canvas-experiments",
+  "version": "1.0.5",
+  "description": "Experiments conducted to decide on canvas-app technology choices",
+  "author": "Atlassian Pty Ltd",
+  "private": true,
+  "scripts": {
+    "build": "canvas-build --favicon canvas-favicon.dev.svg --main=src/canvas-experiments --basename=$BASENAME",
+    "deploy": "atlas micros static deploy -s canvas-experiments -e ${MICROS_ENV:-adev} -f canvas-experiments.sd.yml",
+    "start": "canvas-start --favicon canvas-favicon.dev.svg --port=9011 --main=src/canvas-experiments",
+    "generate-data": "canvas-faker --config canvas-faker.config.js --out-dir data"
+  },
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "atlassian": {
+    "team": "Canvas",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "af:services": {
+    "serviceName": "canvas-experiments",
+    "slackChannelId": "C027MLUFSFN",
+    "master": {
+      "continuous": {
+        "env": "adev"
+      }
+    },
+    "branch": {
+      "env": "statlas"
+    }
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0",
+  "devDependencies": {
+    "@atlassian/canvas-build": "^1.0.0",
+    "@atlassian/canvas-faker": "^1.0.0"
+  },
+  "dependencies": {
+    "@react-three/drei": "^7.0.6",
+    "@react-three/fiber": "^7.0.3",
+    "@types/react": "^16.8.0",
+    "@types/react-dom": "^16.8.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-use-gesture": "^9.1.3",
+    "three": "^0.130.1"
+  }
+}

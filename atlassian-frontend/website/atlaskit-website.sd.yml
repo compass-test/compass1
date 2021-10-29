@@ -1,0 +1,21 @@
+version: 2
+name: atlaskit website
+organization: UI Platform
+
+notifications:
+  email: eng-afp-monorepo-syd@atlassian.com
+static:
+  content: ./dist
+  cache:
+    compress: true
+    maxTTL: 86400 # one day
+  errors:
+    - errorCode: 404
+      responseCode: 200
+      responsePagePath: /404.html
+environmentOverrides:
+  prod-east:
+    static:
+      aliases:
+        - atlaskit.atlassian.com
+        - atlaskit-website.prod.atl-paas.net

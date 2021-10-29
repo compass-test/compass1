@@ -1,0 +1,31 @@
+#import "../../fragments/CompassScorecardCore.graphql"
+
+query getScorecards($cloudId: ID!) {
+  compass {
+    scorecards(cloudId: $cloudId) {
+      __typename
+      ... on CompassScorecardConnection {
+        nodes {
+          id
+          name
+          description
+          importance
+          componentType
+          owner {
+            accountId
+            name
+          }
+
+        ...CompassScorecardCore
+        }
+      }
+      ... on QueryError {
+        message
+        extensions {
+          statusCode
+          errorType
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# PageScorecardDetails
+
+Scorecard Details Page

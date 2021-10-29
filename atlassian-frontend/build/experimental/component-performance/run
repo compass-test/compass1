@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# This binary is designed to be run locally
+# It implicitly requires docker-compose to run
+# The CI configuration should work
+
+if [ -n $CI ]
+then
+  DEFAULT_RUNS=10
+  DEFAULT_COPIES=10
+  DEFAULT_SAMPLES=10
+
+  while [[ $# -gt 0 ]]
+  do
+  key="$1"
+  value="$2"
+  case $key in
+    -p|--packageName)
+    PACKAGE_NAME="$value"
+    shift # past argument
+    shift # past value
+    ;;
+    -s|--storyName)
+    STORY_NAME="$value"
+    shift # past argument
+    shift # past value
+    ;;
+    -r|--repeat)
+    RUNS_ARG=${value}
+    shift # past argument
+    shift # past value
+    ;;
+    -c|--copies)
+    COPIES_ARG=${value}
+    shift # past argument
+    shift # past value
+    ;;
+    -sm|--samples)
+    SAMPLES_ARG=${value}
+    shift # past argument
+    shift # past value
+    ;;
+  esac
+  done
+
+  RUNS=${RUNS_ARG:-$DEFAULT_RUNS}
+  COPIES=${COPIES_ARG:-$DEFAULT_COPIES}
+  SAMPLES=${SAMPLES_ARG:-$DEFAULT_SAMPLES}
+
+  echo "\
+PACKAGE_NAME=$PACKAGE_NAME
+STORY_NAME=$STORY_NAME
+RUNS=$RUNS
+COPIES=$COPIES
+SAMPLES=$SAMPLES" > .env
+fi
+
+echo "Package name: $PACKAGE_NAME"
+echo "Story name: $STORY_NAME"
+echo "Repeat runs: $RUNS"
+echo "Number of copies: $COPIES"
+echo "Number of samples: $SAMPLES"
+
+
+if [[ -d screenshots ]]; then rm -rf screenshots; fi
+if [[ -d results ]]; then rm -rf results; fi
+
+mkdir screenshots results
+node dist/main.js
+
+# clean up results
+for d in results/*; do
+  mv ${d}/* ${d}.json
+  rm -r ${d}
+done
+
+# this will be branch dependent
+mv results $OUT_DIR

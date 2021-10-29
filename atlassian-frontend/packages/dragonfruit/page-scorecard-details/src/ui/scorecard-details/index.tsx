@@ -1,0 +1,1 @@
+export { PageScorecardDetails } from './main';

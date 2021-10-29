@@ -1,0 +1,10 @@
+{
+  "extends": "../../../tsconfig.node.json",
+  "include": ["./src"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "strict": true,
+    "declaration": true
+  }
+}

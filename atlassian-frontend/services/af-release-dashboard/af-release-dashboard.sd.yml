@@ -1,0 +1,103 @@
+name: Atlassian Frontend Release Dashboard
+notifications:
+  email: rsejas@atlassian.com
+organization: Teamwork-Express
+description: Release dashboard for atlassian-frontend
+
+buildNumber: '${IMAGE_VERSION}'
+
+compose:
+  webserver:
+    image: '${IMAGE_NAME}'
+    tag: '${IMAGE_VERSION}'
+  slauth:
+    image: docker.atl-paas.net/sox/micros/slauth-sidecar
+    links:
+      - webserver
+    ports:
+      - 8080:8080
+    tag: stable
+
+links:
+  healthcheck:
+    uri: /healthcheck
+  source:
+    url: git@bitbucket.org:atlassian/atlassian-frontend.git
+
+requiresAsap: true
+
+config:
+  environmentVariables:
+    NODE_ENV: production
+    ALLOW_ORIGINS: 'http://localhost:8080/'
+    STATLAS_NAMESPACE: 'atlassian-frontend'
+    SLAUTH_BACKEND: 'http://webserver:8080'
+    SLAUTH_PLUGINS: 'bypass,build,slauthtoken,saml'
+    SLAUTH_BYPASS_ROUTES: '/healthcheck,/api/v1/jira/webhook,/ddev/api/v1/jira/webhook,/dev-west2/api/v1/jira/webhook'
+    SLAUTH_LOG_LEVEL: debug
+    SLAUTH_SAML_CENTRIFY: 'centrify'
+
+initialisationTimeouts:
+  install: 900
+
+cleanup: false
+
+environmentOverrides:
+  ddev:
+    resources:
+      - name: centrify
+        type: centrify
+        attributes:
+          name: 'af-release-dashboard.ddev'
+          description: Release dashboard for atlassian-frontend
+          url: 'https://af-release-dashboard.ap-southeast-2.dev.atl-paas.net'
+          generateCert: true
+      - name: ddev
+        type: globaledge
+        attributes:
+          upstream_only: true
+  dev-west2:
+    scaling:
+      autoHibernation:
+        enabled: false
+    resources:
+      - name: centrify
+        type: centrify
+        attributes:
+          name: 'af-release-dashboard.dev-west2'
+          description: Release dashboard for atlassian-frontend
+          url: 'https://af-release-dashboard.us-west-2.dev.atl-paas.net'
+          generateCert: true
+      - name: dev-west2
+        type: globaledge
+        attributes:
+          upstream_only: true
+  dev:
+    resources:
+      - type: globaledge
+        name: ingress
+        attributes:
+          routes:
+            - match:
+                prefix: '/ddev/api/v1/jira/webhook'
+                ip_whitelist:
+                  - public
+              route:
+                prefix_rewrite: '/api/v1/jira/webhook'
+                cluster: af-release-dashboard-ddev-micros-elb
+            - match:
+                prefix: '/dev-west2/api/v1/jira/webhook'
+                ip_whitelist:
+                  - public
+              route:
+                prefix_rewrite: '/api/v1/jira/webhook'
+                cluster: af-release-dashboard-dev-west2-micros-elb
+            - match:
+                prefix: '/'
+              direct_response:
+                status: 400
+                body: 'You must prefix your request path with either /ddev/ or /dev-west2/'
+
+resources:
+  - type: postgres-db
+    name: af-release-dashboard

@@ -1,0 +1,33 @@
+{
+  "name": "@atlassian/commerce-privacy",
+  "version": "0.0.1",
+  "description": "Utility for sanitizing data like URLs in such a way that they retain user privacy (no PII, no UGC)",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "sideEffects": false,
+  "atlassian": {
+    "team": "Commerce",
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "typescript": "3.9.6"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": [
+        "atlassian-conventions"
+      ]
+    }
+  },
+  "af:exports": {
+    "./url": "./src/url.ts"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

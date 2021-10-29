@@ -1,0 +1,1 @@
+export { DeleteAnnouncementModal } from './main';

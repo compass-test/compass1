@@ -1,0 +1,12 @@
+diff --git a/node_modules/node-worker-threads-pool/index.d.ts b/node_modules/node-worker-threads-pool/index.d.ts
+index 1158603..d25e529 100644
+--- a/node_modules/node-worker-threads-pool/index.d.ts
++++ b/node_modules/node-worker-threads-pool/index.d.ts
+@@ -1,6 +1,6 @@
+ /// <reference types="node" />
+ 
+-import type { MessagePort } from "worker_threads";
++import { MessagePort } from "worker_threads";
+ 
+ type TransferList = Parameters<typeof MessagePort.prototype.postMessage>[1];
+ 

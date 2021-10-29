@@ -1,0 +1,1 @@
+export { LoadingStateAnimationWrapper } from './styled';

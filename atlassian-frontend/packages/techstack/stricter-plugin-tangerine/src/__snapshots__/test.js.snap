@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stricter-plugin-tangerine should export the correct rules 1`] = `
+Object {
+  "dummy": Object {
+    "onProject": [Function],
+  },
+  "dummy-fail": Object {
+    "onProject": [Function],
+  },
+  "project-structure": Object {
+    "dirsMatch": [Function],
+    "filesMatch": [Function],
+    "matchHierarchy": [Function],
+    "meta": Object {
+      "docs": Object {
+        "description": "Enforce a specific file structure for your project",
+      },
+    },
+    "onProject": [Function],
+    "performMatch": [Function],
+    "prepareStruct": [Function],
+    "processMismatches": [Function],
+    "resolveDefinitionAlias": [Function],
+  },
+}
+`;

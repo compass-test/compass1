@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchResultSection /> snapshot 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    <Styled(span)>
+      Search results
+    </Styled(span)>
+    <Badge
+      testId="search-result-count-badge"
+    >
+      22
+    </Badge>
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`<SearchResultSection /> snapshot when totalResults = 0 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    <Styled(span)>
+      Search results
+    </Styled(span)>
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`<SearchResultSection /> snapshot when totalResults is undefined 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    <Styled(span)>
+      Search results
+    </Styled(span)>
+  </Styled(div)>
+</Styled(div)>
+`;

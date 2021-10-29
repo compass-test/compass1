@@ -1,0 +1,79 @@
+version: 2
+name: Statuspage Chainlink
+
+organization: 'Engineering-SP'
+notifications:
+  email: lstanden@atlassian.com
+
+static:
+  cache:
+    compress: true
+    maxTTL: 86400 # one day
+  content: dist/
+  errors:
+    - errorCode: 404
+      errorCachingMinTTL: 500
+      responseCode: 200
+      responsePagePath: /index.html
+    - errorCode: 500
+      errorCachingMinTTL: 0 # do not cache error, they are most likely an S3 glitch. If we cache them - subsequent requests will result in 500s as well
+      responseCode: 500
+      responsePagePath: /index.html
+  files:
+    - match: '*'
+      params:
+        CacheControl: max-age=1209600, s-maxage=1209600 # 14 days (60 * 60 * 24 * 14)
+    - match: 'index\.html'
+      params:
+        CacheControl: public, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0
+  origins:
+    - CustomOriginConfig:
+        OriginProtocolPolicy: https-only
+      DomainName: api-private.stg.atlassian.com
+      Id: stargate
+  cacheBehaviors:
+    - AllowedMethods:
+        - DELETE
+        - GET
+        - HEAD
+        - OPTIONS
+        - PATCH
+        - POST
+        - PUT
+      ForwardedValues:
+        QueryString: true
+        Cookies:
+          Forward: all
+        Headers:
+          - '*'
+      PathPattern: /gateway/api/*
+      TargetOriginId: stargate
+      ViewerProtocolPolicy: redirect-to-https
+      MaxTTL: 0 # don't ever cache responses on the CloudFront side
+      DefaultTTL: 0 # don't ever cache responses on the CloudFront side
+
+    - ForwardedValues:
+        QueryString: true
+        Cookies:
+          Forward: all
+        Headers:
+          - '*'
+      PathPattern: /SetCST*
+      TargetOriginId: stargate
+      ViewerProtocolPolicy: https-only
+      MaxTTL: 0 # don't ever cache responses on the CloudFront side
+      DefaultTTL: 0 # don't ever cache responses on the CloudFront side
+environmentOverrides:
+  stg-east:
+    static:
+      aliases:
+        - my.statuspagestaging.com
+  prod-east:
+    static:
+      aliases:
+        - my.statuspage.io
+      origins:
+        - CustomOriginConfig:
+            OriginProtocolPolicy: https-only
+          DomainName: api-private.atlassian.com
+          Id: stargate

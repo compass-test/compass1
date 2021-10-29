@@ -1,0 +1,46 @@
+diff --git a/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.dev.js b/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.dev.js
+index 8b33aee..a7f7748 100644
+--- a/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.dev.js
++++ b/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.dev.js
+@@ -462,3 +462,6 @@ async function prependFile(filePath, data, name, prettierConfig) {
+ }
+ 
+ exports.default = applyReleasePlan;
++
++/** Export getNewChangelogEntry function so we can use it directly for generating release notes */
++exports.getNewChangelogEntry = getNewChangelogEntry;
+diff --git a/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.prod.js b/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.prod.js
+index 9e9d03c..7e47bde 100644
+--- a/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.prod.js
++++ b/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.cjs.prod.js
+@@ -270,3 +270,5 @@ async function prependFile(filePath, data, name, prettierConfig) {
+ }
+ 
+ exports.default = applyReleasePlan;
++/** Export getNewChangelogEntry function so we can use it directly for generating release notes */
++exports.getNewChangelogEntry = getNewChangelogEntry;
+diff --git a/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.esm.js b/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.esm.js
+index 795a503..074246a 100644
+--- a/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.esm.js
++++ b/node_modules/@changesets/apply-release-plan/dist/apply-release-plan.esm.js
+@@ -361,7 +361,8 @@ async function applyReleasePlan(releasePlan, packages, config = defaultConfig, s
+   return touchedFiles;
+ }
+ 
+-async function getNewChangelogEntry(releasesWithPackage, changesets, config, cwd) {
++/** Export getNewChangelogEntry function so we can use it directly for generating release notes */
++export async function getNewChangelogEntry(releasesWithPackage, changesets, config, cwd) {
+   let getChangelogFuncs = {
+     getReleaseLine: () => Promise.resolve(""),
+     getDependencyReleaseLine: () => Promise.resolve("")
+diff --git a/node_modules/@changesets/apply-release-plan/dist/declarations/src/index.d.ts b/node_modules/@changesets/apply-release-plan/dist/declarations/src/index.d.ts
+index db7ebee..56b2950 100644
+--- a/node_modules/@changesets/apply-release-plan/dist/declarations/src/index.d.ts
++++ b/node_modules/@changesets/apply-release-plan/dist/declarations/src/index.d.ts
+@@ -1,3 +1,6 @@
+ import { ReleasePlan, Config } from "@changesets/types";
+ import { Packages } from "@manypkg/get-packages";
+ export default function applyReleasePlan(releasePlan: ReleasePlan, packages: Packages, config?: Config, snapshot?: string | boolean): Promise<string[]>;
++
++/** Export getNewChangelogEntry function so we can use it directly for generating release notes. Mostly typed to any as it's not worth properly typing */
++export function getNewChangelogEntry(releasesWithPackage: any[], changesets: any[], config: any, cwd: string): Promise<any[]>;

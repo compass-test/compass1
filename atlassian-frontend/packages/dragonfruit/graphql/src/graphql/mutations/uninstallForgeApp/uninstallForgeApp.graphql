@@ -1,0 +1,10 @@
+mutation uninstallForgeApp($input: AppUninstallationInput!)
+{
+  uninstallApp(input: $input) {
+    success
+    taskId
+    errors {
+      message
+    }
+  }
+}

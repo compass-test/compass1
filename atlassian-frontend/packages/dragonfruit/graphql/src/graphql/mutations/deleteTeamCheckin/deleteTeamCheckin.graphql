@@ -1,0 +1,11 @@
+mutation deleteTeamCheckin($input: CompassDeleteTeamCheckinInput!) {
+  compass {
+    deleteTeamCheckin(input: $input) {
+      success
+      errors {
+        ...CommonMutationError
+      }
+      deletedTeamCheckinId
+    }
+  }
+}

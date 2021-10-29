@@ -1,0 +1,27 @@
+{
+  "name": "@repo/stricter-plugin-rules",
+  "version": "1.4.5",
+  "description": "Stricter rules for the atlassian-frontend repo",
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@atlaskit/build-utils": "*",
+    "globby": "^6.1.0",
+    "jscodeshift": "^0.13.0",
+    "json5": "^2.1.0",
+    "lodash": "^4.17.15",
+    "micromatch": "^4.0.2",
+    "node-cache": "^5.0.1",
+    "path-is-inside": "^1.0.2",
+    "semver": "^7.3.0",
+    "ts-node": "^10.0.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@types/jest": "^26.0.14"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

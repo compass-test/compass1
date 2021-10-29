@@ -1,0 +1,7 @@
+build/
+docs/
+src/
+test/
+examples/
+tsconfig.json
+analytics.spec.yaml

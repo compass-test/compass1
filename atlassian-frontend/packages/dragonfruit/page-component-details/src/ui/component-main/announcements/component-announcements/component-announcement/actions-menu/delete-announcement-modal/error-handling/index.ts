@@ -1,0 +1,1 @@
+export { useAnnouncementDeleteErrorHandler } from './main';

@@ -1,0 +1,14 @@
+node_modules
+*.zip
+dist/
+yarn.lock
+secrets.json
+.asap-config
+afrd-ddev.yaml
+
+# releases dataset directory
+data/
+
+# cache of prs
+.release-prs
+*.seed.json

@@ -1,0 +1,15 @@
+mutation createScorecard($cloudId: ID!, $input: CreateCompassScorecardInput!) {
+  compass {
+    createScorecard(cloudId: $cloudId, input: $input) {
+      success
+
+      scorecardDetails {
+        ...CompassScorecardCore
+      }
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

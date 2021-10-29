@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "declaration": true,
+    "paths": {}
+  },
+  "include": [
+    "../src/**/*.ts"
+  ],
+  "exclude": [
+    "../src/**/__tests__/*",
+    "../src/**/__fixtures__/*",
+    "../src/test-utils/*",
+    "../src/**/*.test.*",
+    "../src/**/test.*"
+  ]
+}

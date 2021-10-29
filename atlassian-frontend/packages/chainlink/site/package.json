@@ -1,0 +1,33 @@
+{
+  "name": "@af/statuspage-chainlink-site",
+  "version": "0.0.11",
+  "description": "Chainlink Site",
+  "private": true,
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "atlassian": {
+    "team": "Statuspage",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@af/statuspage-chainlink-entries": "^0.0.11",
+    "@atlaskit/router": "^0.13.0",
+    "@atlassian/flags-provider": "^0.2.0",
+    "react-loosely-lazy": "^0.5.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1",
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1"
+  }
+}

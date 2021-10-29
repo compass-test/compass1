@@ -1,0 +1,40 @@
+{
+  "name": "@atlaskit/scheduled-releases",
+  "version": "0.5.3",
+  "description": "Scripts & tooling for Atlaskit scheduled releases",
+  "private": true,
+  "scripts": {
+    "create-release": "ts-node scripts/createRelease.ts",
+    "cut-release": "ts-node scripts/cut-release",
+    "update-pr": "ts-node scripts/commentPrs.ts",
+    "get-prs": "ts-node scripts/getPrsInRelease.ts",
+    "label-issues": "ts-node scripts/labelJiraIssuesWithRelease.ts",
+    "generate-release-notes": "ts-node scripts/generateReleaseNotes.ts --rootDir ../../.. --write"
+  },
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "dependencies": {
+    "@atlaskit/build-utils": "*",
+    "@changesets/apply-release-plan": "^4.2.0",
+    "@changesets/config": "^1.5.0",
+    "@changesets/get-release-plan": "^2.0.0",
+    "@changesets/types": "^3.2.0",
+    "@manypkg/get-packages": "^1.0.1",
+    "bolt": "^0.24.10",
+    "chalk": "^2.1.0",
+    "fs-extra": "^4.0.2",
+    "meow": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "p-limit": "^2.2.1",
+    "simple-git": "^1.130.0",
+    "ts-node": "^10.0.0",
+    "typescript": "3.9.6"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/node": "~12.0.12"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

@@ -1,0 +1,1 @@
+export { BreadcrumbsLink } from './main';

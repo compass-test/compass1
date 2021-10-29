@@ -1,0 +1,49 @@
+{
+  "name": "@atlassian/commerce-telemetry",
+  "version": "4.0.0",
+  "description": "Contains Commerce specific telemetry utilities",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.tsx",
+  "atlassian": {
+    "team": "Commerce",
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@atlassian/commerce-events-telemetry-react": "6.0.0",
+    "@atlassian/commerce-telemetry-clients": "2.0.0",
+    "@atlassiansox/metal-client": "^1.21.0",
+    "@babel/runtime": "^7.0.0",
+    "@sentry/react": "5.16.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^8.0.1",
+    "typescript": "3.9.6"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "code-structure": "tangerine-next",
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "af:exports": {
+    ".": "./src/index.tsx",
+    "./dispatch-hooks": "./src/common/utils/dispatch-hooks/index.ts",
+    "./listeners": "./src/common/utils/listeners/index.ts",
+    "./integrations": "./src/common/utils/integrations/index.tsx"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

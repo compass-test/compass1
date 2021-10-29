@@ -1,0 +1,19 @@
+{
+  "teams": {
+    "Fake Team A": {
+      "contributors": ["user-a", "user-b"]
+    },
+    "Fake Team B": {
+      "contributors": ["user-c"]
+    }
+  },
+  "contributorAccountIds": {
+    "Fake Team A": {
+      "user-a": "a",
+      "user-b": "b"
+    },
+    "Fake Team B": {
+      "user-c": "c"
+    }
+  }
+}

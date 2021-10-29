@@ -1,0 +1,23 @@
+version: 2
+name: design system dashboard
+organization: UI Platform
+
+notifications:
+  email: eng-design-system@atlassian.com
+
+static:
+  content: out/
+  cache:
+    compress: true
+    maxTTL: 10800 # 3 hours
+  errors:
+    - errorCode: 404
+      responseCode: 200
+      responsePagePath: /packages/index.html
+
+environmentOverrides:
+  adev:
+    static:
+      aliases:
+        - ds-dashboard.dev.atl-paas.net
+        - ds-dashboard.ap-southeast-2.dev.public.atl-paas.net

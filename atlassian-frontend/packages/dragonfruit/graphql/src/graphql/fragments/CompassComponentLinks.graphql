@@ -1,0 +1,7 @@
+fragment CompassComponentLinkCommon on CompassLink {
+  id
+  name
+  url
+  type
+  _isDeleted @client
+}

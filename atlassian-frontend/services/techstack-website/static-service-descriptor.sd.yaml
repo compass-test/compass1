@@ -1,0 +1,42 @@
+version: 2
+name: Frontend Techstacks
+
+organization: 'Team Work Platform'
+notifications:
+  email: sshaw2@atlassian.com
+
+static:
+  cache:
+    compress: true
+    maxTTL: 86400 # one day
+  content: dist/
+  errors:
+    - errorCode: 404
+      errorCachingMinTTL: 500
+      responseCode: 200
+      responsePagePath: /index.html
+    - errorCode: 500
+      errorCachingMinTTL: 0 # do not cache error, they are most likely an S3 glitch. If we cache them - subsequent requests will result in 500s as well
+      responseCode: 500
+      responsePagePath: /index.html
+  files:
+    - match: '*'
+      params:
+        CacheControl: max-age=1209600, s-maxage=1209600 # 14 days (60 * 60 * 24 * 14)
+    - match: 'index\.html'
+      params:
+        CacheControl: public, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0
+
+environmentOverrides:
+  ddev:
+    static:
+      aliases:
+        - techstack-dev.dev.atl-paas.net
+  stg-west2:
+    static:
+      aliases:
+        - techstack-dev.staging.atl-paas.net
+  prod-west2:
+    static:
+      aliases:
+        - techstack-dev.prod.atl-paas.net

@@ -1,0 +1,88 @@
+export const mockPerformance = (props: Partial<Performance>): Performance => ({
+  navigation: {
+    redirectCount: 0,
+    TYPE_BACK_FORWARD: 1,
+    TYPE_NAVIGATE: 2,
+    TYPE_RELOAD: 3,
+    TYPE_RESERVED: 4,
+    type: 2,
+    toJSON() {
+      return {};
+    },
+  },
+  onresourcetimingbufferfull: () => {},
+  addEventListener: () => {},
+  clearMarks: () => {},
+  clearMeasures: () => {},
+  clearResourceTimings: () => {},
+  dispatchEvent: () => true,
+  getEntries: () => [],
+  getEntriesByName: () => [],
+  getEntriesByType: () => [],
+  mark: () => {},
+  measure: () => {},
+  now: () => 30,
+  removeEventListener: () => {},
+  setResourceTimingBufferSize: () => {},
+  timeOrigin: 0,
+  timing: {
+    connectStart: 1594691831188,
+    navigationStart: 1594691831184,
+    loadEventEnd: 1594691832688,
+    domLoading: 1594691831926,
+    secureConnectionStart: 0,
+    fetchStart: 1594691831188,
+    domContentLoadedEventStart: 1594691832243,
+    responseStart: 1594691831908,
+    responseEnd: 1594691832029,
+    domInteractive: 1594691832161,
+    domainLookupEnd: 1594691831188,
+    redirectStart: 0,
+    requestStart: 1594691831226,
+    unloadEventEnd: 0,
+    unloadEventStart: 0,
+    domComplete: 1594691832688,
+    domainLookupStart: 1594691831188,
+    loadEventStart: 1594691832688,
+    domContentLoadedEventEnd: 1594691832249,
+    redirectEnd: 0,
+    connectEnd: 1594691831188,
+    toJSON() {
+      return {};
+    },
+  },
+  toJSON() {
+    return {};
+  },
+  ...props,
+});
+
+export const mockPerformanceResourceTiming = (
+  data: Partial<PerformanceResourceTiming>,
+): PerformanceResourceTiming => ({
+  connectEnd: 765.5050000175834,
+  connectStart: 765.5050000175834,
+  decodedBodySize: 33808,
+  domainLookupEnd: 765.5050000175834,
+  domainLookupStart: 765.5050000175834,
+  duration: 18.139999941922724,
+  encodedBodySize: 33808,
+  entryType: 'resource',
+  fetchStart: 765.5050000175834,
+  initiatorType: 'link',
+  name: 'https://localhost/bundle.js',
+  nextHopProtocol: 'h2',
+  redirectEnd: 0,
+  redirectStart: 0,
+  requestStart: 781.3499999465421,
+  responseEnd: 783.6449999595061,
+  responseStart: 782.8049999661744,
+  secureConnectionStart: 0,
+  startTime: 765.5050000175834,
+  transferSize: 0,
+  workerStart: 0,
+  toJSON() {
+    return {};
+  },
+  ...data,
+});

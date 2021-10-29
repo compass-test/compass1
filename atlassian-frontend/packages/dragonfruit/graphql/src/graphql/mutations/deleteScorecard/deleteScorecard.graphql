@@ -1,0 +1,12 @@
+mutation deleteScorecard($scorecardId: ID!) {
+  compass {
+    deleteScorecard(scorecardId: $scorecardId) {
+      success
+      scorecardId
+
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

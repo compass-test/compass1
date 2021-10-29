@@ -1,0 +1,751 @@
+--- button-name ---
+Failed element: <button aria-controls="uid7" aria-expanded="false" aria-haspopup="true" class="css-1qhszr8" type="button" tabindex="0">
+Node label:     button
+Selector:       button[aria-controls="uid7"]
+Explanation:    Fix any of the following:
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/dropdown-menu/dropdown-item/?lhciFailedSelector=button%5Baria-controls%3D%22uid7%22%5D
+--------------
+
+--- button-name ---
+Failed element: <button aria-controls="uid8" aria-expanded="false" aria-haspopup="true" class="css-1qhszr8" type="button" tabindex="0">
+Node label:     button
+Selector:       button[aria-controls="uid8"]
+Explanation:    Fix any of the following:
+  Element does not have inner text that is visible to screen readers
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element's default semantics were not overridden with role="presentation"
+  Element's default semantics were not overridden with role="none"
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/dropdown-menu/dropdown-item/?lhciFailedSelector=button%5Baria-controls%3D%22uid8%22%5D
+--------------
+
+--- aria-required-children ---
+Failed element: <div class="WidthConstrainer-sc-1do8tm1-0 LWYhN" id="uid4" role="menu">
+Node label:     Sydney
+Melbourne
+Selector:       #uid4
+Explanation:    Fix any of the following:
+  Required ARIA children role not present: menuitem, menuitemradio, menuitemcheckbox
+Link:           http://localhost:9000/components/dropdown-menu/dropdown-menu-stateless/?lhciFailedSelector=%23uid4
+--------------
+
+--- aria-required-children ---
+Failed element: <div aria-label="" role="menu">
+Node label:     Sydney
+Melbourne
+Selector:       div[aria-label=""]
+Explanation:    Fix any of the following:
+  Required ARIA children role not present: menuitem, menuitemradio, menuitemcheckbox
+Link:           http://localhost:9000/components/dropdown-menu/dropdown-menu-stateless/?lhciFailedSelector=div%5Baria-label%3D%22%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <span> content</span>
+Node label:      content
+Selector:       .css-gyglfn.e13mr3z50:nth-child(12) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(133)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.1 (foreground color: #172b4d, background color: #de350b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/flag/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(12)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(133)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token" style="color: rgb(0, 102, 68);">'Check status page'</span>
+Node label:     'Check status page'
+Selector:       .css-gyglfn.e13mr3z50:nth-child(12) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .token:nth-child(136)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.54 (foreground color: #006644, background color: #de350b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/flag/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(12)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.token%3Anth-child(136)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token function-variable" style="color: rgb(23, 43, 77);">onClick</span>
+Node label:     onClick
+Selector:       .function-variable.token:nth-child(139)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.1 (foreground color: #172b4d, background color: #de350b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/flag/?lhciFailedSelector=.function-variable.token%3Anth-child(139)
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 lkXjiw" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .ProgressIndicatorDefault__Footer-alnzr3-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .lkXjiw[aria-controls="panel0"][aria-label="tab0"]
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorDefault__Footer-alnzr3-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.lkXjiw%5Baria-controls%3D%22panel0%22%5D%5Baria-label%3D%22tab0%22%5D
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 fKjkbz" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .fKjkbz
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.fKjkbz
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 cBoMET" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .cBoMET
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.cBoMET
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 imbUzv" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .imbUzv
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.imbUzv
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 iyEDXV" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .iyEDXV
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.iyEDXV
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 lkXjiw" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .ProgressIndicatorMedium__Footer-sc-1m51afe-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .lkXjiw[aria-controls="panel0"][aria-label="tab0"]
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorMedium__Footer-sc-1m51afe-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.lkXjiw%5Baria-controls%3D%22panel0%22%5D%5Baria-label%3D%22tab0%22%5D
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 bUiuRT" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .bUiuRT
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.bUiuRT
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 lkXjiw" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .ProgressIndicatorComfortable__Footer-v8ddfp-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .lkXjiw[aria-controls="panel0"][aria-label="tab0"]
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorComfortable__Footer-v8ddfp-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.lkXjiw%5Baria-controls%3D%22panel0%22%5D%5Baria-label%3D%22tab0%22%5D
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 eNsdQw" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .eNsdQw
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.eNsdQw
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 PevmT" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .PevmT
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.PevmT
+--------------
+
+--- aria-valid-attr-value ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 lkXjiw" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .ProgressIndicatorInteraction__Footer-bq0ezo-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .lkXjiw[aria-controls="panel0"][aria-label="tab0"]
+Explanation:    Fix all of the following:
+  Invalid ARIA attribute value: aria-controls="panel0"
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorInteraction__Footer-bq0ezo-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.lkXjiw%5Baria-controls%3D%22panel0%22%5D%5Baria-label%3D%22tab0%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token maybe-class-name">ProgressIndicator</span>
+Node label:     ProgressIndicator
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .maybe-class-name.token:nth-child(361)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.maybe-class-name.token%3Anth-child(361)
+--------------
+
+--- color-contrast ---
+Failed element: <span> selectedIndex</span>
+Node label:      selectedIndex
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(362)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(362)
+--------------
+
+--- color-contrast ---
+Failed element: <span>selectedIndex</span>
+Node label:     selectedIndex
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(365)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(365)
+--------------
+
+--- color-contrast ---
+Failed element: <span> values</span>
+Node label:      values
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(367)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(367)
+--------------
+
+--- color-contrast ---
+Failed element: <span>values</span>
+Node label:     values
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(370)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(370)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token maybe-class-name">Button</span>
+Node label:     Button
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .maybe-class-name.token:nth-child(378)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.maybe-class-name.token%3Anth-child(378)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token" style="color: rgb(0, 82, 204); font-weight: bolder;">this</span>
+Node label:     this
+Selector:       .css-gyglfn.e13mr3z50:nth-child(9) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .token:nth-child(208)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 2.22 (foreground color: #0052cc, background color: #1b2638, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(9)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.token%3Anth-child(208)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token method property-access" style="color: rgb(23, 43, 77);">setState</span>
+Node label:     setState
+Selector:       .css-gyglfn.e13mr3z50:nth-child(9) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .method.property-access.token:nth-child(210)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(9)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.method.property-access.token%3Anth-child(210)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token parameter">prevState</span>
+Node label:     prevState
+Selector:       .css-gyglfn.e13mr3z50:nth-child(9) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .parameter.token:nth-child(212)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(9)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.parameter.token%3Anth-child(212)
+--------------
+
+--- color-contrast ---
+Failed element: <span>      selectedIndex</span>
+Node label:           selectedIndex
+Selector:       .css-gyglfn.e13mr3z50:nth-child(9) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(219)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(9)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(219)
+--------------
+
+--- color-contrast ---
+Failed element: <span> prevState</span>
+Node label:      prevState
+Selector:       .css-gyglfn.e13mr3z50:nth-child(9) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(221)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(9)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(221)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token property-access">selectedIndex</span>
+Node label:     selectedIndex
+Selector:       .css-gyglfn.e13mr3z50:nth-child(9) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .property-access.token:nth-child(223)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(9)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.property-access.token%3Anth-child(223)
+--------------
+
+--- color-contrast ---
+Failed element: <span>  values</span>
+Node label:       values
+Selector:       .css-gyglfn.e13mr3z50:nth-child(12) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(96)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(12)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(96)
+--------------
+
+--- color-contrast ---
+Failed element: <span class="token token known-class-name" style="color: rgb(101, 84, 192);">Array</span>
+Node label:     Array
+Selector:       .css-gyglfn.e13mr3z50:nth-child(12) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > .known-class-name.token
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 2.59 (foreground color: #6554c0, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(12)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20.known-class-name.token
+--------------
+
+--- color-contrast ---
+Failed element: <span>string</span>
+Node label:     string
+Selector:       .css-gyglfn.e13mr3z50:nth-child(12) > .css-12ccbiq.e13mr3z52 > .css-1qhrlus[data-code-block=""] > span[data-code-lang="javascript"] > code > span:nth-child(101)
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 1.07 (foreground color: #172b4d, background color: #1b2638, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(12)%20%3E%20.css-12ccbiq.e13mr3z52%20%3E%20.css-1qhrlus%5Bdata-code-block%3D%22%22%5D%20%3E%20span%5Bdata-code-lang%3D%22javascript%22%5D%20%3E%20code%20%3E%20span%3Anth-child(101)
+--------------
+
+--- duplicate-id-active ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 lkXjiw" aria-controls="panel0" aria-label="tab0" aria-selected="true" id="tab0" role="tab" tabindex="0" type="button"></button>
+Node label:     tab0
+Selector:       .ProgressIndicatorDefault__Footer-alnzr3-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .lkXjiw[aria-controls="panel0"][aria-label="tab0"]
+Explanation:    Fix any of the following:
+  Document has active elements with the same id attribute: tab0
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorDefault__Footer-alnzr3-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.lkXjiw%5Baria-controls%3D%22panel0%22%5D%5Baria-label%3D%22tab0%22%5D
+--------------
+
+--- duplicate-id-active ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 iUfzwA" aria-controls="panel1" aria-label="tab1" aria-selected="false" id="tab1" role="tab" tabindex="-1" type="button"></button>
+Node label:     tab1
+Selector:       .ProgressIndicatorDefault__Footer-alnzr3-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .iUfzwA[aria-controls="panel1"][aria-label="tab1"]
+Explanation:    Fix any of the following:
+  Document has active elements with the same id attribute: tab1
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorDefault__Footer-alnzr3-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.iUfzwA%5Baria-controls%3D%22panel1%22%5D%5Baria-label%3D%22tab1%22%5D
+--------------
+
+--- duplicate-id-active ---
+Failed element: <button class="Dots__IndicatorButton-fvfkta-1 iUfzwA" aria-controls="panel2" aria-label="tab2" aria-selected="false" id="tab2" role="tab" tabindex="-1" type="button"></button>
+Node label:     tab2
+Selector:       .ProgressIndicatorDefault__Footer-alnzr3-0 > .Dots__Container-fvfkta-0.fKrgbx[role="tablist"] > .iUfzwA[aria-controls="panel2"][aria-label="tab2"]
+Explanation:    Fix any of the following:
+  Document has active elements with the same id attribute: tab2
+Link:           http://localhost:9000/components/progress-indicator/?lhciFailedSelector=.ProgressIndicatorDefault__Footer-alnzr3-0%20%3E%20.Dots__Container-fvfkta-0.fKrgbx%5Brole%3D%22tablist%22%5D%20%3E%20.iUfzwA%5Baria-controls%3D%22panel2%22%5D%5Baria-label%3D%22tab2%22%5D
+--------------
+
+--- label ---
+Failed element: <input name="branch" type="radio" class="css-ecrazu" value="1" checked="">
+Node label:     input
+Selector:       input[value="\31 "]
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/radio/?lhciFailedSelector=input%5Bvalue%3D%22%5C31%20%22%5D
+--------------
+
+--- label ---
+Failed element: <input name="branch" type="radio" class="css-ecrazu" value="2">
+Node label:     input
+Selector:       input[value="\32 "]
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/radio/?lhciFailedSelector=input%5Bvalue%3D%22%5C32%20%22%5D
+--------------
+
+--- label ---
+Failed element: <input name="branch" type="radio" class="css-ecrazu" value="3">
+Node label:     input
+Selector:       input[value="\33 "]
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/radio/?lhciFailedSelector=input%5Bvalue%3D%22%5C33%20%22%5D
+--------------
+
+--- label ---
+Failed element: <input name="branch" type="radio" class="css-ecrazu" value="4">
+Node label:     input
+Selector:       input[value="\34 "]
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/radio/?lhciFailedSelector=input%5Bvalue%3D%22%5C34%20%22%5D
+--------------
+
+--- heading-order ---
+Failed element: <h4>Choose a color:</h4>
+Node label:     Choose a color:
+Selector:       h4
+Explanation:    Fix any of the following:
+  Heading order invalid
+Link:           http://localhost:9000/components/radio/radio-group/?lhciFailedSelector=h4
+--------------
+
+--- heading-order ---
+Failed element: <h3 class="section-link css-io4cfg" id="warning">
+Node label:     Warning
+Selector:       #warning
+Explanation:    Fix any of the following:
+  Heading order invalid
+Link:           http://localhost:9000/components/section-message/?lhciFailedSelector=%23warning
+--------------
+
+--- heading-order ---
+Failed element: <h3 class="section-link css-io4cfg" id="error">
+Node label:     Error
+Selector:       #error
+Explanation:    Fix any of the following:
+  Heading order invalid
+Link:           http://localhost:9000/components/section-message/?lhciFailedSelector=%23error
+--------------
+
+--- heading-order ---
+Failed element: <h3 class="section-link css-io4cfg" id="confirmation">
+Node label:     Confirmation
+Selector:       #confirmation
+Explanation:    Fix any of the following:
+  Heading order invalid
+Link:           http://localhost:9000/components/section-message/?lhciFailedSelector=%23confirmation
+--------------
+
+--- heading-order ---
+Failed element: <h3 style="color:#6B778C" class="headline3">Contents</h3>
+Node label:     CONTENTS
+Selector:       .css-zid2sp > .headline3
+Explanation:    Fix any of the following:
+  Heading order invalid
+Link:           http://localhost:9000/components/section-message/?lhciFailedSelector=.css-zid2sp%20%3E%20.headline3
+--------------
+
+--- color-contrast ---
+Failed element: <div class="react-select__placeholder css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 1ms ease 0s;">Choose a City</div>
+Node label:     Choose a City
+Selector:       .single-select > .react-select__control.css-cvzi0k-control > .react-select__value-container.css-1b6odlt > .react-select__placeholder.css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.single-select%20%3E%20.react-select__control.css-cvzi0k-control%20%3E%20.react-select__value-container.css-1b6odlt%20%3E%20.react-select__placeholder.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class="react-select__placeholder css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 260ms ease 0s;">Choose a city</div>
+Node label:     Choose a city
+Selector:       .react-select__value-container--is-multi > .react-select__placeholder.css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.react-select__value-container--is-multi%20%3E%20.react-select__placeholder.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class="react-select__placeholder css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 1ms ease 0s;">Choose a city</div>
+Node label:     Choose a city
+Selector:       .radio-select > .react-select__control.css-cvzi0k-control > .react-select__value-container.css-1b6odlt > .react-select__placeholder.css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.radio-select%20%3E%20.react-select__control.css-cvzi0k-control%20%3E%20.react-select__value-container.css-1b6odlt%20%3E%20.react-select__placeholder.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class="select__placeholder css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 260ms ease 0s;">Choose a city</div>
+Node label:     Choose a city
+Selector:       .select__placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.select__placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class=" css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 1ms ease 0s;">Country</div>
+Node label:     Country
+Selector:       .css-22iyag-container > .css-cvzi0k-control > .css-1b6odlt > .css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.css-22iyag-container%20%3E%20.css-cvzi0k-control%20%3E%20.css-1b6odlt%20%3E%20.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class=" css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 1ms ease 0s;">Select...</div>
+Node label:     Select...
+Selector:       .css-gyglfn.e13mr3z50:nth-child(25) > .css-1wthe04.e13mr3z51 > .css-nldnjl-container > .css-cvzi0k-control > .css-1b6odlt > .css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(25)%20%3E%20.css-1wthe04.e13mr3z51%20%3E%20.css-nldnjl-container%20%3E%20.css-cvzi0k-control%20%3E%20.css-1b6odlt%20%3E%20.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class=" css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 1ms ease 0s;">Select...</div>
+Node label:     Select...
+Selector:       .css-gyglfn.e13mr3z50:nth-child(28) > .css-1wthe04.e13mr3z51 > .css-nldnjl-container > .css-cvzi0k-control > .css-1b6odlt > .css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(28)%20%3E%20.css-1wthe04.e13mr3z51%20%3E%20.css-nldnjl-container%20%3E%20.css-cvzi0k-control%20%3E%20.css-1b6odlt%20%3E%20.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <div class=" css-ypi1dq-placeholder" style="opacity: 1; transition: opacity 1ms ease 0s;">Choose a City</div>
+Node label:     Choose a City
+Selector:       .css-gyglfn.e13mr3z50:nth-child(31) > .css-1wthe04.e13mr3z51 > .css-nldnjl-container > .css-cvzi0k-control > .css-1b6odlt > .css-ypi1dq-placeholder
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 3.37 (foreground color: #7a869a, background color: #f4f5f7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(31)%20%3E%20.css-1wthe04.e13mr3z51%20%3E%20.css-nldnjl-container%20%3E%20.css-cvzi0k-control%20%3E%20.css-1b6odlt%20%3E%20.css-ypi1dq-placeholder
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#radio-select">Radio select</a>
+Node label:     Radio select
+Selector:       .subitem:nth-child(5) > a[href$="\#radio-select"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.subitem%3Anth-child(5)%20%3E%20a%5Bhref%24%3D%22%5C%23radio-select%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#country-select">Country select</a>
+Node label:     Country select
+Selector:       .subitem:nth-child(7) > a[href$="\#country-select"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.subitem%3Anth-child(7)%20%3E%20a%5Bhref%24%3D%22%5C%23country-select%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#async-select">Async select</a>
+Node label:     Async select
+Selector:       .subitem:nth-child(8) > a[href$="\#async-select"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.subitem%3Anth-child(8)%20%3E%20a%5Bhref%24%3D%22%5C%23async-select%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#creatable-select">Creatable select</a>
+Node label:     Creatable select
+Selector:       .subitem:nth-child(9) > a[href$="\#creatable-select"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.subitem%3Anth-child(9)%20%3E%20a%5Bhref%24%3D%22%5C%23creatable-select%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#async-creatable">Async creatable</a>
+Node label:     Async creatable
+Selector:       .subitem:nth-child(10) > a[href$="\#async-creatable"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=.subitem%3Anth-child(10)%20%3E%20a%5Bhref%24%3D%22%5C%23async-creatable%22%5D
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-2-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-2-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-2-input
+--------------
+
+--- label ---
+Failed element: <input id="react-select-3-input" readonly="" tabindex="0" aria-autocomplete="list" class="css-62g3xt-dummyInput" value="">
+Node label:     input
+Selector:       #react-select-3-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-3-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-4-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-4-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-4-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-5-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-5-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-5-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-6-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-6-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-6-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-7-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-7-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-7-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-8-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-8-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-8-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-9-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-9-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/select/?lhciFailedSelector=%23react-select-9-input
+--------------
+
+--- heading-order ---
+Failed element: <h3 class="section-link css-io4cfg intersecting" id="default">
+Node label:     Default
+Selector:       #default
+Explanation:    Fix any of the following:
+  Heading order invalid
+Link:           http://localhost:9000/components/spinner/?lhciFailedSelector=%23default
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-2-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-2-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/spinner/?lhciFailedSelector=%23react-select-2-input
+--------------
+
+--- label ---
+Failed element: <input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-3-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+Node label:     input
+Selector:       #react-select-3-input
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/spinner/?lhciFailedSelector=%23react-select-3-input
+--------------
+
+--- label ---
+Failed element: <input name="basic" data-ds--text-field--input="true" class="css-16kwnwk">
+Node label:     input
+Selector:       input[name="basic"]
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/textfield/?lhciFailedSelector=input%5Bname%3D%22basic%22%5D
+--------------
+
+--- label ---
+Failed element: <input data-ds--text-field--input="true" class="css-16kwnwk">
+Node label:     input
+Selector:       .css-nee12t > .css-16kwnwk[data-ds--text-field--input="true"]
+Explanation:    Fix any of the following:
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Form element does not have an implicit (wrapped) <label>
+  Form element does not have an explicit <label>
+  Element has no title attribute or the title attribute is empty
+Link:           http://localhost:9000/components/textfield/?lhciFailedSelector=.css-nee12t%20%3E%20.css-16kwnwk%5Bdata-ds--text-field--input%3D%22true%22%5D
+--------------
+
+--- duplicate-id-aria ---
+Failed element: <input id="toggle-default" name="" type="checkbox" value="">
+Node label:     input
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-1wthe04.e13mr3z51 > .css-ji2l50[data-size="regular"] > input[name=""][type="checkbox"]
+Explanation:    Fix any of the following:
+  Document has multiple elements referenced with ARIA with the same id attribute: toggle-default
+Link:           http://localhost:9000/components/toggle/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-1wthe04.e13mr3z51%20%3E%20.css-ji2l50%5Bdata-size%3D%22regular%22%5D%20%3E%20input%5Bname%3D%22%22%5D%5Btype%3D%22checkbox%22%5D
+--------------
+
+--- form-field-multiple-labels ---
+Failed element: <input id="toggle-default" name="" type="checkbox" value="">
+Node label:     input
+Selector:       .css-gyglfn.e13mr3z50:nth-child(6) > .css-1wthe04.e13mr3z51 > .css-ji2l50[data-size="regular"] > input[name=""][type="checkbox"]
+Explanation:    Fix all of the following:
+  Multiple label elements is not widely supported in assistive technologies. Ensure the first label contains all necessary information.
+Link:           http://localhost:9000/components/toggle/?lhciFailedSelector=.css-gyglfn.e13mr3z50%3Anth-child(6)%20%3E%20.css-1wthe04.e13mr3z51%20%3E%20.css-ji2l50%5Bdata-size%3D%22regular%22%5D%20%3E%20input%5Bname%3D%22%22%5D%5Btype%3D%22checkbox%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#customization">Customization</a>
+Node label:     Customization
+Selector:       li:nth-child(6) > a[href$="\#customization"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/tooltip/?lhciFailedSelector=li%3Anth-child(6)%20%3E%20a%5Bhref%24%3D%22%5C%23customization%22%5D
+--------------
+
+--- color-contrast ---
+Failed element: <a href="#using-a-custom-tag">Using a custom tag</a>
+Node label:     Using a custom tag
+Selector:       li:nth-child(7) > a[href$="\#using-a-custom-tag"]
+Explanation:    Fix any of the following:
+  Element has insufficient color contrast of 4.14 (foreground color: #6b778c, background color: #f4f5f7, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1
+Link:           http://localhost:9000/components/tooltip/?lhciFailedSelector=li%3Anth-child(7)%20%3E%20a%5Bhref%24%3D%22%5C%23using-a-custom-tag%22%5D
+--------------
+

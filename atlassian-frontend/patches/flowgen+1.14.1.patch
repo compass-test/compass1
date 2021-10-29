@@ -1,0 +1,20 @@
+diff --git a/node_modules/flowgen/lib/printers/declarations.js b/node_modules/flowgen/lib/printers/declarations.js
+index f4de1d0..cdcb365 100644
+--- a/node_modules/flowgen/lib/printers/declarations.js
++++ b/node_modules/flowgen/lib/printers/declarations.js
+@@ -272,10 +272,14 @@ const classDeclaration = (nodeName, node, mergedNamespaceChildren) => {
+   let heritage = ""; // If the class is extending something
+ 
+   if (node.heritageClauses) {
++    let isExtends = "";
+     heritage = node.heritageClauses.map(clause => {
++      isExtends = clause.getText().includes('extends')
+       return clause.types.map(classHeritageClause).join(", ");
+     }).join(", ");
+-    heritage = heritage.length > 0 ? `mixins ${heritage}` : "";
++
++    const heritageKeyword = isExtends ? "extends" : "implements";
++    heritage = heritage.length > 0 ? `${heritageKeyword} ${heritage}` : "";
+   }
+ 
+   const str = `declare ${printers.relationships.exporter(node)}class ${nodeName}${printers.common.generics(node.typeParameters)} ${heritage} ${interfaceType(node, nodeName, mergedNamespaceChildren, true)}`;

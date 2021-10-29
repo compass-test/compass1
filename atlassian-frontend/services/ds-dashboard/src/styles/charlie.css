@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Charlie Display';
+  src: url('./charlie/CharlieDisplay-Regular.otf');
+  /* src: url('./CharlieDisplay-Regular.eot'); */
+  /* src: url('/CharlieDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/CharlieDisplay-Regular.woff2') format('woff2'),
+    url('/CharlieDisplay-Regular.woff') format('woff'),
+    url('/CharlieDisplay-Regular.ttf') format('truetype'),
+    url('/CharlieDisplay-Regular.svg#Charlie Display') format('svg'); */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

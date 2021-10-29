@@ -1,0 +1,23 @@
+query searchComponentsAddTeamOwner($cloudId: String!, $query: CompassSearchComponentQuery) {
+  compass {
+    searchComponents(cloudId: $cloudId, query: $query) {
+      ... on CompassSearchComponentConnection {
+        nodes {
+          ...CompassSearchComponentNode
+          component {
+            dataManager {
+              ecosystemAppId
+            }
+          }
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+      }
+      ... on QueryError {
+        ...CommonQueryError
+      }
+    }
+  }
+}

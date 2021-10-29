@@ -1,0 +1,1 @@
+export { SmartLinkWithDelete } from './main';

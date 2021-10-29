@@ -1,0 +1,14 @@
+fragment CompassSearchComponent on CompassComponent {
+  ...CompassComponentCore
+  name
+  description
+  type
+  ownerId
+}
+
+fragment CompassSearchComponentNode on CompassSearchComponentResult {
+  link
+  component {
+    ...CompassSearchComponent
+  }
+}

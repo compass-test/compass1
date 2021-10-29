@@ -1,0 +1,68 @@
+{
+  "name": "@atlassian/commerce-contracts",
+  "version": "0.0.7",
+  "description": "Commerce shared components contract testing support",
+  "private": true,
+  "atlassian": {
+    "team": "Commerce",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "validate": "contract-testing validate --config ./contract-mocks/build-info.json",
+    "generate:all": "ts-node ./bin/generate-mocks.ts",
+    "contract:create": "ts-node -r tsconfig-paths/register -T ./bin/generate-contract -- $1",
+    "contract:test": "ts-node -r tsconfig-paths/register -T ./bin/generate-and-validate-contract -- $1",
+    "contract:all": "yarn contract:billing-details && yarn contract:billing-history && yarn contract:entitlements && yarn contract:payment-flow && yarn contract:payment-methods",
+    "contract:billing-details": "yarn contract:create @atlassian/commerce-billing-details",
+    "contract:billing-history": "yarn contract:create @atlassian/commerce-billing-history",
+    "contract:entitlements": "yarn contract:create @atlassian/commerce-entitlements",
+    "contract:payment-flow": "yarn contract:create @atlassian/commerce-payment-flow",
+    "contract:payment-methods": "yarn contract:create @atlassian/commerce-payment-methods"
+  },
+  "dependencies": {
+    "@atlassian/commerce-billing-details": "^7.0.0",
+    "@atlassian/commerce-billing-history": "^3.0.0",
+    "@atlassian/commerce-entitlements": "^5.3.0",
+    "@atlassian/commerce-environment": "^2.0.0",
+    "@atlassian/commerce-payment-flow": "^6.0.0",
+    "@atlassian/commerce-payment-methods": "^3.0.0",
+    "@atlassian/contract-testing-cli": "^1.12.1",
+    "@babel/runtime": "^7.0.0",
+    "@pact-foundation/pact": "^9.15.5",
+    "node-fetch": "^2.6.1",
+    "query-string": "^5.1.0"
+  },
+  "stricter": {
+    "no-unused-dependencies": {
+      "exclude": [
+        "@atlassian/commerce-billing-details",
+        "@atlassian/commerce-billing-history",
+        "@atlassian/commerce-entitlements",
+        "@atlassian/commerce-environment",
+        "@atlassian/commerce-payment-flow",
+        "@atlassian/commerce-payment-methods",
+        "@atlassian/contract-testing-cli"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@atlaskit/build-utils": "*",
+    "@atlaskit/docs": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "glob": "^7.1.2",
+    "typescript": "3.9.6"
+  },
+  "techstack": {},
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

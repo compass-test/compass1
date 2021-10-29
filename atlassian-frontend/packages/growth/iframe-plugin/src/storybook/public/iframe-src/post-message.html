@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Welcome world</title>
+    </head>
+    <body>
+        <h1>I am the embedded iframe hello world</h1>
+        <button id="button">Close</button>
+        <button id="back">Some action</button>
+        <a href="/iframe.html?id=spaparentclient-core--emit-analytics-event">Go to Story</a>
+    </body>
+    <script type="application/javascript">
+        const source = 'child';
+
+        function sendOperationalMessage(type, payload) {
+            window.postMessage({ type, payload, source }, '*');
+        }
+
+        function sendMessage(payload) {
+            sendOperationalMessage('message', payload);
+        }
+
+        sendOperationalMessage('handshake');
+
+        function postHttpEvent() {
+            fetch(`//${window.location.hostname}:3000`, {
+                method: 'post',
+                body: JSON.stringify({
+                    foo: 'bar',
+                }),
+            }).then(async (response) => {
+                console.log('Frame.http(in)', response);
+            });
+
+            console.log('Frame.http(out)', 'Http request sent');
+        }
+
+        function sendAnalyticEvent(name) {
+            sendOperationalMessage('analytic-event', {
+                analyticEvent: {
+                    type: 'ui',
+                    name,
+                    attributes: {
+                        foo: 'bar',
+                    },
+                },
+            });
+
+            console.log('Frame(out)', 'EVENT action sent');
+        }
+
+        function close() {
+            sendMessage({
+                type: 'CLOSE',
+            });
+
+            console.log('Frame(out)', 'CLOSE action sent');
+        }
+
+        function someAction(product) {
+            sendMessage({
+                type: 'SOME_ACTION',
+                route: product,
+            });
+
+            console.log('Frame(out)', 'SOME_ACTION action sent ->', product);
+        }
+
+        window.addEventListener('message', (evt) => {
+            if (evt.data.source === source) {
+                console.log('Frame(in)', 'Own event skipped');
+                return;
+            }
+
+            console.log('Frame(in)', evt.data);
+
+            const logEl = document.createElement('pre');
+            logEl.innerHTML = JSON.stringify(evt.data, null, '  ');
+            document.body.append(logEl);
+        });
+
+        document.querySelector('#button').addEventListener('click', () => {
+            close();
+            sendAnalyticEvent('close button clicked');
+            postHttpEvent();
+        });
+
+        document.querySelector('#back').addEventListener('click', () => {
+            someAction('confluence');
+            sendAnalyticEvent('change route clicked');
+            postHttpEvent();
+        });
+
+        sendOperationalMessage('ready');
+    </script>
+</html>

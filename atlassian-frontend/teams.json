@@ -1,0 +1,773 @@
+{
+  "Admin Hub": {
+    "contributors": ["atrytiak", "jhung"],
+    "directly-responsible-individual": "atrytiak",
+    "slack": "ax-frontend",
+    "project": "https://hello.atlassian.net/browse/ECE",
+    "primaryReleaseModel": "continuous"
+  },
+  "AFP: Monorepo": {
+    "contributors": [
+      "lquirke",
+      "mblaszczyk",
+      "mdejongh",
+      "rbellebon",
+      "tkeir",
+      "jwong6",
+      "ryan_wang5"
+    ],
+    "directly-responsible-individual": "jdang2",
+    "slack": "help-afp-monorepo",
+    "project": "https://product-fabric.atlassian.net/browse/AFP",
+    "primaryReleaseModel": "continuous"
+  },
+  "AFP: Dev Infrastructure": {
+    "contributors": [
+      "agawrys",
+      "bdo",
+      "eeldredge",
+      "gkong",
+      "jslater",
+      "wbinnssmith"
+    ],
+    "directly-responsible-individual": "dnovoa",
+    "slack": "atlassian-frontend",
+    "project": "https://product-fabric.atlassian.net/browse/P2X",
+    "primaryReleaseModel": "continuous"
+  },
+  "AFP: App Infrastructure": {
+    "contributors": ["bschulze", "chan", "jbrown2", "mjones3", "mpuckeridge"],
+    "directly-responsible-individual": "kchua",
+    "slack": "help-uip-frontend-paas",
+    "project": "https://product-fabric.atlassian.net/browse/AFPAI",
+    "primaryReleaseModel": "continuous"
+  },
+  "Canvas": {
+    "contributors": ["akishore", "aspence", "mnebl", "moates", "njohnson"],
+    "directly-responsible-individual": "calant",
+    "slack": "npf-canvas",
+    "project": "https://product-fabric.atlassian.net/browse/CAN",
+    "primaryReleaseModel": "continuous"
+  },
+  "Design System Team": {
+    "contributors": [
+      "acampbell3",
+      "achi",
+      "ahinds",
+      "areardon",
+      "ddelcore",
+      "dwarn",
+      "isriharsha",
+      "jlorusso",
+      "kpaiva",
+      "mcharlton",
+      "mdougall",
+      "mxiao",
+      "scurtis",
+      "stoon"
+    ],
+    "directly-responsible-individual": "smok",
+    "slack": "help-design-system",
+    "project": "https://ecosystem.atlassian.net/browse/DS",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Editor": {
+    "contributors": [
+      "astaker",
+      "dmorales",
+      "hzou",
+      "lbatchelor",
+      "lflanagan",
+      "lwang7",
+      "lwoollard",
+      "mamin",
+      "psuthar",
+      "ptatarenko",
+      "rnabi",
+      "rsejas",
+      "rvieira",
+      "ssysoev",
+      "tewens",
+      "thor",
+      "who",
+      "wnguyen"
+    ],
+    "directly-responsible-individual": "rtekhov",
+    "slack": "help-editor",
+    "project": "https://product-fabric.atlassian.net/browse/ED",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Linking Platform": {
+    "contributors": [
+      "abhayani",
+      "amotsjonov",
+      "bgeng",
+      "hzarcogarcia",
+      "jcoppinger",
+      "plai",
+      "pjukic",
+      "sxu",
+      "tli",
+      "vsutrave",
+      "wyoosthaporn",
+      "abhayani",
+      "cosmotherly"
+    ],
+    "directly-responsible-individual": "pteen",
+    "slack": "team-linking-platform",
+    "project": "https://product-fabric.atlassian.net/browse/EDM",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Elevate": {
+    "contributors": [
+      "tkeir",
+      "lkarsai",
+      "mforder",
+      "asulthana2",
+      "racharya",
+      "msravanthi",
+      "vn"
+    ],
+    "directly-responsible-individual": "tkeir",
+    "slack": "twp-release-process-flex-team",
+    "project": "https://product-fabric.atlassian.net/browse/ED",
+    "primaryReleaseModel": "continuous"
+  },
+  "People and Teams Collective": {
+    "contributors": [
+      "asalinovic",
+      "esoares",
+      "isomasiri",
+      "jprado",
+      "ltran",
+      "nhiebl",
+      "tthanhdang",
+      "szhuang2"
+    ],
+    "directly-responsible-individual": "osenn",
+    "slack": "team-twp-people-teams",
+    "project": "https://product-fabric.atlassian.net/browse/PTC",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Personalization": {
+    "contributors": ["spantham", "jdurand", "jshi", "uacharya"],
+    "directly-responsible-individual": "jwyne",
+    "slack": "help-personalization",
+    "project": "https://experimentation-platform.atlassian.net/jira/software/projects/EPD",
+    "primaryReleaseModel": "continuous"
+  },
+  "Confluence Performance and Platform": {
+    "contributors": [
+      "cdu",
+      "hmehta",
+      "lmarinov",
+      "rading",
+      "rarkhipau",
+      "jhorsley",
+      "schebykin",
+      "axiao",
+      "dcook2",
+      "dkalidindi",
+      "kwong4",
+      "gjohnson",
+      "tclay",
+      "pbhatt",
+      "mkulinski"
+    ],
+    "directly-responsible-individual": "ifainshtroy",
+    "slack": "cc-fe-performance-and-platform",
+    "project": "https://product-fabric.atlassian.net/browse/CCP",
+    "primaryReleaseModel": "continuous"
+  },
+  "Confluence Discovery & Organization": {
+    "contributors": [
+      "adildy",
+      "ejoun",
+      "hfan",
+      "jpaladin",
+      "jbrunson",
+      "nbourlier",
+      "tmarra",
+      "vhuynh2",
+      "ypatkin"
+    ],
+    "directly-responsible-individual": "ssingh2",
+    "slack": "cc-disco",
+    "project": "https://jira.atlassian.com/secure/RapidBoard.jspa?rapidView=2312",
+    "primaryReleaseModel": "continuous"
+  },
+  "Confluence Delorean": {
+    "contributors": [
+      "ahixon",
+      "smalkireddy",
+      "egui",
+      "lwang4",
+      "megan",
+      "ele",
+      "zverrilli"
+    ],
+    "directly-responsible-individual": "vramanathan",
+    "slack": "cc-ce-delorean",
+    "project": "https://product-fabric.atlassian.net/browse/CEMS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Confluence Better Together": {
+    "contributors": [
+      "clawu",
+      "djadhav",
+      "dzhang2",
+      "fzhou",
+      "jzhou2",
+      "jzhu2",
+      "nkalekar",
+      "qclark"
+    ],
+    "directly-responsible-individual": "lpanda",
+    "slack": "cc-bettertogether",
+    "project": "https://hello.atlassian.net/browse/CBT",
+    "primaryReleaseModel": "continuous"
+  },
+  "Confluence Content Experience Mobile": {
+    "contributors": [
+      "bchaisorn",
+      "bgilomen",
+      "kmcgregor",
+      "rpeck",
+      "vestrellado",
+      "vreddy",
+      "ykhrabatyn"
+    ],
+    "directly-responsible-individual": "bgilomen",
+    "slack": "cc-ce-mobile",
+    "project": "https://product-fabric.atlassian.net/browse/CCCEM",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Notifications Platform": {
+    "contributors": ["cporto", "cpritchett", "mtruong2", "sguillope", "wpan"],
+    "directly-responsible-individual": "cpritchett",
+    "slack": "notificationsplatform",
+    "project": "https://product-fabric.atlassian.net/browse/NP",
+    "primaryReleaseModel": "continuous"
+  },
+  "Growth: Crossflow": {
+    "contributors": [
+      "rbruniges",
+      "dchukhai",
+      "dwatson",
+      "gsgritta",
+      "lhunt",
+      "ndo",
+      "thuynh2",
+      "zng",
+      "mtruong",
+      "doverlock",
+      "gbolloch",
+      "isu",
+      "mmaradiaga",
+      "msinica",
+      "nmowbray",
+      "yzhao"
+    ],
+    "directly-responsible-individual": "gburrows",
+    "slack": "cross-flow-ops-community",
+    "project": "https://hello.atlassian.net/browse/EXPAND",
+    "primaryReleaseModel": "continuous"
+  },
+  "Growth: Groot": {
+    "contributors": [
+      "briosa",
+      "jfield",
+      "jbyler",
+      "kcabazares",
+      "mkobierski",
+      "milavsky",
+      "rdutra",
+      "sbettini",
+      "ygozman",
+      "nmalecki",
+      "dwalker2",
+      "adacosta",
+      "asayam",
+      "bswierczynski",
+      "dferreira",
+      "fchan",
+      "klad",
+      "mmajchrzak",
+      "mng",
+      "jtran"
+    ],
+    "directly-responsible-individual": "asharman",
+    "slack": "groot-techops",
+    "project": "https://atl-growth.atlassian.net/jira/software/projects/VD/boards/25",
+    "primaryReleaseModel": "continuous"
+  },
+  "Growth: New User Experience": {
+    "contributors": [
+      "bgiraldo",
+      "vmarkov",
+      "psia",
+      "tcrane",
+      "bmartinez",
+      "mwarneke",
+      "ashakiba",
+      "mdesouza",
+      "dyang",
+      "tweinstein"
+    ],
+    "directly-responsible-individual": "bgiraldo",
+    "slack": "team-nux-onboarding",
+    "project": "https://hello.atlassian.net/browse/NUX",
+    "primaryReleaseModel": "continuous"
+  },
+  "Growth: Apollo": {
+    "contributors": [
+      "aagrawal3",
+      "apeterson",
+      "hmehendale",
+      "idelarosa",
+      "jlandaverde",
+      "lcao",
+      "mmichael",
+      "rraede",
+      "mtzeng"
+    ],
+    "directly-responsible-individual": "nzhao",
+    "slack": "help-apollo",
+    "project": "https://hello.atlassian.net/wiki/spaces/PGT/pages/756785397/Team+Apollo",
+    "primaryReleaseModel": "continuous"
+  },
+  "Identity: Kirby": {
+    "contributors": ["jbell2", "dsommerich", "pcowan", "abatool", "ayang5"],
+    "directly-responsible-individual": "nmaesepp",
+    "slack": "id-kirby",
+    "project": "https://hello.atlassian.net/browse/KIRBY",
+    "primaryReleaseModel": "continuous"
+  },
+  "Growth: Atlantis": {
+    "contributors": ["staylor3"],
+    "directly-responsible-individual": "briosa",
+    "slack": "team-atlantis",
+    "project": "https://hello.atlassian.net/wiki/spaces/PGT/pages/535423908/Team+Atlantis",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Software: Roadmaps": {
+    "contributors": [
+      "akavelar",
+      "cautexier",
+      "dannesley",
+      "hsu",
+      "htaylor",
+      "wloo"
+    ],
+    "directly-responsible-individual": "akavelar",
+    "slack": "jsw-roadmaps-team",
+    "project": "https://jdog.jira-dev.com/browse/ROAD",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Frontend Platform": {
+    "contributors": [
+      "ashpakov",
+      "vchan",
+      "mheinz",
+      "sshaw2",
+      "sprentice",
+      "lzhang4"
+    ],
+    "directly-responsible-individual": "sjaatinen",
+    "slack": "help-jfp",
+    "project": "https://jdog.jira-dev.com/browse/JFP",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Platform: Search Experience / Empanada": {
+    "contributors": ["cyan", "gcardoso", "smathew"],
+    "directly-responsible-individual": "gcardoso",
+    "slack": "jira-frontend-search",
+    "project": "https://jdog.jira-dev.com/browse/EM",
+    "primaryReleaseModel": "continuous"
+  },
+  "In Product Help": {
+    "contributors": ["malvarez2"],
+    "directly-responsible-individual": "dmartin2",
+    "slack": "in-product-help-eng",
+    "project": "https://hello.atlassian.net/browse/FRAK",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Service Management: Ignition": {
+    "contributors": ["epummeroy", "ktarasiuk", "jgrigg", "mmatic", "psujono"],
+    "directly-responsible-individual": "cowen",
+    "slack": "jsm-ignition",
+    "project": "https://jdog.jira-dev.com/servicedesk/customer/portal/550",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Service Management: Flux": {
+    "contributors": [
+      "cjoseph",
+      "cmann",
+      "hzaheer",
+      "juwong",
+      "ldiniz",
+      "nrobson",
+      "sjhaver",
+      "smalik",
+      "njhon",
+      "ggambeti"
+    ],
+    "directly-responsible-individual": "sayazi",
+    "slack": "jsd-flux",
+    "project": "https://jdog.jira-dev.com/browse/FSD",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Service Management: transFORMers": {
+    "contributors": [
+      "dma",
+      "gtan",
+      "rcourtney",
+      "sfraye",
+      "ebennett",
+      "chamilton",
+      "cgutjahr",
+      "jkirk",
+      "ohisham"
+    ],
+    "directly-responsible-individual": "dmeiklejohn",
+    "slack": "jsm-transformers",
+    "project": "https://jdog.jira-dev.com/browse/FORM",
+    "primaryReleaseModel": "continuous"
+  },
+  "Measurement Platform": {
+    "contributors": [
+      "dhaden",
+      "hchehab",
+      "rsangster",
+      "srahman",
+      "arussell",
+      "cosmotherly",
+      "crobertson",
+      "cyousheyah",
+      "cjoy",
+      "hchow",
+      "jcano",
+      "kpurohit",
+      "opope",
+      "pzhang2"
+    ],
+    "directly-responsible-individual": "mmorovatpasand",
+    "slack": "help-measurement",
+    "project": "https://experimentation-platform.atlassian.net/browse/MEP",
+    "primaryReleaseModel": "continuous"
+  },
+  "Search & Smarts: Search Experience": {
+    "contributors": ["cford", "czeng", "mdyer", "pteen", "rmatta"],
+    "directly-responsible-individual": "pteen",
+    "slack": "smrt-quick-search",
+    "project": "https://product-fabric.atlassian.net/browse/QS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Search & Smarts: Smart Experience": {
+    "contributors": [
+      "kkijak",
+      "awondo",
+      "erho",
+      "hye",
+      "sang",
+      "kmolloy",
+      "bgummer"
+    ],
+    "directly-responsible-individual": "tmuellerpettenpohl",
+    "slack": "help-smart-experiences",
+    "project": "https://product-fabric.atlassian.net/browse/UR",
+    "primaryReleaseModel": "continuous"
+  },
+  "Media Experience": {
+    "contributors": ["achamas", "fghilini", "jnunez", "gchan", "lliu", "phall"],
+    "directly-responsible-individual": "jperez",
+    "slack": "team-media-experience",
+    "project": "https://product-fabric.atlassian.net/browse/MEX",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Bitbucket: CoreX": {
+    "contributors": ["jkim5", "lchoe", "nholland", "rshi"],
+    "directly-responsible-individual": "smclucas",
+    "slack": "bbc-corex-help",
+    "project": "https://softwareteams.atlassian.net/browse/COREX",
+    "primaryReleaseModel": "continuous"
+  },
+  "Bitbucket: Amigos": {
+    "contributors": ["pplewa", "vbapat"],
+    "directly-responsible-individual": "rgomis",
+    "slack": "bbc-amigos",
+    "project": "https://softwareteams.atlassian.net/browse/BBCFR",
+    "primaryReleaseModel": "continuous"
+  },
+  "Activity Platform": {
+    "contributors": ["mdao", "jmaloney", "aoshannessy", "twood"],
+    "directly-responsible-individual": "avijayaraghavan",
+    "slack": "help-start-switcher",
+    "project": "https://product-fabric.atlassian.net/browse/ACT"
+  },
+  "TWP Collaboration Platform": {
+    "contributors": [
+      "hzhuang",
+      "jwang2",
+      "pdissanayake",
+      "phucnguyen",
+      "rcordova",
+      "squindo",
+      "stan3"
+    ],
+    "directly-responsible-individual": "vcassisi",
+    "slack": "team-twp-collab-platform",
+    "project": "https://product-fabric.atlassian.net/browse/COLLAB",
+    "primaryReleaseModel": "scheduled"
+  },
+  "ADF Systems": {
+    "contributors": ["jminarik", "jloh", "jday", "npickworth", "jxie"],
+    "directly-responsible-individual": "fgomes",
+    "slack": "team-content-services",
+    "project": "https://product-fabric.atlassian.net/browse/CS",
+    "primaryReleaseModel": "scheduled"
+  },
+  "Commerce": {
+    "contributors": [
+      "akorzunov",
+      "mpazik",
+      "dcastanocastiblanco",
+      "pshaw",
+      "pllanos",
+      "hedgepigdaniel-atlassian"
+    ],
+    "directly-responsible-individual": "akorzunov",
+    "slack": "tintin-bac-squad",
+    "project": "https://hello.atlassian.net/browse/TNTEXP",
+    "primaryReleaseModel": "continuous"
+  },
+  "Forge UI": {
+    "contributors": [
+      "amerces",
+      "dwinter",
+      "jshe",
+      "kchan",
+      "nhur",
+      "pgleeson",
+      "pyu",
+      "rbraganza",
+      "ssmyth",
+      "vcapuano",
+      "xcaron"
+    ],
+    "directly-responsible-individual": "dwinter",
+    "slack": "eco-dev-loop",
+    "project": "https://ecosystem.atlassian.net/browse/DEVO",
+    "primaryReleaseModel": "continuous"
+  },
+  "Ecosystem Capabilities": {
+    "contributors": [
+      "wneto",
+      "aholmgren",
+      "cjohnston2",
+      "ckrishnakumar",
+      "dhreben",
+      "dshuiskyi",
+      "dsorin",
+      "natashbar",
+      "nsher",
+      "pvlasov",
+      "nsultana"
+    ],
+    "directly-responsible-individual": "rmassaioli",
+    "slack": "eco-capabilities",
+    "project": "https://ecosystem.atlassian.net/browse/CAP",
+    "primaryReleaseModel": "continuous"
+  },
+  "Kirigami": {
+    "contributors": [
+      "cturner",
+      "fbordallo",
+      "gmountakis",
+      "pkodmad",
+      "gtaylor",
+      "vzubach"
+    ],
+    "directly-responsible-individual": "cturner",
+    "slack": "kirigami-team",
+    "project": "https://jdog.jira-dev.com/projects/BENTO",
+    "primaryReleaseModel": "continuous"
+  },
+  "Statuspage": {
+    "contributors": ["lstanden"],
+    "directly-responsible-individual": "lstanden",
+    "slack": "sp-chainlink",
+    "project": "TODO",
+    "primaryReleaseModel": "continuous"
+  },
+  "Trello Frontend Platform": {
+    "contributors": [
+      "cfletcher",
+      "dcruz",
+      "dwalker",
+      "jchung",
+      "kwatkins",
+      "mlozano"
+    ],
+    "directly-responsible-individual": "cfletcher",
+    "slack": "fe-platform-trello",
+    "project": "https://trello.atlassian.net/browse/FEPLAT",
+    "primaryReleaseModel": "continuous"
+  },
+  "UIP Frontend Observability": {
+    "contributors": ["mbiniek", "mreis", "etimothy", "cng", "mliu2"],
+    "directly-responsible-individual": "mbiniek",
+    "slack": "uip-fe-observability",
+    "project": "https://product-fabric.atlassian.net/jira/software/projects/APD",
+    "primaryReleaseModel": "continuous"
+  },
+  "AAIS: Team X": {
+    "contributors": ["qbuu", "plai2"],
+    "directly-responsible-individual": "shekmat",
+    "slack": "aais-teamx",
+    "project": "https://jdog.jira-dev.com/projects/JPO",
+    "primaryReleaseModel": "continuous"
+  },
+  "Compass Frontend": {
+    "contributors": ["jgrose", "sberry", "zjaramillo"],
+    "directly-responsible-individual": "smccullough",
+    "slack": "compass-dev-frontend",
+    "project": "https://softwareteams.atlassian.net/browse/COMPASS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Compass Crux": {
+    "contributors": ["hkuan", "jgrose", "rliang", "zjaramillo", "zrichmond"],
+    "directly-responsible-individual": "lesther",
+    "slack": "compass-crux-team",
+    "project": "https://softwareteams.atlassian.net/browse/COMPASS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Compass Lodestone": {
+    "contributors": ["dphan2", "pshkleinik", "mhossain", "kcornn", "bkrig"],
+    "directly-responsible-individual": "sbennett",
+    "slack": "compass-lodestone",
+    "project": "https://softwareteams.atlassian.net/browse/COMPASS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Compass Magnets": {
+    "contributors": [
+      "rrosenfeld",
+      "pbrady",
+      "hallentilford",
+      "holson",
+      "kbielaski",
+      "rpushkin"
+    ],
+    "directly-responsible-individual": "rgoodman",
+    "slack": "compass-magnets",
+    "project": "https://softwareteams.atlassian.net/browse/COMPASS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Compass Vega": {
+    "contributors": [
+      "dgollapudi",
+      "gdame",
+      "jbobowski",
+      "jzhu",
+      "pciporin",
+      "sberry",
+      "sbland2",
+      "sdave",
+      "tlannon"
+    ],
+    "directly-responsible-individual": "dsalet",
+    "slack": "compass-vega",
+    "project": "https://softwareteams.atlassian.net/browse/COMPASS",
+    "primaryReleaseModel": "continuous"
+  },
+  "Migrations Platform": {
+    "contributors": [
+      "abonifacio",
+      "cjames2",
+      "dalmeida",
+      "fkarim",
+      "jsebastian",
+      "mkenchugonde"
+    ],
+    "directly-responsible-individual": "jsebastian",
+    "slack": "team-mpt-frontend",
+    "project": "https://hello.atlassian.net/browse/CME",
+    "primaryReleaseModel": "continuous"
+  },
+  "CASSI": {
+    "contributors": [
+      "ashrivastava",
+      "rravisankar",
+      "falguni",
+      "mayank",
+      "ksarkar"
+    ],
+    "directly-responsible-individual": "rravisankar",
+    "slack": "#help-cassi-dev",
+    "project": "https://hello.atlassian.net/browse/IPA",
+    "primaryReleaseModel": "continuous"
+  },
+  "Jira Training App": {
+    "contributors": ["alaktionova", "mkotii"],
+    "directly-responsible-individual": "alaktionova",
+    "slack": "help-training-for-jira-app",
+    "project": "https://hello.atlassian.net/browse/UNV",
+    "primaryReleaseModel": "continuous"
+  },
+  "Agile-Makkuro": {
+    "contributors": [
+      "amoret",
+      "fyasir",
+      "mperzanowski",
+      "snarasimhan",
+      "wkuang"
+    ],
+    "directly-responsible-individual": "yjutard",
+    "slack": "makkuro-dev",
+    "project": "https://jdog.jira-dev.com/projects/KURO",
+    "primaryReleaseModel": "continuous"
+  },
+  "Confluence Analytics": {
+    "contributors": [
+      "parora",
+      "aawchat",
+      "gmenard",
+      "jgalea",
+      "kselladurai",
+      "kharriger",
+      "sdemontfort",
+      "awu"
+    ],
+    "directly-responsible-individual": "parora",
+    "slack": "cc-analytics",
+    "project": "https://hello.atlassian.net/browse/CCA",
+    "primaryReleaseModel": "continuous"
+  },
+  "Platform Adoption": {
+    "contributors": ["mhudson", "mmroz", "togbamichael"],
+    "directly-responsible-individual": "mhudson",
+    "slack": "adoption-help",
+    "project": "https://hello.atlassian.net/browse/PES",
+    "primaryReleaseModel": "continuous"
+  },
+  "Team Central": {
+    "contributors": [
+      "eoates",
+      "jkurniawan",
+      "nathanflew",
+      "owallhult",
+      "andax"
+    ],
+    "directly-responsible-individual": "nathanflew",
+    "slack": "help-teamcentral",
+    "project": "https://product-fabric.atlassian.net/browse/TC",
+    "primaryReleaseModel": "continuous"
+  },
+  "Chroma": {
+    "contributors": ["awong", "joejohndev"],
+    "directly-responsible-individual": "tgranshaw",
+    "slack": "team-phoenix",
+    "project": "https://hello.atlassian.net/browse/MNY",
+    "primaryReleaseModel": "continuous"
+  }
+}

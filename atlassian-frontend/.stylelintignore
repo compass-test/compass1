@@ -1,0 +1,11 @@
+node_modules
+coverage
+dist
+.yarn
+packages/design-system/icon/glyph/**
+packages/design-system/icon/cjs/**
+packages/design-system/icon/utils/**
+
+
+# tmp
+build

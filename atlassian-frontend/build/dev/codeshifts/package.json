@@ -1,0 +1,24 @@
+{
+  "name": "@atlaskit/codeshifts",
+  "version": "0.1.6",
+  "private": true,
+  "description": "A collection of codeshifts",
+  "scripts": {
+    "format-package-jsons": "ts-node package-json-formatting"
+  },
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@atlaskit/build-utils": "*",
+    "lodash": "^4.17.15",
+    "meow": "^6.0.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "ts-node": "^10.0.0"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

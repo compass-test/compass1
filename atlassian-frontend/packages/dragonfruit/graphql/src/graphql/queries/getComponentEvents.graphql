@@ -1,0 +1,34 @@
+query getComponentEvents($id: ID!, $query: CompassEventsQuery) {
+  compass {
+    component(id: $id) {
+      __typename
+
+      ... on CompassComponent {
+        id
+        events(query: $query) {
+          __typename
+          ... on CompassEventConnection {
+            nodes {
+              ... on CompassDeploymentEvent {
+                eventType
+                lastUpdated
+                displayName
+                state
+                description
+                environment {
+                  displayName
+                  category
+                }
+                url
+              }
+            }
+          }
+        }
+      }
+
+      ... on QueryError {
+        ...CommonQueryError
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@atlassian/codebase-evolution-scripts",
+  "version": "1.0.1",
+  "private": true,
+  "description": "A collection of scripts for use in Codebase Evolutions",
+  "main": "index.js",
+  "scripts": {},
+  "atlassian": {
+    "team": "AFP: Monorepo"
+  },
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@atlaskit/build-utils": "*",
+    "bolt": "^0.24.10",
+    "bunyan": "^2.0.4",
+    "fs-extra": "^4.0.2",
+    "semver": "^7.3.0",
+    "typescript": "3.9.6"
+  },
+  "devDependencies": {},
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

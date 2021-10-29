@@ -1,0 +1,11 @@
+diff --git a/node_modules/style-dictionary/types/_helpers.ts b/node_modules/style-dictionary/types/_helpers.ts
+index fa9b77d..7436569 100644
+--- a/node_modules/style-dictionary/types/_helpers.ts
++++ b/node_modules/style-dictionary/types/_helpers.ts
+@@ -13,4 +13,4 @@
+ 
+ type Named<T> = T & { name: string; };
+ 
+-export { Named }
+\ No newline at end of file
++export type { Named }

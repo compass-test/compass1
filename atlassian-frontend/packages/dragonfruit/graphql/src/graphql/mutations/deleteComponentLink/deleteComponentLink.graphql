@@ -1,0 +1,11 @@
+mutation deleteComponentLink($input: DeleteCompassComponentLinkInput!) {
+  compass {
+    deleteComponentLink(input: $input) {
+      success
+      deletedCompassLinkId
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

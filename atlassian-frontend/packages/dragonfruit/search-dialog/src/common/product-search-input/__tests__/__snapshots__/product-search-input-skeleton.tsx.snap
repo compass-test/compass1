@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductSearchInputSkeleton /> should render a dummy skeleton 1`] = `<ForwardRef />`;
+
+exports[`<ProductSearchInputSkeleton /> should render a dummy skeleton with theme provider 1`] = `
+<ThemeProvider
+  partialSearchCSS={
+    Object {
+      "default": Object {
+        "backgroundColor": "white",
+        "borderColor": "white",
+        "color": "white",
+      },
+      "focus": Object {
+        "backgroundColor": "white",
+        "borderColor": "white",
+        "color": "white",
+      },
+      "hover": Object {
+        "backgroundColor": "white",
+        "borderColor": "white",
+        "color": "white",
+      },
+    }
+  }
+>
+  <ForwardRef />
+</ThemeProvider>
+`;

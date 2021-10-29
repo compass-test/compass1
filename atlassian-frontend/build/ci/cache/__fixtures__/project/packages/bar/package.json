@@ -1,0 +1,8 @@
+{
+  "name": "@af/bar",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@af/foo": "^1.0.0"
+  }
+}

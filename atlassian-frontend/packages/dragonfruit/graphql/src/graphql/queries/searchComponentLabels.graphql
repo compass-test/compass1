@@ -1,0 +1,14 @@
+query searchComponentLabels($cloudId: String!, $query: CompassSearchComponentLabelsQuery) {
+  compass {
+    searchComponentLabels(cloudId: $cloudId, query: $query) {
+      ... on CompassSearchComponentLabelsConnection {
+        nodes {
+          name
+        }
+      }
+      ... on QueryError {
+        ...CommonQueryError
+      }
+    }
+  }
+}

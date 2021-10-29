@@ -1,0 +1,26 @@
+query getMetricByEventKey($eventKey: String!) {
+  metricByEventKey(eventKey: $eventKey) {
+    __typename
+    id
+    name
+    product
+    key
+    owner {
+      __typename
+      ... on Staff {
+        id
+        fullName
+      }
+      ... on Team {
+        id
+        teamName
+      }
+    }
+    slackChannel
+    ... on BrowserMetric {
+      eventType
+      eventKey
+      availableCohortTypes
+    }
+  }
+}

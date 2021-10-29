@@ -1,0 +1,45 @@
+{
+  "name": "@atlassian/error-handling",
+  "version": "0.3.7",
+  "description": "Error handling utilities for firing error events into FAMA and sentry",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.tsx",
+  "atlassian": {
+    "team": "Jira Frontend Platform",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-next": "^8.0.0",
+    "@atlassian/analytics-bridge": "^0.4.0",
+    "@babel/runtime": "^7.0.0",
+    "@sentry/browser": "^5.11.0",
+    "@sentry/integrations": "^5.7.0",
+    "@sentry/types": "^5.12.0",
+    "bowser": "^2.9.0",
+    "lodash": "^4.17.15",
+    "raven-js": "^3.26.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "code-structure": "tangerine-next",
+      "import-structure": "atlassian-conventions"
+    }
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "typescript": "3.9.6"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

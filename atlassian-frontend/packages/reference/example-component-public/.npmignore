@@ -1,0 +1,6 @@
+__tests__/
+build/
+docs/
+examples/
+src/
+tsconfig.json

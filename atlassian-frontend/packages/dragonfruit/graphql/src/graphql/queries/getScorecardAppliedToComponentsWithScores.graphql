@@ -1,0 +1,39 @@
+query getScorecardAppliedToComponentsWithScores($scorecardId: ID!, $first: Int, $after: String) {
+  compass {
+    scorecard(id: $scorecardId) {
+      __typename
+      ... on CompassScorecard {
+        id
+        appliedToComponents(query: { first: $first, after: $after }) {
+          __typename
+          ... on CompassScorecardAppliedToComponentsConnection {
+            nodes {
+              id
+              name
+              description
+              type
+              ownerId
+              scorecardScore(query: { scorecardId: $scorecardId }) {
+                totalScore
+              }
+            }
+            pageInfo {
+              hasNextPage
+              hasPreviousPage
+              endCursor
+              startCursor
+              __typename
+            }
+          }
+        }
+      }
+      ... on QueryError {
+        message
+        extensions {
+          statusCode
+          errorType
+        }
+      }
+    }
+  }
+}

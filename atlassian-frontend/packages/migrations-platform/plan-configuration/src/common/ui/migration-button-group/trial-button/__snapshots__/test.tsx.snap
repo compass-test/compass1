@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrialButton /> renders disabled button by default 1`] = `"<button target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"css-lz2v2h-ButtonBase\\" disabled=\\"\\" data-testid=\\"get-cloud-button\\" type=\\"button\\" tabindex=\\"-1\\"><span class=\\"css-1aqf1z6-ButtonBase\\"><span>Get Confluence Cloud trial</span></span></button>"`;

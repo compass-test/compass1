@@ -1,0 +1,6 @@
+fragment CompassComponentInRelationshipView on CompassComponent {
+  ...CompassComponentCore
+  id
+  type
+  name
+}

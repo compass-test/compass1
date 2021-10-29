@@ -1,0 +1,86 @@
+{
+  "name": "@atlassian/chroma-plans-table",
+  "version": "2.0.0",
+  "description": "A React component that renders plans table for products.",
+  "publishConfig": {
+    "registry": "https://packages.atlassian.com/api/npm/npm-remote"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Chroma",
+    "inPublicMirror": false,
+    "releaseModel": "continuous"
+  },
+  "scripts": {
+    "ak-postbuild": "ls -d dist/* | xargs -n 1 copyfiles -u 1 -V src/**/*.svg"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-next": "^8.0.1",
+    "@atlaskit/button": "^16.1.1",
+    "@atlaskit/icon": "^21.9.0",
+    "@atlaskit/lozenge": "^11.1.1",
+    "@atlaskit/theme": "^12.0.0",
+    "@atlassian/analytics-bridge": "^0.4.1",
+    "@atlassian/chroma-modals": "^2.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.7",
+    "react-intl": "^2.6.0"
+  },
+  "peerDependencies": {
+    "@atlassiansox/analytics-web-client": "^3.6.0",
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/build-utils": "*",
+    "@atlaskit/docs": "*",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/visual-regression": "*",
+    "@atlaskit/webdriver-runner": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@testing-library/react": "^8.0.1",
+    "react-dom": "^16.8.0",
+    "typescript": "3.9.6",
+    "wait-for-expect": "^1.2.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "code-structure": [
+        "tangerine-next"
+      ],
+      "import-structure": [
+        "atlassian-conventions"
+      ],
+      "circular-dependencies": [
+        "file-and-folder-level"
+      ]
+    },
+    "@repo/internal": {
+      "analytics": [
+        "analytics-next"
+      ],
+      "theming": [
+        "new-theming-api"
+      ],
+      "ui-components": [
+        "lite-mode"
+      ],
+      "deprecation": [
+        "no-deprecated-imports"
+      ]
+    }
+  },
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

@@ -1,0 +1,12 @@
+fragment CompassRelationshipCore on CompassRelationship {
+  # We always need to query the type, startNode.id, and endNode.id in order to normalise the object in cache
+  type
+  startNode {
+    id
+  }
+  endNode {
+    id
+  }
+
+  _isDeleted @client
+}

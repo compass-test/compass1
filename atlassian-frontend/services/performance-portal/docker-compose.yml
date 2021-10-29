@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  prod:
+    build:
+      context: .
+      target: prod
+    ports:
+      - 3000:8080
+    environment:
+      NODE_ENV: production
+      GQL_SERVER_URL: ${GQL_SERVER_URL:-https://perf-portal-gql.staging.atl-paas.net}
+    depends_on:
+      - dockerhost
+
+  dev:
+    build:
+      context: .
+      target: dev
+    ports:
+      - 3000:8080
+      - 3229:9229
+    volumes:
+      - ./dist:/app
+    environment:
+      NODE_ENV: development
+      GQL_SERVER_URL: ${GQL_SERVER_URL:-https://perf-portal-gql.staging.atl-paas.net}
+      STATIC_ASSETS_SERVER_URL: http://dockerhost:3001
+    depends_on:
+      - dockerhost
+
+  dockerhost:
+    image: qoomon/docker-host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    restart: on-failure
+    mem_limit: 8M
+    cpu_count: 1

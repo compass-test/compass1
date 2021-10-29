@@ -1,0 +1,9 @@
+node_modules
+**/bundle.js
+.env
+.env.*
+*.env.*
+.next
+pk.pem
+jwtKeys.js
+.asap-config

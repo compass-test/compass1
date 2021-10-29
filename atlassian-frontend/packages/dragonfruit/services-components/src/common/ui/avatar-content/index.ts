@@ -1,0 +1,1 @@
+export { AvatarContent } from './main';

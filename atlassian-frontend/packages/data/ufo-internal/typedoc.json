@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["./src/index.ts", "./src/core/index.ts", "./src/react/index.ts"],
+  "out": "api-docs/content",
+  "plugin": ["atlassian-typedoc-dac-plugin"],
+  "baseUrl": "/platform/ufo/reference/clients/atlassian-ufo",
+  "dacJsonFileOutput": "./api-docs/data/ufo.json",
+  "baseJsonFile": "./api-docs/data/ufo-template.json",
+  "dacSubcategory": "Web Client",
+  "readme": "none",
+  "entryDocument": "index.md"
+}

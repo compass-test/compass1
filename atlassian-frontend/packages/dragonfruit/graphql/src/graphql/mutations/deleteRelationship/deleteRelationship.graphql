@@ -1,0 +1,10 @@
+mutation deleteRelationship($input: DeleteCompassRelationshipInput!) {
+  compass {
+    deleteRelationship(input: $input) {
+      success
+      errors {
+        ...CommonMutationError
+      }
+    }
+  }
+}

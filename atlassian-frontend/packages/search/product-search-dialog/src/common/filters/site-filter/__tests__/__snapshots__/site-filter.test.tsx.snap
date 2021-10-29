@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SiteFilter /> should pass through the sites which matches the entered query in Show More & excludes already visible option 1`] = `
+Array [
+  Object {
+    "label": <FilterShowMoreItem
+      label="test-cupiditate"
+    />,
+    "value": Object {
+      "avatarUrl": "http://adrain.name",
+      "cloudId": "5c3f2368-3393-4e09-8492-fd03e808d9d8",
+      "filterSource": "EXTERNAL",
+      "id": "5c3f2368-3393-4e09-8492-fd03e808d9d8",
+      "isChecked": false,
+      "isVisible": false,
+      "product": "JIRA",
+      "siteName": "test-cupiditate",
+      "siteUrl": "https://sonny.org",
+    },
+  },
+]
+`;

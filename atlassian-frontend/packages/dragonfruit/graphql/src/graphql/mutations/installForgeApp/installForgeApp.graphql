@@ -1,0 +1,11 @@
+mutation installForgeApp($input: AppInstallationInput!)
+{
+  installApp(input: $input) {
+    success
+    installationId
+    taskId
+    errors {
+      message
+    }
+  }
+}

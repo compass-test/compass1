@@ -1,0 +1,8 @@
+{
+  "name": "@atlaskit/foo",
+  "version": "0.0.1",
+  "dependencies": {
+    "@atlaskit/bar": "^0.0.3",
+    "@atlaskit/fuzz": "^1.0.0"
+  }
+}

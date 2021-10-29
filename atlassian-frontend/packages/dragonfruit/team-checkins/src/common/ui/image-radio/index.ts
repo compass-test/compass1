@@ -1,0 +1,1 @@
+export { ImageRadio } from './main';

@@ -1,0 +1,22 @@
+mutation createComponentLink($input: CreateCompassComponentLinkInput!) {
+  compass {
+    createComponentLink(input: $input) {
+      success
+      componentDetails {
+        id
+        links {
+          id
+          name
+          type
+          url
+        }
+      }
+      errors {
+        message
+        extensions {
+          errorType
+        }
+      }
+    }
+  }
+}

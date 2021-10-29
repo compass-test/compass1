@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfluencePreQuery /> does not render results on prequery 1`] = `
+<div>
+  <span
+    data-test-id="search-dialog-pre-query"
+  />
+</div>
+`;
+
+exports[`<ConfluencePreQuery /> renders a recently viewed section 1`] = `
+<div>
+  <span
+    data-test-id="search-dialog-pre-query"
+  >
+    <div
+      class="search-result-section"
+      data-test-id="search-dialog-pre-query-components"
+    >
+      <div
+        title="[object Object]"
+      >
+        <div
+          class="recently-viewed-component"
+        >
+          <div
+            analyticcontext="[object Object]"
+            href="/compass/component/test-component?search_id=testSearchSessionId"
+            icon="[object Object]"
+            owner=""
+            screen="preQuerySearchResults"
+            title="Test Service"
+          />
+        </div>
+        <div
+          class="recently-viewed-component"
+        >
+          <div
+            analyticcontext="[object Object]"
+            href="/compass/component/test-component2?search_id=testSearchSessionId"
+            icon="[object Object]"
+            owner=""
+            screen="preQuerySearchResults"
+            title="Test Service 2"
+          />
+        </div>
+      </div>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`<ConfluencePreQuery /> won't render a components section if there are no components 1`] = `
+<div>
+  <span
+    data-test-id="search-dialog-pre-query"
+  >
+    <div
+      class="search-result-section"
+      data-test-id="search-dialog-pre-query-teams"
+    >
+      <div
+        title="[object Object]"
+      >
+        <div
+          class="recently-viewed-team"
+        >
+          <div
+            analyticcontext="[object Object]"
+            href="/compass/people/team/team1?search_id=testSearchSessionId"
+            icon="[object Object]"
+            screen="preQuerySearchResults"
+            title="Lodestone"
+          />
+        </div>
+      </div>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`<ConfluencePreQuery /> won't render a teams section if there are no teams 1`] = `
+<div>
+  <span
+    data-test-id="search-dialog-pre-query"
+  >
+    <div
+      class="search-result-section"
+      data-test-id="search-dialog-pre-query-components"
+    >
+      <div
+        title="[object Object]"
+      >
+        <div
+          class="recently-viewed-component"
+        >
+          <div
+            analyticcontext="[object Object]"
+            href="/compass/component/test-component?search_id=testSearchSessionId"
+            icon="[object Object]"
+            owner=""
+            screen="preQuerySearchResults"
+            title="Test Service"
+          />
+        </div>
+      </div>
+    </div>
+  </span>
+</div>
+`;

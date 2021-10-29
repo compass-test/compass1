@@ -1,0 +1,1 @@
+export { ProductFabricStatus } from './ProductFabricStatus';

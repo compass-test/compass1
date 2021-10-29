@@ -1,0 +1,316 @@
+{
+  "consumer": {
+    "name": "af-commerce-payment-methods"
+  },
+  "provider": {
+    "name": "accounts-receivable"
+  },
+  "interactions": [
+    {
+      "description": "Request to fetch payment methods: GET /api/v1/payment-methods -> 200: GET /api/v1/payment-methods -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/payment-methods",
+        "query": "pageSize=1000",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "data": [
+            {
+              "id": "visa-payment-method-id",
+              "type": "CARD",
+              "default": true,
+              "card": {
+                "brand": "visa",
+                "expMonth": 5,
+                "expYear": 21,
+                "last4": "4242"
+              }
+            },
+            {
+              "id": "master-payment-method-id",
+              "type": "CARD",
+              "default": false,
+              "card": {
+                "brand": "mastercard",
+                "expMonth": 10,
+                "expYear": 22,
+                "last4": "4444"
+              }
+            }
+          ],
+          "min": "visa-payment-method-id",
+          "max": "master-payment-method-id"
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment methods returns empty: GET /api/v1/payment-methods -> 200: GET /api/v1/payment-methods -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/payment-methods",
+        "query": "pageSize=1000",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "data": [
+
+          ]
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment methods returns deferred: GET /api/v1/payment-methods -> 200: GET /api/v1/payment-methods -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/payment-methods",
+        "query": "pageSize=1000",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "data": [
+            {
+              "id": "deferred-payment-method-id",
+              "default": false,
+              "type": "DEFERRED"
+            }
+          ],
+          "min": "visa-payment-method-id",
+          "max": "master-payment-method-id"
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment method: GET /api/v1/payment-methods/visa-payment-method-id -> 200: GET /api/v1/payment-methods/visa-payment-method-id -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/payment-methods/visa-payment-method-id",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "id": "visa-payment-method-id",
+          "type": "CARD",
+          "default": true,
+          "card": {
+            "brand": "visa",
+            "expMonth": 5,
+            "expYear": 21,
+            "last4": "4242"
+          }
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment method: GET /api/v1/payment-methods/deferred-payment-method-id -> 200: GET /api/v1/payment-methods/deferred-payment-method-id -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/payment-methods/deferred-payment-method-id",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "id": "deferred-payment-method-id",
+          "default": false,
+          "type": "DEFERRED"
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment method for a given IG returns visa: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/invoice-groups/ig-ramen-rule-world",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "defaultPaymentMethod": "visa-payment-method-id"
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment method for a given IG returns deferred: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/invoice-groups/ig-ramen-rule-world",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "defaultPaymentMethod": "deferred-payment-method-id"
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment method for a given IG returns empty response: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/invoice-groups/ig-ramen-rule-world",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+        }
+      }
+    },
+    {
+      "description": "Request to fetch payment method for a given IG returns nothing: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200: GET /api/v1/invoice-groups/ig-ramen-rule-world -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/invoice-groups/ig-ramen-rule-world",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "id": "ig-ramen-rule-world",
+          "defaultPaymentMethod": null
+        }
+      }
+    },
+    {
+      "description": "Request to update payment method for a given IG: PUT /api/v1/invoice-groups/ig-ramen-rule-world -> 200: PUT /api/v1/invoice-groups/ig-ramen-rule-world -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "PUT",
+        "path": "/api/v1/invoice-groups/ig-ramen-rule-world",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "defaultPaymentMethod": "visa-payment-method-id"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "id": "ig-ramen-rule-world",
+          "defaultPaymentMethod": "visa-payment-method-id"
+        }
+      }
+    },
+    {
+      "description": "Request to payment methods: GET /api/v1/invoice-groups -> 200: GET /api/v1/invoice-groups -> 200",
+      "providerState": "I've a valid TXA id",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/invoice-groups",
+        "query": "",
+        "headers": {
+          "x-transaction-account": "TXA_ID",
+          "authorization": "bearer dummy"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json"
+        },
+        "body": {
+          "data": [
+            {
+              "id": "ig-ramen-rule-world",
+              "defaultPaymentMethod": "visa-payment-method-id"
+            },
+            {
+              "id": "ig-hot-burrito-roll",
+              "defaultPaymentMethod": "master-payment-method-id"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
